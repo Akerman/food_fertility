@@ -216,8 +216,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /*--Section Spacing--*/
 .section-padding {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-padding {
@@ -277,7 +277,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .section-title::before {
   position: absolute;
   content: "";
-  background-image: url(../images/shape/shape-3.png);
+  background-image: url(../images/shape/Watermark.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -329,7 +329,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 .section-title.section-title-white::before {
-  background-image: url(../images/shape/shape-4.png);
+  background-image: url(../images/shape/Watermark-White.png);
 }
 .section-title.section-title-white .sub-title {
   color: #fea200;
@@ -1632,10 +1632,13 @@ select {
       -ms-flex-align: center;
           align-items: center;
 }
+.header-logo a img {
+  width: 130px;
+}
 
 @media only screen and (max-width: 575px) {
   .header-logo a img {
-    width: 130px;
+    width: 100px;
   }
 }
 
@@ -1880,447 +1883,6 @@ select {
   padding-left: 24%;
 }
 
-/*--
-/*  3.3 - Login Header CSS
-/*----------------------------------------*/
-.login-header {
-  background-color: #0a4d3c;
-}
-
-.login-header-wrapper.navbar {
-  padding: 0 0;
-}
-
-.login-header-logo {
-  padding: 25px 25px;
-  background-color: #073f31;
-}
-.login-header-logo a + a {
-  margin-left: 15px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-logo a + a {
-    display: none;
-  }
-}
-.login-header-logo.logo-2 {
-  margin-right: 50px;
-  padding: 35px 50px;
-  background-color: #073f31;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-logo.logo-2 {
-    padding: 30px 20px;
-    margin-right: 20px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .login-header-logo.logo-2 {
-    padding: 20px 20px;
-    margin-right: 30px;
-  }
-}
-
-.login-header-search {
-  position: relative;
-  width: 500px;
-  margin-left: auto;
-  margin-right: 30px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .login-header-search {
-    width: 400px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-search {
-    width: 350px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .login-header-search {
-    position: static;
-    width: auto;
-    margin-right: 0;
-  }
-}
-.login-header-search .search-input {
-  position: relative;
-  padding: 0;
-  background: none;
-  display: block;
-  z-index: 11;
-  border-radius: 0;
-  border: 0;
-}
-@media only screen and (max-width: 767px) {
-  .login-header-search .search-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #28313d;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 113;
-    display: none;
-  }
-}
-.login-header-search .search-input input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]) {
-  width: 100%;
-  height: 60px;
-  border: 0;
-  border-radius: 50px;
-  padding: 0 30px;
-  padding-right: 53px;
-  outline: none;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  background-color: #073f31;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0;
-}
-.login-header-search .search-input input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file])::-webkit-input-placeholder {
-  opacity: 1;
-}
-.login-header-search .search-input input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]):-moz-placeholder {
-  opacity: 1;
-}
-.login-header-search .search-input input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file])::-moz-placeholder {
-  opacity: 1;
-}
-.login-header-search .search-input input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]):-ms-input-placeholder {
-  opacity: 1;
-}
-.login-header-search .search-input.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: sticky 0.3s;
-          animation: sticky 0.3s;
-}
-.login-header-search button {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 10px;
-  background-color: transparent;
-  border: 0;
-  top: 5px;
-  right: 5px;
-  font-size: 16px;
-  color: #fff;
-  z-index: 112;
-}
-@media only screen and (max-width: 767px) {
-  .login-header-search button {
-    position: relative;
-    top: 0;
-    right: 0;
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .login-header-search button {
-    position: relative;
-    top: 0;
-    right: 0;
-    font-size: 20px;
-  }
-}
-.login-header-search.search-2 {
-  margin-right: 0;
-  margin-left: 0;
-}
-@media only screen and (max-width: 767px) {
-  .login-header-search.search-2 {
-    margin-left: auto;
-  }
-}
-
-@-webkit-keyframes search {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-@keyframes search {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-.login-header-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 25px;
-}
-@media only screen and (max-width: 767px) {
-  .login-header-action {
-    padding-right: 5px;
-  }
-}
-.login-header-action > * {
-  margin: 0px 15px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 575px) {
-  .login-header-action > * {
-    margin: 0px 7px;
-  }
-}
-.login-header-action .notification {
-  font-size: 36px;
-  color: #fff;
-  position: relative;
-  padding: 0;
-  padding-top: 3px;
-  background: none;
-  border: 0;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-action .notification {
-    font-size: 28px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .login-header-action .notification {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .notification {
-    font-size: 22px;
-  }
-}
-.login-header-action .notification .active {
-  width: 12px;
-  height: 12px;
-  background-color: #ffa300;
-  border: 2px solid #0a4d3c;
-  position: absolute;
-  top: 17px;
-  right: 3px;
-  border-radius: 5px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .notification .active {
-    right: -2px;
-  }
-}
-.login-header-action .author img {
-  width: 60px;
-  border-radius: 50%;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-action .author img {
-    width: 50px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .login-header-action .author img {
-    width: 45px;
-  }
-}
-.login-header-action .more {
-  width: 36px;
-  height: 36px;
-  border: 0;
-  background-color: #fff;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-action .more {
-    width: 30px;
-    height: 30px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .more {
-    width: 28px;
-    height: 28px;
-  }
-}
-.login-header-action .more span {
-  width: 4px;
-  height: 4px;
-  background-color: #0a4d3c;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 1.5px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .more span {
-    width: 3px;
-    height: 3px;
-    margin: 0 1px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu {
-  width: 160px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 0;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  left: auto;
-  right: 0;
-}
-.login-header-action .dropdown .dropdown-menu.dropdown-notification {
-  width: 360px;
-  padding: 0;
-  right: -150px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .login-header-action .dropdown .dropdown-menu.dropdown-notification {
-    right: -110px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .login-header-action .dropdown .dropdown-menu.dropdown-notification {
-    right: -140px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .dropdown .dropdown-menu.dropdown-notification {
-    width: 270px;
-    right: -90px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu li {
-  border-bottom: 1px solid #e0dddb;
-}
-.login-header-action .dropdown .dropdown-menu li:last-child {
-  border-bottom: 0;
-}
-.login-header-action .dropdown .dropdown-menu li > a {
-  display: block;
-  color: #2c241b;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 9px 14px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.login-header-action .dropdown .dropdown-menu li > a:hover {
-  color: #ffa300;
-}
-.login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid #e0dddb;
-  padding: 20px 25px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item {
-    padding: 10px 15px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .notify-icon {
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-  padding: 0 9px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .notify-icon {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 8px;
-    font-size: 13px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .dropdown-body {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .dropdown-body p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 200px;
-  margin-bottom: 0;
-  margin-top: 5px;
-  font-weight: 400;
-  font-size: 14px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .dropdown-body p {
-    width: 150px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .notify-time {
-  width: 100%;
-  white-space: nowrap;
-  color: #828690;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 13px;
-  padding-left: 9px;
-}
-@media only screen and (max-width: 575px) {
-  .login-header-action .dropdown .dropdown-menu .notification-items-list .notification-item .notify-time {
-    font-size: 12px;
-  }
-}
-.login-header-action .dropdown .dropdown-menu .all-notification {
-  display: block;
-  padding: 15px 30px 15px;
-  text-align: center;
-  font-size: 14px;
-  color: #2c241b;
-  font-weight: 400;
-}
-.login-header-action.action-2 {
-  margin-left: auto;
-}
-@media only screen and (max-width: 767px) {
-  .login-header-action.action-2 {
-    margin-left: 0;
-  }
-}
-
-/*----------------------------------------*/
-/*  04. Pages CSS (All Page Styles)
-/*----------------------------------------*/
-/*--
 /*  4.1 - Slider CSS
 /*----------------------------------------*/
 .single-slider {
@@ -2842,17 +2404,18 @@ select {
   background: linear-gradient(180deg, rgba(10, 77, 60, 0) 0%, rgba(10, 77, 60, 0) 50%, rgba(10, 77, 60, 0.6) 100%);
 }
 .about-images .shape {
+  width: 35%;
   position: absolute;
-  top: -60px;
-  left: -60px;
+  top: -70px;
+  left: -45px;
   -webkit-animation: spin-1 8s infinite linear;
-          animation: spin-1 8s infinite linear;
+  animation: spin-1 35s infinite linear;
 }
 @media only screen and (max-width: 575px) {
   .about-images .shape {
-    width: 100px;
-    left: -20px;
-    top: -20px;
+    width: 90px;
+    left: -10px;
+    top: -40px;
   }
 }
 .about-images .images img {
@@ -9866,6 +9429,7 @@ select {
 /*----------------------------------------*/
 .footer-widget-section {
   position: relative;
+  border-top: 20px solid #f8f6f4;
 }
 .footer-widget-section .shape-01 {
   position: absolute;
@@ -10085,4 +9649,43 @@ select {
 .back-to-top:hover {
   color: #fff;
   background-color: #343a40;
+}
+
+
+
+
+/* ================== Custon CSS By Md Abdullah================== */
+
+
+.feature-icon img{
+width: 60%;
+}
+
+.feature_icon_A{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.feature_icon_B{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+    -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+
+  opacity: 0  !important;
+  
+}
+
+.single-feature:hover .feature_icon_A {
+  opacity: 0 !important;
+}
+
+.single-feature:hover .feature_icon_B {
+  opacity: 1 !important;
 }
