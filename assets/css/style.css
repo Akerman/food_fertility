@@ -6226,13 +6226,10 @@ select {
 /*  4.20 - iFrame
 /*----------------------------------------*/
 .iframe {
-  height: 940px;
+  height: 700px;
   padding-top: 100px;
   padding-bottom: 20px;
   position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 /*--
