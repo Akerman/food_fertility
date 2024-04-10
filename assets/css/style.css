@@ -6228,7 +6228,7 @@ select {
 .iframe {
   height: 940px;
   padding-top: 100px;
-  padding-bottom: 105px;
+  padding-bottom: 20px;
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -6236,7 +6236,7 @@ select {
 }
 
 /*--
-/*  4.210 - Courses Admin CSS
+/*  4.21 - Courses Admin CSS
 /*----------------------------------------*/
 .sidebar-wrapper {
   background-color: #13634f;
