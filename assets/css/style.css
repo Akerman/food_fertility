@@ -6221,8 +6221,22 @@ select {
   color: #ffa300;
 }
 
+
+
+/*  4.20 - iFrame
+/*----------------------------------------*/
+.iframe {
+  height: 940px;
+  padding-top: 100px;
+  padding-bottom: 105px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 /*--
-/*  4.20 - Courses Admin CSS
+/*  4.210 - Courses Admin CSS
 /*----------------------------------------*/
 .sidebar-wrapper {
   background-color: #13634f;
