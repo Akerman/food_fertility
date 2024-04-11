@@ -1,11 +1,5 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Nutras Fitness & Nutrition Bootstrap 5 Template
-    Author: Hastech IT
-    Version: 1.0
-
------------------------------------------------------------------------------------
-
     CSS INDEX
     ===================
 
@@ -6227,14 +6221,14 @@ select {
 /*----------------------------------------*/
 .iframe-wrapper {
   width: 100%;
-  height: 600px;
+  height: 700px;
   padding-top: 100px;
   overflow: hidden;
 }
 
 .iframe-wrapper iframe {
   width: 100.5%;
-  height: 600px;
+  height: 700px;
 }
 
 /*--
