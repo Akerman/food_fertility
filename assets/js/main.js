@@ -84,7 +84,7 @@
         //     prevEl: ".slider-active .swiper-button-prev",
         // },
         autoplay: {
-            delay: 5000,
+            delay: 10000,
         },
     });    
     
@@ -128,7 +128,7 @@
             }
         },
         autoplay: {
-            delay: 5000,
+            delay: 8000,
         },
     });
     
