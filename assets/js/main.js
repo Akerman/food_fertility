@@ -72,7 +72,7 @@
         Slider
     -----------------------------------*/
     var slider = new Swiper('.slider-active .swiper-container', {
-        speed: 600,
+        speed: 1200,
         effect: "fade",
         loop: true,
         pagination: {
@@ -84,7 +84,7 @@
         //     prevEl: ".slider-active .swiper-button-prev",
         // },
         autoplay: {
-            delay: 8000,
+            delay: 5000,
         },
     });    
     
@@ -94,7 +94,7 @@
     -----------------------------------*/
 
 	var swiper = new Swiper(".testimonial-active .swiper-container", {
-		speed: 600,
+		speed: 1200,
         navigation: {
           nextEl: ".testimonial-active .swiper-button-next",
           prevEl: ".testimonial-active .swiper-button-prev",
@@ -106,7 +106,7 @@
         Brand
     -----------------------------------*/
     var edule = new Swiper('.brand-active .swiper-container', {
-        speed: 600,
+        speed: 1200,
         spaceBetween: 30,
         loop: true,
         breakpoints: {
@@ -128,7 +128,7 @@
             }
         },
         autoplay: {
-            delay: 8000,
+            delay: 5000,
         },
     });
     
