@@ -9439,7 +9439,6 @@ select {
 /*----------------------------------------*/
 .footer-widget-section {
   position: relative;
-  border-top: 20px solid #f8f6f4;
 }
 .footer-widget-section .shape-01 {
   position: absolute;
