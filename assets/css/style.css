@@ -2376,6 +2376,142 @@ select {
   visibility: visible;
 }
 
+.feature-no-animation-wrapper {
+  margin-top: -50px;
+}
+
+.feature-no-animation-wrapper .row > *:nth-child(2n+2) .feature-no-animation {
+  border-left: 1px solid #f3f0ec;
+  border-right: 1px solid #f3f0ec;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .feature-no-animation-wrapper .row > *:nth-child(2n+2) .feature-no-animation {
+    border: 0;
+  }
+}
+
+.feature-no-animation {
+  text-align: center;
+  padding: 0 25px;
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .feature-no-animation {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.feature-no-animation .feature-icon span {
+  width: 170px;
+  height: 170px;
+  line-height: 175px;
+  background-color: #f8f6f4;
+  text-align: center;
+  display: inline-block;
+  font-size: 70px;
+  color: #0a4d3c;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 575px) {
+  .feature-no-animation .feature-icon span {
+    width: 140px;
+    height: 140px;
+    line-height: 145px;
+    font-size: 60px;
+  }
+}
+
+.feature-no-animation .feature-icon span::before {
+  position: absolute;
+  content: "";
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #0a4d3c;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 575px) {
+  .feature-no-animation .feature-icon span::before {
+    bottom: -120px;
+  }
+}
+
+.feature-no-animation .feature-icon span::after {
+  position: absolute;
+  content: "";
+  bottom: -170px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffa300;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 575px) {
+  .feature-no-animation .feature-icon span::after {
+    bottom: -140px;
+  }
+}
+
+.feature-no-animation .feature-content {
+  padding-top: 35px;
+}
+
+.feature-no-animation .feature-content .content-wrapper {
+  background-color: #fff;
+}
+
+.feature-no-animation .feature-content .title {
+  font-size: 35px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .feature-no-animation .feature-content .title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .feature-no-animation .feature-content .title {
+    font-size: 24px;
+  }
+}
+
+.feature-no-animation .feature-content p {
+  margin-top: 20px;
+}
+
+.feature-no-animation .feature-content .arrow {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #ffa300;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 50%;
+  margin-top: 35px;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.feature-no-animation .feature-content .arrow:hover {
+  background-color: #0a4d3c;
+}
+
 /*--
 /*  4.3 - About CSS
 /*----------------------------------------*/
