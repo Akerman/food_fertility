@@ -9665,6 +9665,9 @@ select {
 
 /* ================== Custon CSS By Md Abdullah================== */
 
+.feature-icon2 img{
+width: 100%;
+}
 
 .feature-icon img{
 width: 60%;
