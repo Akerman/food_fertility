@@ -1,0 +1,202 @@
+---
+layout: default
+title: Home Page
+---
+<!-- Slider Section Start -->
+        <div class="slider-section slider-active section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!-- Single Slider Start -->
+                    <div class="swiper-slide animation-style-01 single-slider d-flex align-items-center" style="background-image: url(assets/images/slider/slider-1.jpg);">
+                        <div class="container">
+
+                            <!-- Slider Content Start -->
+                            <div class="slider-content">
+                                <h2 class="main-title">Overcome infertility with confidence (and nutrition).</h1>
+                                <p>Courses to support and empower your fertility journey.</p> 
+                                <a href="#" class="btn btn-primary btn-hover-secondary">Enroll Today</a>
+                            </div>
+                            <!-- Slider Content End -->
+
+                        </div>
+
+                        <!-- Slider Social Start -->
+                        <div class="slider-social">
+                            <div class="container">
+                                <div class="social-wrapper">
+                                    <p>Connect with us:</p>
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                        <li><a href="#"><i class="icofont-skype"></i></a></li>
+                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Social End -->
+                    </div>
+                    <!-- Single Slider End -->
+
+                    <!-- Single Slider Start -->
+                    <div class="swiper-slide animation-style-01 single-slider d-flex align-items-center" style="background-image: url(assets/images/slider/slider-2.jpg);">
+                        <div class="container">
+
+                            <!-- Slider Content Start -->
+                            <div class="slider-content">
+                                <h6 class="sub-title">Did you know?</h6>
+                                <h1 class="main-title">Nutrition may help improve your chance of parenthood.</h1>
+                                <p>Whether you're just starting your fertility journey or preparing for another cycle of Assisted Reproductive Therapy (ART), the right nutrition can make a big difference.</p> 
+                                <p>At Food and Fertility, we’re here to guide you from fork to stork.</p>
+                                <a href="#" class="btn btn-primary btn-hover-secondary">Our Programs</a>
+                            </div>
+                            <!-- Slider Content End -->
+
+                        </div>
+
+                        <!-- Slider Social Start -->
+                        <div class="slider-social">
+                            <div class="container">
+                                <div class="social-wrapper">
+                                    <p>Connect with us:</p>
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                        <li><a href="#"><i class="icofont-skype"></i></a></li>
+                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Social End -->
+                    </div>
+                    <!-- Single Slider End -->
+
+                    <!-- Single Slider Start -->
+                    <div class="swiper-slide animation-style-01 single-slider d-flex align-items-center" style="background-image: url(assets/images/slider/slider-3.jpg);">
+                        <div class="container">
+
+                            <!-- Slider Content Start -->
+                            <div class="slider-content">
+                                <h6 class="sub-title">Did you know?</h6>
+                                <h1 class="main-title">Lifestyle changes may help you grow your family.</h1>
+                                <p>At Food and Fertility, most people choose our courses which include access to a Fertility Dietitian for general inquiries and support.</p>
+                                <p>For those seeking more personalized care, we also offer one-on-one sessions with a Fertility Dietitian. We are here to guide you from fork to stork!</p>
+                                <a href="#" class="btn btn-primary btn-hover-secondary">Our Programs</a>
+                            </div>
+                            <!-- Slider Content End -->
+
+                        </div>
+
+                        <!-- Slider Social Start -->
+                        <div class="slider-social">
+                            <div class="container">
+                                <div class="social-wrapper">
+                                    <p>Connect with us:</p>
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                        <li><a href="#"><i class="icofont-skype"></i></a></li>
+                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Social End -->
+                    </div>
+                    <!-- Single Slider End -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Slider Section End -->
+
+        <!-- Features Section Start -->
+        <div class="section section-padding">
+            <div class="container">
+                <div class="features-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Feature Start -->
+                            <div class="single-feature">
+                                <div class="feature-icon">
+                                    <span ><img class="feature_icon_A"  src="./assets/images/icon/healthy woman.png" alt=""> <img  class="feature_icon_B" src="./assets/images/icon/healthy woman 1.png" alt=""></span>
+                                </div>
+                            </div>
+                            <!-- Single Feature End -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Feature Start -->
+                            <div class="single-feature">
+                                <div class="feature-icon">
+                                    <span ><img  src="./assets/images/icon/pediatrics.png" alt=""> <img  class="feature_icon_B" src="./assets/images/icon/pediatrics 1.png" alt=""></span>
+                                </div>
+                            </div>
+                            <!-- Single Feature End -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Feature Start -->
+                            <div class="single-feature">
+                                <div class="feature-icon">
+                                    <span ><img class="feature_icon_A"  src="./assets/images/icon/healthy-food.png" alt=""> <img  class="feature_icon_B" src="./assets/images/icon/healthy-food-1.png" alt=""></span>
+                                </div>
+                            </div>
+                            <!-- Single Feature End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features Section End -->
+
+        <!-- About Section Start -->
+        <div class="section section-padding bg-grey overflow-hidden">
+            <div class="container">
+
+                <!-- About Wrapper Start -->
+                <div class="about-wrapper">
+                    <div class="row align-items-center gx-xxl-5">
+                        <div class="col-lg-5">
+                            <!-- About Images Start -->
+                            <div class="about-images">
+                                <div class="images">
+                                    <img src="assets/images/Baby_in_bed_correctly_cropped.jpg" alt="About">
+                                </div>
+                            </div>
+                            <!-- About Images End -->
+                        </div>
+                        <div class="col-lg-7">
+                            <!-- About Content Start -->
+                            <div class="about-content bg-white">
+                                <div class="content-wrapper">
+                                    <h2 class="main-title">Our Fertility Dietitians help clients (with):</h2>
+                                    <p>
+                                        <ul>
+                                          <li>Unexplained infertility</li>
+                                          <li>Recurrent miscarriage</li>
+                                          <li>Preparing for Assisted Reproductive Therapy IVF, IUI, ICIS</li>
+                                          <li>Endometriosis</li>
+                                          <li>Polycystic Ovarian Syndrome (PCOS)</li>
+                                          <li>Improve hormone balance</li>
+                                          <li>Optimize egg quality</li>
+                                          <li>MTHFR gene variant</li>
+                                          <li>Optimize sperm parameters</li>
+                                          <li>Sperm DNA fragmentation</li>
+                                          <li>Insulin resistance</li>
+                                          <li>Improve overall health of parents and baby</li>
+                                          <li>And more</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- About Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- About Wrapper End -->
+
+            </div>
+        </div>
+        <!-- About Section End -->
+        
