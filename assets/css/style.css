@@ -2521,8 +2521,18 @@ select {
 .feature-no-animation .feature-content .arrow:hover {
   background-color: #0a4d3c;
 }
+.slider-section {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
-/*--
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/*-- Some section heading --*/
 /*  4.3 - About CSS
 /*----------------------------------------*/
 .about-wrapper {
