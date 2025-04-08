@@ -127,7 +127,7 @@
                 slidesPerView: 5,
             }
         },
-        autoplay: {
+        autoplay: false,
             delay: 8000,
         },
     });
