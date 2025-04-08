@@ -83,7 +83,7 @@
         //     nextEl: ".slider-active .swiper-button-next",
         //     prevEl: ".slider-active .swiper-button-prev",
         // },
-        autoplay: {
+        autoplay: false,
             delay: 10000,
         },
     });    
