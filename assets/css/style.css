@@ -9857,9 +9857,15 @@ width: 60%;
 .single-feature:hover .feature_icon_B {
   opacity: 1 !important;
 }
+/* Leave the section alone — no animation here */
 .slider-section {
+  opacity: 1;
+}
+
+/* Fade in only the text content */
+.slider-content {
   opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
+  animation: fadeIn 1.5s ease-out forwards;
   animation-delay: 0.3s;
   animation-fill-mode: both;
 }
