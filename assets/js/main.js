@@ -72,20 +72,13 @@
         Slider
     -----------------------------------*/
     var slider = new Swiper('.slider-active .swiper-container', {
-        speed: 1000,
-        effect: "fade",
-        loop: false,
-        pagination: {
-            el: '.slider-active .swiper-pagination',
-            clickable: true,
-        },
-        // navigation: {
-        //     nextEl: ".slider-active .swiper-button-next",
-        //     prevEl: ".slider-active .swiper-button-prev",
-        // },
-        autoplay: {
-            delay: 10,
-            disableOnInteraction: true,
+    speed: 1000,
+    effect: "fade",
+    loop: false, // don't loop back
+    autoplay: false, // completely stop automatic transitions
+    pagination: {
+        el: '.slider-active .swiper-pagination',
+        clickable: true,
         },
     });    
     
