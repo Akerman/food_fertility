@@ -71,19 +71,7 @@
     /*--
         Slider
     -----------------------------------*/
-    var slider = new Swiper('.slider-active .swiper-container', {
-    speed: 1000,
-    effect: "fade",
-    loop: false, // don't loop back
-    autoplay: false, // completely stop automatic transitions
-    pagination: {
-        el: '.slider-active .swiper-pagination',
-        clickable: true,
-        },
-    }); 
-setTimeout(function () {
-    slider.autoplay.stop();
-}, 20);
+
     
 	
 	/*--
