@@ -74,7 +74,7 @@
     var slider = new Swiper('.slider-active .swiper-container', {
         speed: 1200,
         effect: "fade",
-        loop: true,
+        loop: false,
         pagination: {
             el: '.slider-active .swiper-pagination',
             clickable: true,
