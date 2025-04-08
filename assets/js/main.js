@@ -72,7 +72,7 @@
         Slider
     -----------------------------------*/
     var slider = new Swiper('.slider-active .swiper-container', {
-        speed: 120000000,
+        speed: 1000,
         effect: "fade",
         loop: false,
         pagination: {
@@ -83,8 +83,9 @@
         //     nextEl: ".slider-active .swiper-button-next",
         //     prevEl: ".slider-active .swiper-button-prev",
         // },
-        autoplay: false,
-            delay: 10000,
+        autoplay: {
+            delay: 10,
+            disableOnInteraction: true,
         },
     });    
     
