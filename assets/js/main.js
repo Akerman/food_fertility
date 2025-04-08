@@ -72,7 +72,7 @@
         Slider
     -----------------------------------*/
     var slider = new Swiper('.slider-active .swiper-container', {
-        speed: 1200,
+        speed: 120000000,
         effect: "fade",
         loop: false,
         pagination: {
