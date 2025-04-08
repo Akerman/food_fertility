@@ -80,7 +80,10 @@
         el: '.slider-active .swiper-pagination',
         clickable: true,
         },
-    });    
+    }); 
+setTimeout(function () {
+    slider.autoplay.stop();
+}, 20);
     
 	
 	/*--
