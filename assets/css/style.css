@@ -2211,7 +2211,17 @@ select {
     right: 50%;
   }
 }
+.slider-section {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 /*--
 /*  4.2 - Features CSS
 /*----------------------------------------*/
