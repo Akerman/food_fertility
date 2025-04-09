@@ -9989,8 +9989,23 @@ width: 60%;
   }
 }
 .slider-section,
-.single-slider {
+.single-slider,
+.hero-banner {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* Force top line (hero-subheading) to use Montserrat and not italic */
+.slider-content .hero-subheading {
+  font-style: normal !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Add spacing above CTA button */
+.btn-primary {
+  margin-top: 1.5rem;
 }
