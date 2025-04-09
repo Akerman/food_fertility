@@ -10033,3 +10033,9 @@ width: 60%;
   flex-direction: column;
   justify-content: center;
 }
+.main-title {
+  font-size: clamp(2rem, 5vw, 3rem); /* responsive scaling with a max size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
