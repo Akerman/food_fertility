@@ -9896,13 +9896,14 @@ width: 60%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  height: 938px; /* matches the image height */
+  height: 1050px; /* increased for more breathing room */
   color: black;
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  align-items: flex-start; /* aligns content to top */
+  align-items: flex-start; /* aligns content toward top */
   justify-content: center;
-  padding-top: 200px; /* adjusts how far down the content sits */
+  padding-top: 200px;  /* pushes content lower into visible image */
+  padding-bottom: 120px; /* adds space below CTA button */
   overflow: hidden;
 }
 
@@ -9972,8 +9973,9 @@ width: 60%;
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .hero-banner {
-    height: 550px;
+    height: 600px;
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .hero-subheading {
