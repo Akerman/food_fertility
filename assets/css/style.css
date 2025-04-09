@@ -9899,6 +9899,9 @@ width: 60%;
   min-height: 100vh;
   color: black;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -9912,6 +9915,16 @@ width: 60%;
   z-index: 1;
 }
 
+/* NEW — Stretch flex container */
+.single-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+/* Content styling */
 .slider-content {
   position: relative;
   z-index: 2;
@@ -9919,74 +9932,16 @@ width: 60%;
   width: 100%;
   padding: 80px 20px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh; /* ensures visibility on tall screens */
-  box-sizing: border-box;
+  text-align: left;
 }
 
 /* Top line: Emotional hook */
-.hero-subheading {
+.slider-content .hero-subheading {
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 1rem;
   color: #222;
   line-height: 1.4;
-  font-style: normal; /* ✅ remove italics */
-}
-
-/* Main headline */
-.main-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: black;
-}
-
-/* Supporting line */
-.hero-tagline {
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-/* CTA Button */
-.btn-primary {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #4c6ef5;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: inline-block;
-  z-index: 2;
-  position: relative;
-}
-
-.btn-primary:hover {
-  background-color: #3b5bdb;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  .slider-content {
-    padding: 60px 20px;
-    min-height: auto;
-  }
-
-  .hero-subheading {
-    font-size: 1.5rem;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .hero-tagline {
-    font-size: 1rem;
-  }
+  font-style: normal !important; /* 💥 no more italics */
+  font-family: 'Montserrat', sans-serif !important;
 }
