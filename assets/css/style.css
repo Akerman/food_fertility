@@ -9949,3 +9949,13 @@ width: 60%;
     font-size: 1rem;
   }
 }
+.hero-subheading {
+  display: block !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: black !important;
+  z-index: 2;
+  position: relative;
+}
