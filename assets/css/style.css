@@ -9896,14 +9896,9 @@ width: 60%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  min-height: 100vh; /* Full height of screen, responsive */
+  min-height: 100vh;
   color: black;
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  align-items: center; /* center vertically */
-  justify-content: center;
-  padding: 80px 20px; /* top and bottom spacing */
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -9922,8 +9917,13 @@ width: 60%;
   z-index: 2;
   max-width: 700px;
   width: 100%;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  padding: 80px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh; /* ensures visibility on tall screens */
+  box-sizing: border-box;
 }
 
 /* Top line: Emotional hook */
@@ -9933,6 +9933,7 @@ width: 60%;
   margin-bottom: 1rem;
   color: #222;
   line-height: 1.4;
+  font-style: normal; /* ✅ remove italics */
 }
 
 /* Main headline */
@@ -9949,7 +9950,6 @@ width: 60%;
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: #333;
-  font-family: 'Montserrat', sans-serif; /* ensure consistency */
 }
 
 /* CTA Button */
@@ -9973,9 +9973,9 @@ width: 60%;
 
 /* Mobile tweaks */
 @media (max-width: 768px) {
-  .hero-banner {
+  .slider-content {
     padding: 60px 20px;
-    min-height: 600px;
+    min-height: auto;
   }
 
   .hero-subheading {
