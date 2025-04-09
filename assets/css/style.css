@@ -9896,14 +9896,14 @@ width: 60%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  height: 1050px; /* increased for more breathing room */
+  min-height: 100vh; /* Full height of screen, responsive */
   color: black;
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  align-items: flex-start; /* aligns content toward top */
+  align-items: center; /* center vertically */
   justify-content: center;
-  padding-top: 200px;  /* pushes content lower into visible image */
-  padding-bottom: 120px; /* adds space below CTA button */
+  padding: 80px 20px; /* top and bottom spacing */
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -9921,13 +9921,13 @@ width: 60%;
   position: relative;
   z-index: 2;
   max-width: 700px;
-  padding: 0 20px;
+  width: 100%;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Top line: Emotional hook */
 .hero-subheading {
-  display: block;
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -9949,6 +9949,7 @@ width: 60%;
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: #333;
+  font-family: 'Montserrat', sans-serif; /* ensure consistency */
 }
 
 /* CTA Button */
@@ -9970,12 +9971,11 @@ width: 60%;
   background-color: #3b5bdb;
 }
 
-/* Responsive Tweaks */
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .hero-banner {
-    height: 600px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 20px;
+    min-height: 600px;
   }
 
   .hero-subheading {
