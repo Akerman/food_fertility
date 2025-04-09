@@ -10026,3 +10026,10 @@ width: 60%;
 .btn-primary {
   margin-top: 1.5rem;
 }
+.slider-content {
+  max-height: 80vh; /* ensures content doesn't stretch too far vertically */
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
