@@ -9988,3 +9988,9 @@ width: 60%;
     font-size: 1rem;
   }
 }
+.slider-section,
+.single-slider {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
