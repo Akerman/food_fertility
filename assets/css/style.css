@@ -9896,13 +9896,15 @@ width: 60%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  color: black;
+  min-height: 100vh; /* full viewport height */
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 60px 20px; /* top/bottom padding to prevent cutoff */
+  box-sizing: border-box;
+  color: black;
 }
 
 .hero-banner .overlay {
@@ -9915,33 +9917,74 @@ width: 60%;
   z-index: 1;
 }
 
-/* NEW — Stretch flex container */
-.single-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  width: 100%;
-}
-
-/* Content styling */
 .slider-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
-  width: 100%;
-  padding: 80px 20px;
-  margin: 0 auto;
+  max-width: 720px;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Top line: Emotional hook */
-.slider-content .hero-subheading {
+/* Top line (fixing italics) */
+.hero-subheading {
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 1rem;
   color: #222;
   line-height: 1.4;
-  font-style: normal !important; /* 💥 no more italics */
-  font-family: 'Montserrat', sans-serif !important;
+  font-style: normal !important;  /* 💥 override inherited italics */
+}
+
+/* Main headline */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+/* Supporting line */
+.hero-tagline {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* CTA Button */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #4c6ef5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+}
+
+.btn-primary:hover {
+  background-color: #3b5bdb;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 40px 20px;
+  }
+
+  .hero-subheading {
+    font-size: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
 }
