@@ -9894,15 +9894,15 @@ width: 60%;
   position: relative;
   background-image: url('/assets/images/slider/7.jpg');
   background-size: cover;
-  background-position: top center;
+  background-position: center top;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 938px; /* matches the image height */
   color: black;
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* aligns content to top */
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 200px; /* adjusts how far down the content sits */
   overflow: hidden;
 }
 
