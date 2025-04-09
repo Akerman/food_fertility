@@ -9874,17 +9874,18 @@ width: 60%;
   to {
     opacity: 1;
   }
-}
 .hero-banner {
   position: relative;
   background-image: url('/assets/images/slider/7.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 700px; /* was 600px */
   color: black;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* changed from center */
+  justify-content: center;
+  padding-top: 100px; /* pushes content into visible area */
   overflow: hidden;
 }
 
@@ -9902,7 +9903,7 @@ width: 60%;
   position: relative;
   z-index: 2;
   max-width: 700px;
-  padding: 40px 20px 0 20px; /* added top padding */
+  padding: 0 20px;
 }
 
 /* Headline: "When your body and your dreams feel out of sync." */
