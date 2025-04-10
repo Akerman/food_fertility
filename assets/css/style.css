@@ -9899,7 +9899,7 @@ width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 20px 20px;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: black;
@@ -9924,7 +9924,7 @@ width: 60%;
 
 /* Slider Layout Containers */
 .slider-section {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
