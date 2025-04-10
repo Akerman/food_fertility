@@ -10039,7 +10039,8 @@ width: 60%;
 
 .cta-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* 👈 center buttons */
+  width: 100%;              /* 👈 stretch container full width */
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
