@@ -10036,8 +10036,9 @@ width: 60%;
 
 .cta-buttons {
   display: flex;
-  gap: 1rem; /* space between buttons */
-  flex-wrap: wrap; /* stack buttons on small screens */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: 1.5rem;
 }
 
