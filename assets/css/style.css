@@ -10006,14 +10006,16 @@ width: 60%;
 
 .hero-banner {
   position: relative;
-  background-image: url('/assets/images/slider/7.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  font-family: 'Montserrat', sans-serif;
   width: 100%;
   min-height: 100vh;
   overflow: visible;
+
+  background-image: url('/assets/images/slider/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Force top line (hero-subheading) to use Montserrat and not italic */
