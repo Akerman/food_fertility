@@ -9993,8 +9993,10 @@ width: 60%;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-}
 
+  /* 👇 This line overrides the inherited alignment */
+  align-self: center;
+}
 .slider-content .btn {
   display: inline-block;
   width: auto;
