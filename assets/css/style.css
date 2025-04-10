@@ -9904,7 +9904,7 @@ width: 60%;
   z-index: 1;
 
   background-color: pink; /* 👈 TEMP fallback to test visibility */
-  background-image: url('/assets/images/slider/7.jpg');
+  background-image: url('assets/images/slider/7.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
