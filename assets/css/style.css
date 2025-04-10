@@ -9890,19 +9890,18 @@ width: 60%;
   }
 }
 
-/* Hero Banner */
 .hero-banner {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* 👈 Use height instead of min-height to force full height */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
   padding: 60px 20px;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: black;
+  z-index: 1;
 
   background-color: pink; /* 👈 TEMP fallback to test visibility */
   background-image: url('/assets/images/slider/7.jpg');
@@ -9911,13 +9910,23 @@ width: 60%;
   background-position: top center;
 }
 
+/* Overlay – added this! */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0; /* 👈 Ensures it's behind the text */
+  background: rgba(255, 255, 255, 0); /* 👈 Make it fully transparent for now */
+}
+
 /* Slider Layout Containers */
 .slider-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: visible;
 }
 
 .single-slider {
@@ -9925,7 +9934,7 @@ width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
+  position: relative; /* 👈 Needed for the overlay to position correctly */
 }
 
 /* Hero Text Content */
@@ -9936,7 +9945,6 @@ width: 60%;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   max-height: 80vh;
-  overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9950,7 +9958,6 @@ width: 60%;
   margin-bottom: 1rem;
   color: #222;
   line-height: 1.4;
-  font-style: normal !important;
   font-family: 'Montserrat', sans-serif !important;
 }
 
