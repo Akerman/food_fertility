@@ -9893,7 +9893,7 @@ width: 60%;
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 100vh; /* 👈 Use height instead of min-height to force full height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9904,7 +9904,7 @@ width: 60%;
   z-index: 1;
 
   background-color: pink; /* 👈 TEMP fallback to test visibility */
-  background-image: url('assets/images/slider/7.jpg');
+  background-image: url('/assets/images/slider/7.jpg'); /* 👈 Correct root-relative path */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
