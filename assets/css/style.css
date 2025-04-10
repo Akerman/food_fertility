@@ -1761,10 +1761,12 @@ select {
 
 .sticky {
   position: fixed;
-  -webkit-animation: sticky 1s;
-  animation: sticky 1s;
-  -webkit-box-shadow: 2px 4px 8px rgba(33, 40, 50, 0.15);
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff; /* Match your site’s header color */
   box-shadow: 2px 4px 8px rgba(33, 40, 50, 0.15);
+  transition: all 0.2s ease-in-out;
 }
 
 @-webkit-keyframes sticky {
