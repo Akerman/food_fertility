@@ -9894,13 +9894,13 @@ width: 60%;
   position: relative;
   width: 100%;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
   padding: 60px 20px;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
   color: black;
 
   background-image: url('/assets/images/slider/7.jpg');
@@ -9909,77 +9909,7 @@ width: 60%;
   background-position: top center;
 }
 
-.slider-content {
-  position: relative;
-  z-index: 2;
-  max-width: 720px;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Top line (fixing italics) */
-.hero-subheading {
-  font-size: 1.75rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #222;
-  line-height: 1.4;
-  font-style: normal !important;  /* 💥 override inherited italics */
-}
-
-/* Main headline */
-.main-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: black;
-}
-
-/* Supporting line */
-.hero-tagline {
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-/* CTA Button */
-.btn-primary {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #4c6ef5;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: inline-block;
-  z-index: 2;
-  position: relative;
-}
-
-.btn-primary:hover {
-  background-color: #3b5bdb;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .hero-banner {
-    padding: 40px 20px;
-  }
-
-  .hero-subheading {
-    font-size: 1.5rem;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .hero-tagline {
-    font-size: 1rem;
-  }
-}
+/* Slider Layout Containers */
 .slider-section {
   min-height: 100vh;
   display: flex;
@@ -9996,39 +9926,35 @@ width: 60%;
   overflow: visible;
 }
 
-.hero-banner {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: visible;
-
-  background-image: url('/assets/images/slider/7.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Force top line (hero-subheading) to use Montserrat and not italic */
-.slider-content .hero-subheading {
-  font-style: normal !important;
-  font-family: 'Montserrat', sans-serif !important;
-}
-
-/* Add spacing above CTA button */
-.btn-primary {
-  margin-top: 1.5rem;
-}
+/* Hero Text Content */
 .slider-content {
-  max-height: 80vh; /* ensures content doesn't stretch too far vertically */
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  max-height: 80vh;
   overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* Top Line */
+.hero-subheading,
+.slider-content .hero-subheading {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #222;
+  line-height: 1.4;
+  font-style: normal !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Main Headline */
 .main-title {
-  font-size: clamp(2rem, 5vw, 3rem); /* responsive scaling with a max size */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 1rem;
   color: black;
