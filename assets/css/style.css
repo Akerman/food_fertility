@@ -9948,13 +9948,14 @@ width: 60%;
   position: relative;
   z-index: 2;
   max-width: 720px;
+  width: 100%; /* 👈 allows button container to stretch */
   max-height: 80vh;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* 👈 ensures text stays left-aligned */
+  align-items: flex-start; /* 👈 keeps text left-aligned */
 }
 
 /* Top Line */
@@ -9987,13 +9988,21 @@ width: 60%;
    =============================== */
 .cta-buttons {
   display: flex;
-  justify-content: center; /* 👈 center horizontally */
-  width: 100%;             /* 👈 takes up full width of slider-content */
+  justify-content: center;
+  width: 100%;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
 
+.slider-content .btn {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Button Style */
 .btn-primary {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -10003,7 +10012,6 @@ width: 60%;
   border: none;
   border-radius: 0.5rem;
   text-decoration: none;
-  display: inline-block;
   z-index: 2;
   position: relative;
 }
@@ -10012,7 +10020,7 @@ width: 60%;
   background-color: #3b5bdb;
 }
 
-/* Optional: spacing if buttons aren't in a .cta-buttons wrapper */
+/* Spacing between buttons (if not using .cta-buttons) */
 .btn + .btn {
   margin-left: 1rem;
 }
@@ -10037,43 +10045,13 @@ width: 60%;
     font-size: 1rem;
   }
 
-.cta-buttons {
-  display: flex;
-  justify-content: center;  /* 👈 center buttons */
-  width: 100%;              /* 👈 stretch container full width */
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-.btn-primary {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #4c6ef5;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: inline-block;
-  z-index: 2;
-  position: relative;
-}
-
-.btn-primary:hover {
-  background-color: #3b5bdb;
-}
-
-/* Make hero buttons auto-size to content */
-.slider-content .btn {
-  display: inline-block;
-  width: auto;
-  text-align: center;
-  white-space: nowrap;
-  margin-top: 1.5rem;
-}
-
-/* Optional: spacing if buttons aren't in a .cta-buttons wrapper */
-.btn + .btn {
-  margin-left: 1rem;
+  .btn + .btn {
+    margin-left: 0;
+  }
 }
