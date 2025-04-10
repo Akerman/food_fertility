@@ -114,4 +114,22 @@ title: Home Page
             </div>
         </div>
         <!-- About Section End -->
-        
+        <!-- Sticky Header Support Script -->
+<style>
+  body {
+    padding-top: 100px; /* Adjust to match header height */
+  }
+</style>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header-main');
+    if (window.scrollY > 100) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+</script>
+</body>
+</html>
