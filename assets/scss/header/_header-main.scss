@@ -2,16 +2,16 @@
 /*  3.1 - Header Top CSS
 /*----------------------------------------*/
 
-// Header Main 
 .header-main {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
     background-color: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); // optional subtle shadow
 
-    @media #{$tablet-device, $large-mobile}{
+    @media #{$tablet-device, $large-mobile} {
         padding: 15px 0;
     }
 }
