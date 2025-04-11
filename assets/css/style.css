@@ -9948,14 +9948,14 @@ width: 60%;
   position: relative;
   z-index: 2;
   max-width: 720px;
-  width: 100%; /* 👈 allows button container to stretch */
+  width: 100%; /* Allows button container to stretch */
   max-height: 80vh;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* 👈 keeps text left-aligned */
+  align-items: flex-start; /* Keeps text left-aligned */
 }
 
 /* Top Line */
@@ -9993,10 +9993,13 @@ width: 60%;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-
-  /* 👇 This line overrides the inherited alignment */
   align-self: center;
+
+  /* ✅ Ensures centering in left-aligned parent */
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .slider-content .btn {
   display: inline-block;
   width: auto;
