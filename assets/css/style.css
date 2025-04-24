@@ -10061,3 +10061,34 @@ width: 60%;
     margin-left: 0;
   }
 }
+.fertility-steps {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.fertility-steps .section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+}
