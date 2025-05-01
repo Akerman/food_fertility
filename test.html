@@ -72,59 +72,56 @@ title: Home Page
 <!-- Fertility Steps Section End -->
 
 <style>
+/* Fertility Steps Section */
 .fertility-steps {
-    background-color: #f8f6f4; /* Updated to match site-wide gray */
-    padding: 60px 20px;
-    margin: 50px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f8f6f4 100%);
+    padding: 40px 20px; /* reduced top padding slightly */
+    margin: 0 0 50px 0; /* remove top margin, keep bottom space */
+    border-radius: 10px; /* softly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    text-align: center; /* center-align all text */
+    font-family: 'Montserrat', sans-serif; /* apply Montserrat font */
 }
 
 .fertility-steps-wrapper {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .fertility-steps h2.section-title {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 700;
-    color: #2f6859; /* dark green title color */
 }
 
 .steps-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .step h3 {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 24px;
     margin-bottom: 10px;
-    color: #1d4979; /* navy blue step title */
+    font-weight: 600;
 }
 
 .step p {
     font-size: 16px;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
-    color: #333;
 }
 
-/* Optional: make side-by-side on desktop */
-@media (min-width: 768px) {
-    .steps-list {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+/* Remove gap BELOW the section above (adjust class name if needed) */
+.features-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
-    .step {
-        flex: 1;
-        padding: 0 15px;
-    }
+/* Remove gap ABOVE the fertility-steps section */
+.fertility-steps {
+    margin-top: 0;
+    padding-top: 40px; /* or adjust if needed */
 }
 </style>
 
