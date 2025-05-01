@@ -10121,7 +10121,7 @@ width: 60%;
   touch-action: manipulation;
 }
 .fertility-steps {
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f8f6f4 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f8f6f4 100%);
     padding: 60px 20px; /* space top/bottom and sides */
     margin: 40px 0; /* space outside the section */
     border-radius: 10px; /* softly rounded corners */
