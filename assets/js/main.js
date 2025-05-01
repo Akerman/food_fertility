@@ -31,9 +31,9 @@
             $('.overlay').removeClass('open')
         });
         
-        $('.overlay').on('click', function(){
-            $('.mobile-menu').removeClass('open')
-            $('.overlay').removeClass('open')
+       $('.overlay:not(.slider-overlay)').on('click', function(){
+       $('.mobile-menu').removeClass('open');
+       $('.overlay').removeClass('open');
         });
         
         /*Variables*/
