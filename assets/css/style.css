@@ -10121,7 +10121,7 @@ width: 60%;
   touch-action: manipulation;
 }
 .fertility-steps {
-    background-color: #f8f9fa; /* light gray background */
+    background: linear-gradient(to bottom, #ffffff, #f8f6f4); /* white to site gray gradient */
     padding: 60px 20px; /* space top/bottom and sides */
     margin: 40px 0; /* space outside the section */
     border-radius: 10px; /* softly rounded corners */
