@@ -10123,7 +10123,7 @@ width: 60%;
 /* Fertility Steps Section */
 .fertility-steps {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f8f6f4 100%);
-    padding: 60px 20px; /* space top/bottom and sides */
+    padding: 40px 20px; /* reduced top padding slightly */
     margin: 0 0 50px 0; /* remove top margin, keep bottom space */
     border-radius: 10px; /* softly rounded corners */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
@@ -10160,7 +10160,7 @@ width: 60%;
     margin: 0 auto;
 }
 
-/* Section above (replace '.features-section' with the actual class/ID of the section above) */
+/* Section above — adjust class if needed */
 .features-section {
     margin-bottom: 0;
     padding-bottom: 0;
