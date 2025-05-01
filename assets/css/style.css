@@ -10120,10 +10120,11 @@ width: 60%;
   cursor: pointer !important;
   touch-action: manipulation;
 }
+./* Fertility Steps Section */
 .fertility-steps {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f8f6f4 100%);
     padding: 60px 20px; /* space top/bottom and sides */
-    margin: 40px 0; /* space outside the section */
+    margin: 0 0 50px 0; /* remove top margin, keep bottom space */
     border-radius: 10px; /* softly rounded corners */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
     text-align: center; /* center-align all text */
@@ -10157,4 +10158,10 @@ width: 60%;
     font-size: 16px;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Section above (replace '.features-section' with the actual class/ID of the section above) */
+.features-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
