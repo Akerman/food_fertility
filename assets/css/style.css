@@ -10093,3 +10093,30 @@ width: 60%;
   color: #555;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* ===============================
+   Try to fix Links
+   =============================== */
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0);
+  pointer-events: none !important;
+}
+.cta-buttons {
+  position: relative;
+  z-index: 20 !important;
+  pointer-events: auto !important;
+}
+.quiz-link {
+  position: relative;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  touch-action: manipulation;
+}
