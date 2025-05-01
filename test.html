@@ -12,8 +12,8 @@ title: Home Page
         <h1 class="main-title">Improve Your Fertility With Nutrition.</h1>
         <p class="hero-tagline">Ready to take the next step? Take the quiz or book an appointment below.</p> 
         <div class="cta-buttons">
-          <a class="btn btn-secondary btn-hover-primary quiz-link" href="/quiz.html">Take the Quiz</a>
-          <a class="btn btn-secondary btn-hover-primary" href="schedule.html">Book an Appointment</a>
+          <a class="custom-btn" href="/quiz.html">Take the Quiz</a>
+          <a class="custom-btn" href="schedule.html">Book an Appointment</a>
         </div>
       </div>
     </div>
@@ -21,15 +21,22 @@ title: Home Page
 </div>
 <!-- Slider Content End -->
 
-    </div>
-  </div>
-</div>
-<!-- Slider Section End -->
+<style>
+.custom-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8f6f4; /* Light gray background */
+    color: #2c241b; /* Dark brown text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        <!-- Slider Section End -->
-            </div>
-        </div> 
-    </div>
+.custom-btn:hover {
+    background-color: #ffa300; /* Orange background on hover */
+    color: #fff; /* White text on hover */
+}
+</style>
 
 <!-- Fertility Steps Section Start -->
 <section class="fertility-steps">
