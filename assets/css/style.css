@@ -10109,9 +10109,15 @@ width: 60%;
   pointer-events: none !important;
 }
 .cta-buttons {
-  position: relative;
-  z-index: 20 !important;
-  pointer-events: auto !important;
+    position: relative;
+    z-index: 20 !important;
+    pointer-events: auto !important;
+
+    display: flex;
+    justify-content: center; /* centers buttons horizontally */
+    flex-wrap: wrap; /* allows stacking on small screens */
+    gap: 10px; /* space between buttons */
+    margin-top: 20px;
 }
 .quiz-link {
   position: relative;
