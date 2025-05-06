@@ -10033,6 +10033,209 @@ width: 60%;
 }
 
 /* ===============================
+   Hero Banner & Slider
+   =============================== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  z-index: 1;
+  background-image: url('/assets/images/slider/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.slider-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-slider {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: 100%;
+  max-height: 80vh;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-subheading {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #222;
+  line-height: 1.4;
+}
+
+.main-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.hero-tagline {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* ===============================
+   CTA Buttons
+   =============================== */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  align-self: stretch;
+  text-align: center;
+  position: relative;
+  z-index: 20 !important;
+  pointer-events: auto !important;
+}
+
+.custom-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2f6859;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+  background-color: #3b8a72;
+  color: #fff;
+  text-decoration: none;
+}
+
+.quiz-link {
+  position: relative;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  touch-action: manipulation;
+}
+
+/* ===============================
+   Fertility Steps Section (New)
+   =============================== */
+.fertility-steps-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fertility-steps-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #1d4939;
+}
+
+.fertility-steps-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fertility-step {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fertility-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fertility-step img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.fertility-step h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d4939;
+  margin-bottom: 10px;
+}
+
+.fertility-step p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* ===============================
+   Features Section (if still used)
+   =============================== */
+.features-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ===============================
+   Overlay Background Layer
+   =============================== */
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0);
+  pointer-events: none;
+}
+
+/* ===============================
    Responsive Tweaks
    =============================== */
 @media (max-width: 768px) {
@@ -10058,117 +10261,8 @@ width: 60%;
     gap: 0.75rem;
   }
 
-  .btn + .btn {
-    margin-left: 0;
-  }
-}
-.fertility-steps {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.fertility-steps .section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.steps-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.step h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.step p {
-  font-size: 1rem;
-  color: #555;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* ===============================
-   Try to fix Links
-   =============================== */
-
-.slider-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  background: rgba(255, 255, 255, 0);
-  pointer-events: none !important;
-}
-..cta-buttons {
-    position: relative;
-    z-index: 20 !important;
-    pointer-events: auto !important;
-
-    display: flex;
-    justify-content: center; /* centers buttons horizontally */
-    flex-wrap: wrap; /* allows stacking on small screens */
-    gap: 10px; /* space between buttons */
-    margin-top: 40px; /* increased from 20px to 40px for more space above */
-}
-
-.quiz-link {
-  position: relative;
-  z-index: 10 !important;
-  pointer-events: auto !important;
-  cursor: pointer !important;
-  touch-action: manipulation;
-}
-/* Fertility Steps Section */
-.fertility-steps {
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f8f6f4 100%);
-    padding: 40px 20px; /* reduced top padding slightly */
-    margin: 0 0 50px 0; /* remove top margin, keep bottom space */
-    border-radius: 10px; /* softly rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
-    text-align: center; /* center-align all text */
-    font-family: 'Montserrat', sans-serif; /* apply Montserrat font */
-}
-
-.fertility-steps-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.fertility-steps h2.section-title {
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.steps-list {
-    display: flex;
+  .fertility-steps-container {
     flex-direction: column;
-    gap: 20px;
-}
-
-.step h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.step p {
-    font-size: 16px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Section above — adjust class if needed */
-.features-section {
-    margin-bottom: 0;
-    padding-bottom: 0;
+    align-items: center;
+  }
 }
