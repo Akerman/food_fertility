@@ -10309,7 +10309,7 @@ width: 60%;
    ======================================== */
 
 .value-section {
-  background-image: url('assets/images/baby.png');
+  background-image: url('/assets/images/baby.png');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
