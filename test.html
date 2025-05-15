@@ -5,9 +5,9 @@ title: Home Page
 
 <!-- Slider Section Start -->
 <div class="slider-section">
-  <div class="single-slider hero-banner d-flex align-items-center" style="position: relative; overflow: hidden; min-height: 600px;">
+  <div class="single-slider hero-banner d-flex align-items-center" style="position: relative; overflow: hidden; min-height: 600px; background: none;">
 
-    <!-- Background Image with Opacity -->
+    <!-- Actual Colored Background Image -->
     <div style="
       position: absolute;
       top: 0;
@@ -17,12 +17,22 @@ title: Home Page
       background-image: url('/assets/images/menu-icon/Couple.png');
       background-size: cover;
       background-position: center;
-      opacity: 0.45;
       z-index: 1;
     "></div>
 
+    <!-- Transparent Overlay Layer for better text contrast -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3); /* adjust transparency here */
+      z-index: 2;
+    "></div>
+
     <!-- Content Container -->
-    <div class="container" style="position: relative; z-index: 2;">
+    <div class="container" style="position: relative; z-index: 3;">
       <div class="slider-content">
         <p class="hero-subheading" style="font-style: normal; font-family: 'Montserrat', sans-serif;">
           Align your body with your dreams.
