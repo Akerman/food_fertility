@@ -10372,3 +10372,36 @@ width: 60%;
     margin-bottom: 20px;
   }
 }
+/* Value Stack Card Styles */
+.value-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.value-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1d4939;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.value-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  display: none;
+}
+
+.value-header.active + .value-content {
+  display: block;
+}
