@@ -113,79 +113,89 @@ title: Home Page
   </div>
 </div>
 <!-- Simple Steps Section End -->
-<!-- Value Stack Section with Full Image Background -->
-<section style="position: relative; width: 100%; min-height: 600px; background-color: #f8f6f4; overflow: hidden; font-family: 'Montserrat', sans-serif;">
+<!-- Value Stack Grid with Toggle Details -->
+<section style="position: relative; background-image: url('/assets/images/menu-icon/Baby.png'); background-size: cover; background-position: center; padding: 80px 20px;">
 
-  <!-- Full-color Baby Image as Background -->
-  <div style="
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/images/menu-icon/Baby.png');
-    background-size: cover;
-    background-position: 60% 30%;
-    z-index: 1;
-  "></div>
+  <!-- Overlay to soften background -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.3); z-index: 1;"></div>
 
-  <!-- White Overlay to Brighten Image and Improve Text Readability -->
-  <div style="
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2); /* adjust for brightness */
-    z-index: 2;
-  "></div>
+  <!-- Grid Container -->
+  <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
 
-  <!-- Content Container -->
-  <div style="
-    position: relative;
-    z-index: 3;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 600px;
-  ">
-    <!-- Transparent Text Box -->
-    <div style="
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 40px 30px;
-      border-radius: 16px;
-      max-width: 420px;
-      width: 100%;
-      color: #1d4939;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    ">
-      <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 25px;">
-        Nutrition Plan to Get You Closer to Baby
-      </h2>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
-        <li style="margin-bottom: 18px;">
-          <strong style="display: block; font-size: 1.1rem; font-weight: 600;">1:1 Fertility Nutrition Support</strong>
-          Clear, confident steps to improve your fertility.
-        </li>
-        <li style="margin-bottom: 18px;">
-          <strong style="display: block; font-size: 1.1rem; font-weight: 600;">Science-Based Solutions</strong>
-          Follow proven strategies that support your body and hormones.
-        </li>
-        <li style="margin-bottom: 18px;">
-          <strong style="display: block; font-size: 1.1rem; font-weight: 600;">A Plan Built Around You</strong>
-          Manage PCOS, endo, IVF prep, or miscarriage with a plan that fits your life.
-        </li>
-        <li>
-          <strong style="display: block; font-size: 1.1rem; font-weight: 600;">Support Your Baby’s Future Health</strong>
-          Nourish your body before pregnancy to give your baby a strong start.
-        </li>
-      </ul>
+    <!-- Card 1 -->
+    <div class="value-card">
+      <button class="value-header">1:1 Fertility Nutrition Support</button>
+      <div class="value-content">Clear, confident steps to improve your fertility.</div>
     </div>
+
+    <!-- Card 2 -->
+    <div class="value-card">
+      <button class="value-header">Science-Based Solutions</button>
+      <div class="value-content">Follow proven strategies that support your body and hormones.</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="value-card">
+      <button class="value-header">A Plan Built Around You</button>
+      <div class="value-content">Manage PCOS, endo, IVF prep, or miscarriage with a plan that fits your life.</div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="value-card">
+      <button class="value-header">Support Your Baby’s Future Health</button>
+      <div class="value-content">Nourish your body before pregnancy to give your baby a strong start.</div>
+    </div>
+
   </div>
 </section>
+
+<style>
+.value-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.value-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1d4939;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.value-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  display: none;
+}
+
+.value-header.active + .value-content {
+  display: block;
+}
+</style>
+
+<script>
+// Toggle functionality for each card
+const headers = document.querySelectorAll('.value-header');
+headers.forEach(header => {
+  header.addEventListener('click', () => {
+    header.classList.toggle('active');
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
 
 
 
