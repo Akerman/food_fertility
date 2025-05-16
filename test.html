@@ -260,14 +260,24 @@ body {
 <!-- About Section End -->
 
 <script>
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('.header-main');
-  if (window.scrollY > 100) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
-});
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header-main');
+    if (window.scrollY > 100) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+
+  // Value Stack toggle functionality
+  document.querySelectorAll('.value-header').forEach(header => {
+    header.addEventListener('click', () => {
+      header.classList.toggle('active');
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
 </script>
+
 </body>
 </html>
