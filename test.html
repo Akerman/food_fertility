@@ -268,13 +268,14 @@ body {
       header.classList.remove('sticky');
     }
   });
-
-  // Value Stack toggle functionality
-  document.querySelectorAll('.value-header').forEach(header => {
-    header.addEventListener('click', () => {
-      header.classList.toggle('active');
-      const content = header.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+ // Toggle functionality for value stack
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.value-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
     });
   });
 </script>
