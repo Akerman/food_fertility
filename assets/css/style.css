@@ -10304,10 +10304,9 @@ width: 60%;
   color: #444;
   margin: 0;
 }
-/* ========================================
-   Background Image Value Section (New)
+ /* ========================================
+   Background Image Value Section (Legacy)
    ======================================== */
-
 .value-section {
   background-image: url('/assets/images/baby.png');
   background-size: cover;
@@ -10316,7 +10315,6 @@ width: 60%;
   position: relative;
   color: #fff;
 }
-
 
 .value-overlay {
   background-color: rgba(29, 73, 57, 0.75); /* dark green overlay */
@@ -10355,7 +10353,7 @@ width: 60%;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #ffffff;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -10364,15 +10362,45 @@ width: 60%;
     text-align: center;
   }
 
-  .value-list {
-    font-size: 1rem;
-  }
-
   .value-list li {
     margin-bottom: 20px;
   }
 }
-/* Value Stack Card Styles */
+
+/* ========================================
+   Value Stack Grid Section (Toggle Cards)
+   ======================================== */
+.value-stack-section {
+  position: relative;
+  width: 100%;
+  background-image: url('https://foodandfertility.com/assets/images/menu-icon/Baby.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.value-stack-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
 .value-card {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 20px;
@@ -10380,6 +10408,7 @@ width: 60%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
+
 .value-header {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
@@ -10393,12 +10422,14 @@ width: 60%;
   padding: 0;
   margin-bottom: 10px;
 }
+
 .value-content {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   color: #333;
   display: none;
 }
+
 .value-header.active + .value-content {
   display: block;
 }
