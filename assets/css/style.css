@@ -10360,7 +10360,6 @@ width: 60%;
   font-family: 'Montserrat', sans-serif;
   color: #1d4939;
 }
-
 /* Accordion body */
 .accordion-body {
   font-family: 'Montserrat', sans-serif;
@@ -10370,4 +10369,15 @@ width: 60%;
   background-color: #fff;
   padding: 16px 20px;
   border-top: 1px solid #ddd;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: #f1f5f3 !important; /* same as default background */
+  color: #1d4939 !important; /* green text */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f1f5f3 !important;
+  color: #1d4939 !important;
 }
