@@ -10413,3 +10413,21 @@ width: 60%;
 .faq-accordion .accordion-item button {
   font-size: 18px !important;
 }
+/* Rounded edges for each accordion item */
+.faq-accordion .accordion-item {
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+}
+
+/* Optional: soften the question buttons too */
+.faq-accordion .accordion-item button {
+  border-radius: 0 !important; /* keeps top flush with accordion item */
+}
+
+/* Optional: round bottom corners of the answer box */
+.faq-accordion .accordion-body {
+  border-radius: 0 0 12px 12px;
+}
