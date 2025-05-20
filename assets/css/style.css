@@ -10376,3 +10376,9 @@ width: 60%;
   padding: 16px 20px;
   border-top: 1px solid #ddd;
 }
+.accordion-item {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
