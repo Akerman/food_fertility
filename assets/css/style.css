@@ -10340,25 +10340,32 @@ width: 60%;
 .value-header.active + .value-content {
   display: block;
 }
-/* Accordion button when open */
-.accordion-button:not(.collapsed) {
-  background-color: #e0f0eb; /* lighter green */
-  color: #2f6859; /* brand green text */
+/* Accordion button text and style */
+.accordion-button {
+  background-color: #ffffff !important;
+  color: #1d4939 !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  border-color: #2f6859;
-  box-shadow: none;
+  border: none;
 }
 
-/* Accordion button on hover */
+/* Accordion button hover */
 .accordion-button:hover {
-  background-color: #e6f3ef; /* even lighter green on hover */
-  color: #2f6859;
+  background-color: #f8f8f8 !important;
+  color: #1d4939 !important;
 }
-/* Accordion button text */
-.accordion-button {
-  font-family: 'Montserrat', sans-serif;
-  color: #1d4939;
+
+/* Accordion button when open or focused */
+.accordion-button:focus,
+.accordion-button:focus-visible,
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff !important;
+  color: #1d4939 !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
+
 /* Accordion body */
 .accordion-body {
   font-family: 'Montserrat', sans-serif;
@@ -10368,14 +10375,4 @@ width: 60%;
   background-color: #fff;
   padding: 16px 20px;
   border-top: 1px solid #ddd;
-}
-
-/* Accordion button states */
-.accordion-button:focus,
-.accordion-button:focus-visible,
-.accordion-button:not(.collapsed) {
-  box-shadow: none !important;
-  outline: none !important;
-  background-color: #f1f5f3 !important;
-  color: #1d4939 !important;
 }
