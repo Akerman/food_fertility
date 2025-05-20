@@ -10382,3 +10382,30 @@ width: 60%;
   border-radius: 6px;
   margin-bottom: 16px;
 }
+/* Your current accordion styles (keep these) */
+/* ... your existing code from your last message ... */
+
+/* Then add this at the bottom ⬇️ */
+.faq-accordion .accordion-item button {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  background-color: #ffffff !important;
+  color: #1d4939 !important;
+  border: none !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.faq-accordion .accordion-item button.collapsed {
+  background-color: #ffffff !important;
+  color: #1d4939 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.faq-accordion .accordion-body {
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #ffffff !important;
+  font-style: italic;
+  color: #333;
+  font-size: 0.95rem;
+}
