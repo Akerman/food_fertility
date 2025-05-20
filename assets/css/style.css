@@ -10354,7 +10354,6 @@ width: 60%;
   background-color: #e6f3ef; /* even lighter green on hover */
   color: #2f6859;
 }
-
 /* Accordion button text */
 .accordion-button {
   font-family: 'Montserrat', sans-serif;
@@ -10370,14 +10369,13 @@ width: 60%;
   padding: 16px 20px;
   border-top: 1px solid #ddd;
 }
-.accordion-button:focus {
+
+/* Accordion button states */
+.accordion-button:focus,
+.accordion-button:focus-visible,
+.accordion-button:not(.collapsed) {
   box-shadow: none !important;
   outline: none !important;
-  background-color: #f1f5f3 !important; /* same as default background */
-  color: #1d4939 !important; /* green text */
-}
-
-.accordion-button:not(.collapsed) {
   background-color: #f1f5f3 !important;
   color: #1d4939 !important;
 }
