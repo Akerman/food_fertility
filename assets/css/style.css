@@ -10409,3 +10409,7 @@ width: 60%;
   color: #333;
   font-size: 0.95rem;
 }
+/* Decrease accordion question font size for Value Stack */
+.faq-accordion .accordion-item button {
+  font-size: 18px !important;
+}
