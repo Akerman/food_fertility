@@ -10431,3 +10431,30 @@ width: 60%;
 .faq-accordion .accordion-body {
   border-radius: 0 0 12px 12px;
 }
+.custom-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2f6859;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.custom-btn:hover {
+  background-color: #3b8a72;
+  color: #fff;
+}
+
+.negative-btn {
+  background-color: #ffffff;
+  color: #2f6859;
+  border: 2px solid #2f6859;
+}
+
+.negative-btn:hover {
+  background-color: #e1f0ea;
+}
