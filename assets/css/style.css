@@ -10470,3 +10470,8 @@ width: 60%;
   width: 100%;
   height: auto;
 }
+@media (max-width: 767px) {
+  .faq-accordion {
+    margin-top: 16px !important;
+  }
+}
