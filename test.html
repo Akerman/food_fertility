@@ -249,17 +249,11 @@ title: Home Page
 body {
     padding-top: 100px;
 }
-</style>
-<script>
-  window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header-main');
-    if (window.scrollY > 100) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-    }
-  });
-</script>
 
-</body>
-</html>
+/* ✅ Mobile image spacing fix */
+@media (max-width: 767px) {
+    .couple-image-section {
+        padding-top: 0px !important;
+    }
+}
+</style>
