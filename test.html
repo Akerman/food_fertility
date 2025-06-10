@@ -186,7 +186,7 @@ title: Home Page
 .custom-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #2f6859; /* Darker green */
+    background-color: #2f6859;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -203,7 +203,7 @@ title: Home Page
 .custom-btn:hover,
 .custom-btn:focus,
 .custom-btn:active {
-    background-color: #3b8a72; /* Lighter green on hover/click */
+    background-color: #3b8a72;
     color: #fff;
     text-decoration: none;
 }
@@ -257,3 +257,14 @@ body {
     }
 }
 </style>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header-main');
+    if (window.scrollY > 100) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+</script>
