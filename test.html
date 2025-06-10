@@ -186,7 +186,7 @@ title: Home Page
 .custom-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #2f6859;
+    background-color: #2f6859; /* Darker green */
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -203,7 +203,7 @@ title: Home Page
 .custom-btn:hover,
 .custom-btn:focus,
 .custom-btn:active {
-    background-color: #3b8a72;
+    background-color: #3b8a72; /* Lighter green on hover/click */
     color: #fff;
     text-decoration: none;
 }
@@ -249,15 +249,7 @@ title: Home Page
 body {
     padding-top: 100px;
 }
-
-/* ✅ Mobile image spacing fix */
-@media (max-width: 767px) {
-    .couple-image-section {
-        padding-top: 0px !important;
-    }
-}
 </style>
-
 <script>
   window.addEventListener('scroll', function () {
     const header = document.querySelector('.header-main');
@@ -268,3 +260,6 @@ body {
     }
   });
 </script>
+
+</body>
+</html>
