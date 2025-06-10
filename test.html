@@ -253,6 +253,19 @@ title: Home Page
 body {
     padding-top: 100px;
 }
+  /* Restore couple image visibility on mobile */
+@media (max-width: 767px) {
+  .couple-image-section {
+    display: block !important;
+    padding-top: 20px !important;
+  }
+
+  .couple-image-section img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
 <script>
   window.addEventListener('scroll', function () {
