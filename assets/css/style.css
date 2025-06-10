@@ -10458,3 +10458,15 @@ width: 60%;
 .negative-btn:hover {
   background-color: #e1f0ea;
 }
+.rounded-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.rounded-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
