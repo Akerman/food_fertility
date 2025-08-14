@@ -1,0 +1,283 @@
+---
+layout: default
+title: Home Page
+---
+
+<!-- Hero Banner Section Start -->
+<div class="slider-section" style="background-color: #ffffff; padding: 80px 0 10px 0;">
+  <div class="container text-center">
+    <div class="slider-content" style="max-width: 720px; margin: 0 auto;">
+      <h1 class="main-title" style="font-family: 'Montserrat', sans-serif; color: #1d4939; font-size: 3rem; font-weight: 700; margin-bottom: 0.25rem;">
+        Improve Your Fertility With Nutrition.
+      </h1>
+      <p class="hero-subheading" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-style: italic; color: #1d4939; margin: 0.75rem 0;">
+        Align your body and your dreams!
+      </p>
+      <div class="cta-buttons" style="margin-top: 1.5rem;">
+  <a class="custom-btn" href="/waitlist.html">Join the Virtual Launch Waitlist</a>
+  <div style="margin-top:8px;color:#5b6b64;font-size:14px;font-family:'Montserrat',sans-serif;">
+    Virtual consults open October 2025 • California-wide
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<!-- Hero Banner Section End -->
+<!-- Image Section Start -->
+<div class="section text-center couple-image-section" style="background-color: #ffffff; padding: 0px 20px 40px 20px;">
+  <div class="rounded-image-wrapper">
+    <img src="/assets/images/Couple6.png" alt="Couple">
+  </div>
+</div>
+<!-- Image Section End -->
+<!-- Nutrition Support + Quiz Section Start -->
+<div class="section section-padding" style="background-color: #fffbf9; text-align: center; padding: 60px 20px;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-family: 'Montserrat', sans-serif; color: #1d4939; font-size: 2.25rem; font-weight: 700; margin-bottom: 16px;">
+      Nutrition can be the support your body needs to grow your family.
+    </h2>
+    <p style="font-family: 'Montserrat', sans-serif; color: #444; font-size: 1.125rem; font-weight: 500; margin-bottom: 32px;">
+      Are you ready for a plan?<br>
+      Take this 2-minute quiz and find out.
+    </p>
+    <a class="custom-btn" href="/quiz.html">Take the Quiz</a>
+  </div>
+</div>
+<!-- Nutrition Support + Quiz Section End -->
+<!-- Steps Section Start -->
+<div class="section section-padding" style="background-color: #f1f5f3;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+
+  <!-- Section Title -->
+<div class="text-center" style="margin-bottom: 40px;">
+  <h2 style="
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1d4939;
+    letter-spacing: 0.5px;
+  ">
+    Simple 3-Step Process
+  </h2>
+</div>
+
+    <!-- Step 1 -->
+ <div style="background: #fff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 24px;">
+  <div class="d-flex align-items-start gap-3">
+    <div style="min-width: 40px; height: 40px; background-color: #1d4939; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700;">
+      1
+    </div>
+    <div>
+      <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1d4939; margin-bottom: 5px;">
+        Join the Virtual Launch Waitlist
+      </h3>
+      <p style="font-family: 'Montserrat', sans-serif; color: #444; margin-bottom: 12px;">
+        Be first in line for October 2025 scheduling and early access updates.
+      </p>
+      <a href="/waitlist.html" class="custom-btn">Join The Waitlist Now</a>
+      <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #a33; margin-top: 8px;">
+        Spots are limited — priority scheduling for waitlist members.
+      </p>
+    </div>
+  </div>
+</div>
+    <!-- Step 2 -->
+    <div style="background: #fff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 24px;">
+      <div class="d-flex align-items-start gap-3">
+        <div style="min-width: 40px; height: 40px; background-color: #1d4939; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700;">
+          2
+        </div>
+        <div>
+          <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1d4939; margin-bottom: 5px;">
+            Receive Your Personalized Plan
+          </h3>
+          <p style="font-family: 'Montserrat', sans-serif; color: #444;">Together we’ll explore your nutrition, lifestyle, and baby goals to create your plan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div style="background: #fff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); padding: 20px;">
+      <div class="d-flex align-items-start gap-3">
+        <div style="min-width: 40px; height: 40px; background-color: #1d4939; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700;">
+          3
+        </div>
+        <div>
+          <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1d4939; margin-bottom: 5px;">
+            Improve Your Fertility
+          </h3>
+          <p style="font-family: 'Montserrat', sans-serif; color: #444;">Feel empowered as you take action toward the family of your dreams.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Steps Section End -->
+<!-- Baby Image Section Start -->
+<div class="section text-center" style="background-color: #fffbf9; padding: 40px 20px;">
+  <div class="rounded-image-wrapper">
+    <img src="/assets/images/Baby6.png" alt="Baby">
+  </div>
+</div>
+<!-- Baby Image Section End -->
+<!-- Unified Value Stack / FAQ Section Start -->
+<div class="section" style="padding: 60px 20px; background-color: #fffbf9;">
+  <div class="container" style="max-width:1100px; margin:0 auto;">
+
+    <!-- Section Title -->
+    <!-- Section Title -->
+     <div class="text-start" style="margin-bottom: 24px;">
+      <h2 class="section-title shape-none" style="
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #1d4939;
+        margin-bottom: 0;">
+        How We Support Your Fertility Journey
+      </h2>
+    </div>
+
+    <!-- FAQ-Style Accordion Start -->
+    <div class="faq-accordion" id="accordionSupport" style="width: 100%; margin-top: 0;">
+
+      <!-- Accordion Item 1 -->
+      <div class="accordion-item" style="border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px;">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportOne"
+          style="font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 600; color: #1d4939; background-color: #f9f9f9; padding: 14px 20px;">
+          Get a Comprehensive Nutrition & Lifestyle Assessment
+        </button>
+        <div id="supportOne" class="accordion-collapse collapse" data-bs-parent="#accordionSupport">
+          <div class="accordion-body" style="padding: 16px 20px; font-family: 'Montserrat', sans-serif; color: #444;">
+            We complete a full nutrition and lifestyle assessment, including your diet, medical history, symptoms, and fertility goals. This allows us to tailor recommendations to your unique needs and develop a clear plan for next steps.
+          </div>
+        </div>
+      </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item" style="border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px;">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportTwo"
+            style="font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 600; color: #1d4939; background-color: #f9f9f9; padding: 14px 20px;">
+            Follow a Personalized Plan to Optimize Fertility
+          </button>
+          <div id="supportTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSupport">
+            <div class="accordion-body" style="padding: 16px 20px; font-family: 'Montserrat', sans-serif; color: #444;">
+              Based on your assessment, we create a personalized nutrition and lifestyle plan tailored to your goals, cycle, and health needs. You’ll receive step-by-step guidance — including tailored meal ideas or a sample plan — to support hormone balance, improve egg or sperm quality, and help enhance your fertility.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item" style="border: 1px solid #e0e0e0; border-radius: 8px;">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFour"
+            style="font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 600; color: #1d4939; background-color: #f9f9f9; padding: 14px 20px;">
+            Nourish Your Body for a Healthy Pregnancy and Baby
+          </button>
+          <div id="supportFour" class="accordion-collapse collapse" data-bs-parent="#accordionSupport">
+            <div class="accordion-body" style="padding: 16px 20px; font-family: 'Montserrat', sans-serif; color: #444;">
+              A healthy preconception diet can help support pregnancy and lay the groundwork for your baby’s future health. We’ll help you make simple, sustainable changes to nourish your body and support your fertility.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- FAQ-Style Accordion End -->
+
+  </div>
+</div>
+<!-- Unified Value Stack / FAQ Section End -->
+<style>
+.custom-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2f6859; /* Darker green */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+    background-color: #3b8a72; /* Lighter green on hover/click */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Fertility Steps Section (new) */
+.fertility-steps-section {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fertility-steps-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #1d4939;
+}
+
+.fertility-steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.fertility-step {
+    max-width: 200px;
+}
+
+.fertility-step img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.fertility-step h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d4939;
+    margin: 0;
+}
+
+body {
+    padding-top: 100px;
+}
+  /* Restore couple image visibility on mobile */
+@media (max-width: 767px) {
+  .couple-image-section {
+    display: block !important;
+    padding-top: 20px !important;
+  }
+
+  .couple-image-section img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header-main');
+    if (window.scrollY > 100) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+</script>
+
+</body>
+</html>
