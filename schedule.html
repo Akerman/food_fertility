@@ -1,234 +1,138 @@
 ---
 layout: default
-title: Book An Appointment
----
----
-layout: default
 title: Book an Appointment
 ---
 
-<style>
-  /* ===== Brand + Base ===== */
-  :root{
-    --ff-green:#1d4939;        /* primary */
-    --ff-accent:#f7980f;       /* accent */
-    --ff-ink:#1e2a27;          /* heading/body */
-    --ff-muted:#5c6a66;        /* secondary text */
-    --ff-bg:#ffffff;           /* page bg */
-    --ff-card:#f7faf9;         /* soft card bg */
-  }
-  .ff-container{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: clamp(16px, 3vw, 32px);
-  }
-  .ff-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: clamp(16px, 2.5vw, 28px);
-  }
-  @media (min-width: 960px){
-    .ff-grid{
-      grid-template-columns: 1.1fr 0.9fr; /* booking on left, info on right */
-      align-items: start;
-    }
-  }
+<!-- Page Container -->
+<div class="ff-container" style="max-width: 1100px; margin: 0 auto; padding: 32px 16px; font-family: 'Montserrat', sans-serif;">
 
-  /* ===== Headings & Text ===== */
-  .ff-hero{
-    text-align: center;
-    margin-bottom: clamp(12px, 2vw, 20px);
-  }
-  .ff-title{
-    color: var(--ff-green);
-    font-size: clamp(28px, 4vw, 40px);
-    line-height: 1.15;
-    letter-spacing: 0.2px;
-    margin: 0 0 8px;
-    font-weight: 700;
-  }
-  .ff-subtitle{
-    color: var(--ff-muted);
-    font-size: clamp(16px, 2.2vw, 18px);
-    margin: 0 auto;
-    max-width: 48ch;
-  }
-
-  /* ===== Card / Widget Shell ===== */
-  .ff-card{
-    background: var(--ff-card);
-    border: 1px solid rgba(29,73,57,0.08);
-    border-radius: 16px;
-    box-shadow:
-      0 1px 2px rgba(0,0,0,0.06),
-      0 6px 18px rgba(29,73,57,0.08);
-    padding: clamp(14px, 2vw, 18px);
-  }
-  .ff-card .ff-card-header{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 2px 4px 10px;
-  }
-  .ff-dot{
-    width: 10px; height: 10px; border-radius: 50%;
-    background: var(--ff-accent);
-    flex: 0 0 10px;
-  }
-  .ff-card-title{
-    margin: 0;
-    font-weight: 600;
-    color: var(--ff-ink);
-    font-size: 16px;
-    letter-spacing: .2px;
-  }
-
-  /* ===== Practice Better Embed ===== */
-  .better-inline-booking-widget{
-    position: relative;
-    overflow: hidden;      /* rounds iframe corners */
-    border-radius: 14px;   /* rounded corners */
-    background: #fff;
-    border: 1px solid rgba(29,73,57,0.08);
-    height: 780px;         /* default; overridden below on small screens */
-  }
-  .better-inline-booking-widget iframe{
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-  }
-  @media (max-width: 600px){
-    .better-inline-booking-widget{ height: 880px; } /* a bit taller for mobile */
-  }
-
-  /* ===== Right Column: Quick facts ===== */
-  .ff-list{
-    display: grid;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .ff-list li{
-    background: var(--ff-bg);
-    border: 1px solid rgba(29,73,57,0.08);
-    border-radius: 12px;
-    padding: 12px 14px;
-    display: grid;
-    grid-template-columns: 22px 1fr;
-    gap: 10px;
-    align-items: start;
-  }
-  .ff-bullet{
-    width: 22px; height: 22px; border-radius: 50%;
-    background: rgba(247,152,15,0.14);
-    display: grid; place-items: center;
-    color: var(--ff-green);
-    font-weight: 700; font-size: 12px;
-  }
-  .ff-li-title{
-    margin: 0 0 4px;
-    color: var(--ff-ink);
-    font-weight: 600;
-    font-size: 15px;
-  }
-  .ff-li-body{
-    margin: 0; color: var(--ff-muted);
-    font-size: 14px; line-height: 1.5;
-  }
-
-  /* ===== Helper text / trust section ===== */
-  .ff-help{
-    margin-top: clamp(16px, 2.2vw, 22px);
-    color: var(--ff-muted);
-    font-size: 14px;
-  }
-  .ff-note{
-    background: #fff3e6;
-    border: 1px solid rgba(247,152,15,0.35);
-    color: #5a3c10;
-    padding: 10px 12px;
-    border-radius: 10px;
-    font-size: 13.5px;
-  }
-
-  /* ===== CTA badge ===== */
-  .ff-badge{
-    display: inline-block;
-    background: var(--ff-green);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 12.5px;
-    letter-spacing: 0.3px;
-    margin-top: 10px;
-  }
-</style>
-
-<div class="ff-container">
-  <header class="ff-hero">
-    <h1 class="ff-title">Book an Appointment</h1>
-    <p class="ff-subtitle">Fertility-focused, evidence-based nutrition care. Telehealth appointments available.</p>
-  </header>
-
-  <section class="ff-grid">
-    <!-- Left: Booking widget card -->
-    <div class="ff-card">
-      <div class="ff-card-header">
-        <span class="ff-dot" aria-hidden="true"></span>
-        <p class="ff-card-title">Secure booking via Practice Better</p>
-      </div>
-
-      <!-- Practice Better Booking Widget: start -->
-      <div class="better-inline-booking-widget"
-           data-url="https://my.practicebetter.io"
-           data-booking-page=""
-           data-hash="686c32ba9a42aa4d3bdc57c4"
-           data-theme="1d4939"
-           data-theme-accent="f7980f"
-           data-scrollbar-visible="false"
-           style="width:100%;">
-      </div>
-      <script src="https://cdn.practicebetter.io/assets/js/booking.widget.js" defer></script>
-      <!-- Practice Better Booking Widget: end -->
-
-      <div class="ff-help">
-        <div class="ff-note">
-          Tip: If the widget doesn’t load immediately, please refresh the page or try a private window.
-        </div>
-        <span class="ff-badge">HIPAA-secure • Encrypted</span>
-      </div>
+  <!-- 3-Step Process -->
+  <div style="margin-bottom: 60px;">
+    <div class="text-center" style="margin-bottom: 32px;">
+      <h2 style="font-size: 2rem; font-weight: 700; color: #1d4939; margin-bottom: 10px;">
+        Simple 3-Step Process
+      </h2>
+      <p style="font-size: 1rem; color: #555; max-width: 620px; margin: 0 auto;">
+        Getting started with Food & Fertility is simple, clear, and supportive.
+      </p>
     </div>
 
-    <!-- Right: Quick info (easy to skim) -->
-    <aside class="ff-card">
-      <div class="ff-card-header">
-        <span class="ff-dot" aria-hidden="true"></span>
-        <p class="ff-card-title">What to expect</p>
+    <div style="display: grid; gap: 20px;">
+      <!-- Step 1 -->
+      <div style="background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px;">
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="min-width:40px; height:40px; background-color:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">
+            1
+          </div>
+          <div>
+            <h3 style="font-weight:600; font-size:1.05rem; color:#1d4939; margin:0 0 4px;">
+              Book Your Appointment
+            </h3>
+            <p style="color:#444; margin:0;">
+              Choose a service package that fits your fertility journey.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <ul class="ff-list">
-        <li>
-          <span class="ff-bullet">1</span>
-          <div>
-            <p class="ff-li-title">Evidence-based care</p>
-            <p class="ff-li-body">Support for PCOS, metabolic health, preconception, ART/IVF prep, pregnancy nutrition, and reproductive wellness.</p>
+      <!-- Step 2 -->
+      <div style="background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px;">
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="min-width:40px; height:40px; background-color:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">
+            2
           </div>
-        </li>
-        <li>
-          <span class="ff-bullet">2</span>
           <div>
-            <p class="ff-li-title">Personalized & practical</p>
-            <p class="ff-li-body">Plans tailored to your preferences and culture—balanced meals, blood sugar support, and fertility-focused guidance.</p>
+            <h3 style="font-weight:600; font-size:1.05rem; color:#1d4939; margin:0 0 4px;">
+              Receive Your Personalized Plan
+            </h3>
+            <p style="color:#444; margin:0;">
+              Together we’ll explore your nutrition, lifestyle, and goals to create your plan.
+            </p>
           </div>
-        </li>
-        <li>
-          <span class="ff-bullet">3</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px;">
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="min-width:40px; height:40px; background-color:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">
+            3
+          </div>
           <div>
-            <p class="ff-li-title">Telehealth convenience</p>
-            <p class="ff-li-body">Flexible appointments and secure messaging. California-based; eligibility may vary by location.</p>
+            <h3 style="font-weight:600; font-size:1.05rem; color:#1d4939; margin:0 0 4px;">
+              Improve Your Fertility
+            </h3>
+            <p style="color:#444; margin:0;">
+              Feel empowered as you take action toward the family of your dreams.
+            </p>
           </div>
-        </li>
-      </ul>
-    </aside>
-  </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End 3-Step -->
+
+  <!-- Services Section -->
+  <div style="margin-bottom: 60px;">
+    <div class="text-center" style="margin-bottom: 28px;">
+      <h2 style="font-size:2rem; font-weight:700; color:#1d4939; margin:0 0 10px;">
+        Choose Your Service
+      </h2>
+      <p style="font-size:1rem; color:#555; max-width:600px; margin:0 auto;">
+        Select from tailored packages designed to support every stage of your fertility journey.
+      </p>
+    </div>
+
+    <!-- Service Pill Buttons -->
+    <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center;">
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        Initial Consultation
+      </a>
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        Follow-Up Session
+      </a>
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        PCOS Package
+      </a>
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        Egg Health Package
+      </a>
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        Sperm Health Package
+      </a>
+      <a href="#booking" style="text-decoration:none; font-weight:600; font-size:0.95rem; background:#fff; border:1.5px solid #1d4939; color:#1d4939; border-radius:999px; padding:10px 20px; transition:all 0.25s;">
+        IVF/IUI Nutrition Support
+      </a>
+    </div>
+  </div>
+  <!-- End Services -->
+
+  <!-- Booking Widget Section -->
+  <div id="booking" class="ff-card" style="background:#f7faf9; border:1px solid rgba(29,73,57,0.08); border-radius:16px; box-shadow:0 1px 2px rgba(0,0,0,0.06),0 6px 18px rgba(29,73,57,0.08); padding:20px;">
+    <div style="margin-bottom: 12px;">
+      <h3 style="font-size:1.2rem; font-weight:600; color:#1d4939; margin:0;">Secure Booking via Practice Better</h3>
+    </div>
+
+    <!-- Practice Better Booking Widget: start -->
+    <div class="better-inline-booking-widget"
+         data-url="https://my.practicebetter.io"
+         data-booking-page=""
+         data-hash="686c32ba9a42aa4d3bdc57c4"
+         data-theme="1d4939"
+         data-theme-accent="f7980f"
+         data-scrollbar-visible="false"
+         style="width:100%; max-width:550px; height:800px; border-radius:14px; overflow:hidden; margin:0 auto;">
+    </div>
+    <script src="https://cdn.practicebetter.io/assets/js/booking.widget.js" defer></script>
+    <!-- Practice Better Booking Widget: end -->
+
+    <p style="font-size:0.85rem; color:#555; margin-top:16px;">
+      Tip: If the widget doesn’t load immediately, please refresh the page or try a private window.
+    </p>
+    <span style="display:inline-block; background:#1d4939; color:#fff; padding:6px 12px; border-radius:999px; font-size:0.8rem; margin-top:8px;">
+      HIPAA-secure • Encrypted
+    </span>
+  </div>
+  <!-- End Booking -->
 </div>
+<!-- End Container -->
