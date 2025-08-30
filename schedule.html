@@ -3,31 +3,44 @@ layout: default
 title: Book an Appointment
 ---
 
-<!-- ======= PAGE WRAPPER ======= -->
-<div class="ff-wrap" style="max-width: 1200px; margin: 0 auto; padding: 32px 16px;">
+<!-- Force-load Montserrat and override local styles -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<div class="ff-wrap">
 
   <!-- ========== SERVICES ========== -->
-  <section aria-labelledby="services-heading" style="margin-bottom: 40px;">
+  <section aria-labelledby="services-heading" class="ff-section">
     <h1 id="services-heading" class="ff-h1">Services</h1>
-    <p class="ff-intro">Choose the option that fits your fertility journey. Click a tile to see details.</p>
+    <p class="ff-intro">Choose the option that fits your fertility journey. Tap a service to see details.</p>
 
     <div class="ff-accordion">
+
       <!-- Couples Fertility Package -->
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">Couples Fertility Package</span>
-          <span class="ff-meta">4 sessions · US$675.00</span>
         </summary>
         <div class="ff-body">
-          <p>Each partner contributes 50% of your future baby's DNA. This package offers support to help optimize egg and sperm health.</p>
+          <p class="ff-overview">
+            Each partner contributes 50% of your future baby’s DNA. This package supports both partners to help optimize egg and sperm health.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
             <li>Two 75-minute individual assessments (one per partner)</li>
-            <li>Two 45-minute follow-up sessions*</li>
+            <li>Two 45-minute follow-up sessions* (together or separate)</li>
             <li>Personalized fertility nutrition + supplement plans</li>
             <li>Tailored sample meal plans</li>
             <li>Fertility-friendly grocery guide</li>
           </ul>
-          <p class="ff-note">*Follow-ups may be held together or separately and can be adjusted to better meet your needs.</p>
+          <p class="ff-note">*Follow-ups can be adjusted to better meet your needs.</p>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 4 sessions</span>
+            <span><strong>Fee:</strong> US$675.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
@@ -36,15 +49,24 @@ title: Book an Appointment
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">Optimize Egg Quality</span>
-          <span class="ff-meta">3 sessions · US$375.00</span>
         </summary>
         <div class="ff-body">
-          <p>If you’re preparing for pregnancy, IVF, or egg freezing, this package provides targeted support to improve egg quality and hormonal health.</p>
+          <p class="ff-overview">
+            Preparing for pregnancy, IVF, or egg freezing? Get targeted support to nurture egg quality and hormone balance.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
             <li>One 75-minute assessment</li>
             <li>Two 45-minute follow-ups</li>
             <li>Personalized plan, sample meal plan, grocery guide</li>
           </ul>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 3 sessions</span>
+            <span><strong>Fee:</strong> US$375.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
@@ -53,17 +75,26 @@ title: Book an Appointment
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">Optimize Sperm Health</span>
-          <span class="ff-meta">3 sessions · US$375.00</span>
         </summary>
         <div class="ff-body">
-          <p>Sperm makes up 50% of the fertility equation. This package targets the nutrients and lifestyle strategies that support healthy sperm development.</p>
+          <p class="ff-overview">
+            Sperm makes up 50% of the fertility equation. Focus on nutrients and habits that support healthy sperm development.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
             <li>One 75-minute initial assessment</li>
-            <li>Two 45-minute follow-up sessions</li>
-            <li>Personalized nutrition and supplement plan for sperm health</li>
+            <li>Two 45-minute follow-ups</li>
+            <li>Personalized nutrition & supplement plan for sperm health</li>
             <li>Tailored sample meal plan</li>
             <li>Fertility-friendly grocery guide</li>
           </ul>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 3 sessions</span>
+            <span><strong>Fee:</strong> US$375.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
@@ -72,18 +103,26 @@ title: Book an Appointment
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">Initial Fertility Nutrition Consult</span>
-          <span class="ff-meta">75 minutes · US$225.00</span>
         </summary>
         <div class="ff-body">
-          <p>This session is your starting point—whether you’re supporting egg quality, sperm health, or preparing to conceive.</p>
-          <p class="ff-subhead">You’ll get:</p>
+          <p class="ff-overview">
+            Your starting point—whether you’re supporting egg quality, sperm health, or preparing to conceive.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
-            <li>A review of your diet, labs, and fertility goals</li>
+            <li>Review of your diet, labs, and fertility goals</li>
             <li>Guidance on supplement use</li>
             <li>Simple, personalized nutrition plan you can start right away</li>
             <li>Tailored meal ideas and a sample menu</li>
           </ul>
           <p class="ff-note">Walk away with clarity and a plan made just for you.</p>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 75 minutes</span>
+            <span><strong>Fee:</strong> US$225.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
@@ -92,18 +131,26 @@ title: Book an Appointment
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">Follow-up Fertility Nutrition Session</span>
-          <span class="ff-meta">45 minutes · US$135.00</span>
         </summary>
         <div class="ff-body">
-          <p>These sessions help you stay supported and on track as we build on your plan.</p>
-          <p class="ff-subhead">You’ll get:</p>
+          <p class="ff-overview">
+            Stay supported and on track as we refine your plan and respond to changes.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
-            <li>Adjustments to your nutrition and supplement plan based on changes in your cycle, labs, or symptoms</li>
+            <li>Adjustments based on your cycle, labs, or symptoms</li>
             <li>Fine-tuning to support what’s working and troubleshoot what’s not</li>
             <li>New meal ideas or strategies to match your current needs</li>
             <li>Space to ask questions and stay focused on your goals</li>
           </ul>
           <p class="ff-note">Each session helps you take meaningful steps toward your baby goal.</p>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 45 minutes</span>
+            <span><strong>Fee:</strong> US$135.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
@@ -112,23 +159,33 @@ title: Book an Appointment
       <details class="ff-item">
         <summary class="ff-summary">
           <span class="ff-title">PCOS Mini-Session</span>
-          <span class="ff-meta">30 minutes · US$65.00</span>
         </summary>
         <div class="ff-body">
-          <p>A focused session to help you take the first step toward hormone-friendly eating for PCOS.</p>
+          <p class="ff-overview">
+            A focused session to take the first step toward hormone-friendly eating for PCOS.
+          </p>
+
+          <p class="ff-subhead">What’s included</p>
           <ul class="ff-list">
             <li>30-minute virtual session</li>
             <li>1-week PCOS-friendly meal plan with recipes</li>
             <li>Snack guide + grocery list</li>
           </ul>
+
+          <div class="ff-meta-row">
+            <span><strong>Duration:</strong> 30 minutes</span>
+            <span><strong>Fee:</strong> US$65.00</span>
+          </div>
+
           <a href="#book" class="ff-btn">Book this service</a>
         </div>
       </details>
+
     </div>
   </section>
 
   <!-- ========== BOOKING ========== -->
-  <section id="book" aria-labelledby="book-heading" class="ff-book">
+  <section id="book" aria-labelledby="book-heading" class="ff-section ff-book">
     <h2 id="book-heading" class="ff-h1">Book Through Safe Portal</h2>
 
     <div class="ff-widget">
@@ -138,8 +195,7 @@ title: Book an Appointment
            data-hash="686c32ba9a42aa4d3bdc57c4"
            data-theme="1d4939"
            data-theme-accent="f7980f"
-           data-scrollbar-visible="false"
-           style="width:100%; max-width:1100px; height:1200px; margin:0 auto; border-radius:16px; overflow:hidden; background:#fff; border:1px solid rgba(29,73,57,0.10);">
+           data-scrollbar-visible="false">
       </div>
       <script src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 
@@ -154,6 +210,10 @@ title: Book an Appointment
 
 <!-- ======= STYLES ======= -->
 <style>
+  /* Page + font override */
+  .ff-wrap{ max-width:1200px; margin:0 auto; padding:32px 16px; }
+  .ff-wrap, .ff-wrap * { font-family:'Montserrat',sans-serif !important; }
+
   :root{
     --ff-green:#1d4939;
     --ff-accent:#f7980f;
@@ -161,15 +221,17 @@ title: Book an Appointment
     --ff-muted:#5c6a66;
     --ff-card:#f7faf9;
   }
+
+  .ff-section{ margin-bottom: 44px; }
   .ff-h1{
     color: var(--ff-green);
     font-weight: 800;
     font-size: clamp(26px, 4vw, 36px);
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
   .ff-intro{
     color: var(--ff-muted);
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     font-size: 16px;
   }
 
@@ -185,7 +247,7 @@ title: Book an Appointment
   .ff-summary{
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr auto 22px;
+    grid-template-columns: 1fr 22px;
     align-items: center;
     gap: 10px;
     padding: 16px 18px;
@@ -194,35 +256,53 @@ title: Book an Appointment
   }
   .ff-summary::-webkit-details-marker{ display:none; }
   .ff-title{ color: var(--ff-ink); font-weight: 700; font-size: 16px; }
-  .ff-meta{
-    color: var(--ff-green); font-weight: 700; font-size: 14px;
-    background: rgba(29,73,57,0.08); padding: 6px 10px; border-radius: 999px; white-space: nowrap;
-  }
+  /* Chevron */
   .ff-summary::after{
-    content: ''; width: 10px; height: 10px;
+    content: '';
+    width: 10px; height: 10px;
     border-right: 2px solid var(--ff-green); border-bottom: 2px solid var(--ff-green);
     transform: rotate(-45deg); justify-self: end; transition: transform .2s ease;
   }
   details[open] .ff-summary::after{ transform: rotate(45deg); }
+
   .ff-body{ padding: 0 18px 16px 18px; color: var(--ff-ink); font-size: 15px; }
-  .ff-subhead{ font-weight: 700; margin: 10px 0 6px; }
-  .ff-list{ margin: 0 0 10px 18px; }
+  .ff-overview{ margin: 10px 0 10px; }
+  .ff-subhead{ font-weight: 700; margin: 12px 0 6px; }
+  .ff-list{ margin: 0 0 14px 18px; }
   .ff-list li{ margin: 6px 0; }
-  .ff-note{ color: var(--ff-muted); margin: 6px 0 12px; font-size: 14px; }
+  .ff-note{ color: var(--ff-muted); margin: 4px 0 12px; font-size: 14px; }
+  .ff-meta-row{
+    display:flex; gap:16px; flex-wrap:wrap;
+    color: var(--ff-ink); margin: 0 0 12px;
+  }
   .ff-btn{
     display:inline-block; background: var(--ff-green); color:#fff; text-decoration:none;
     padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px;
   }
   .ff-btn:hover{ background:#173b2f; }
 
-  /* Booking section shell */
+  /* Booking shell */
   .ff-book{
     background: var(--ff-card);
     border: 1px solid rgba(29,73,57,0.10);
     border-radius: 16px;
     padding: clamp(14px, 2.2vw, 22px);
   }
-  .ff-widget{ margin-top: 6px; }
+  .ff-widget{ margin-top: 8px; }
+
+  /* CRITICAL: Practice Better widget sizing */
+  .better-inline-booking-widget{
+    position: relative; overflow: hidden;
+    width:100%; max-width: 1100px;
+    height: 1200px;            /* base height */
+    margin: 0 auto;
+    border-radius:16px; background:#fff;
+    border:1px solid rgba(29,73,57,0.10);
+  }
+  .better-inline-booking-widget iframe{
+    position:absolute; inset:0; width:100%; height:100%; border:0;
+  }
+
   .ff-tip{ text-align:center; font-size:13.5px; color:var(--ff-muted); margin:10px 0 0; }
   .ff-links{
     margin-top:12px; text-align:center; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
@@ -232,23 +312,14 @@ title: Book an Appointment
   }
   .ff-link:hover{ border-bottom-color: var(--ff-accent); color: var(--ff-accent); }
 
-  /* CRITICAL: widget iframe sizing */
-  .better-inline-booking-widget{ position: relative; overflow: hidden; }
-  .better-inline-booking-widget iframe{
-    position: absolute; top:0; left:0; width:100%; height:100%; border:0;
+  /* Responsive widget heights */
+  @media (min-width: 1200px){
+    .better-inline-booking-widget{ height: min(92vh, 1500px) !important; max-width: 1100px !important; }
   }
-
-  /* Make widget tall / responsive */
-  @media (min-width: 1100px){
-    .better-inline-booking-widget{
-      height: min(92vh, 1500px) !important;
-      max-width: 1100px !important;
-    }
+  @media (max-width: 1024px){
+    .better-inline-booking-widget{ height: 1400px !important; max-width: 100% !important; }
   }
-  @media (max-width: 1099.98px){
-    .better-inline-booking-widget{
-      height: 1300px !important;
-      max-width: 100% !important;
-    }
+  @media (max-width: 640px){
+    .better-inline-booking-widget{ height: 1500px !important; }
   }
 </style>
