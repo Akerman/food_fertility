@@ -2,12 +2,12 @@
 layout: default
 title: Referrals
 ---
-<!-- local styles -->
+<!-- Local styles to guarantee pill button + soft card (remove if already global) -->
 <style>
   .custom-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #2f6859;
+    background-color: #2f6859; /* Button green from your index */
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -20,82 +20,85 @@ title: Referrals
     margin-bottom: 10px;
     white-space: nowrap;
   }
-  .custom-btn:hover, .custom-btn:focus {
-    background-color: #3b8a72;
-    color: #fff;
-    text-decoration: none;
-  }
-  .card-soft {
-    background:#fff;
-    border-radius:12px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.06);
-  }
+  .custom-btn:hover,.custom-btn:focus{ background-color:#3b8a72; color:#fff; text-decoration:none; }
+  .card-soft { background:#fff; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
 </style>
 
-<!-- Top section -->
-<div class="section" style="background-color:#ffffff; padding: 60px 20px 20px 20px;">
-  <div class="container" style="max-width: 860px; margin: 0 auto; text-align:center;">
+<!-- Hero Banner Section Start (matches About page padding) -->
+<div class="slider-section" style="background-color:#ffffff; padding: 80px 0 10px 0;">
+  <div class="container text-center">
+    <div class="slider-content" style="max-width: 720px; margin: 0 auto;">
+      <h1 class="main-title" style="
+        font-family: 'Montserrat', sans-serif;
+        color: #1d4939;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;">
+        Refer a Client
+      </h1>
+      <p class="hero-subheading" style="
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: #1d4939;
+        margin: 0 0 1.5rem 0;">
+        Download the referral form, complete, and fax back.<br>
+        We’ll take care of the rest.
+      </p>
 
-    <!-- Title + Subheading -->
-    <h1 class="main-title" style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:2.5rem; font-weight:700; margin-bottom:0.5rem;">
-      Refer a Client
-    </h1>
-    <p class="hero-subheading" style="font-family:'Montserrat', sans-serif; font-size:1rem; color:#1d4939; margin:0 0 1.5rem 0;">
-      Download the referral form, complete, and fax back.<br>
-      We’ll take care of the rest.
-    </p>
-
-    <!-- Button -->
-    <div class="cta-buttons" style="margin-bottom: 2rem;">
-      <a class="custom-btn" href="/assets/forms/Food-and-Fertility-Referral.pdf" target="_blank" rel="noopener">
-        📄 Download Referral Form (PDF)
-      </a>
+      <!-- Primary CTA -->
+      <div class="cta-buttons" style="margin-top: 1.25rem;">
+        <a class="custom-btn" href="/assets/forms/Food-and-Fertility-Referral.pdf" target="_blank" rel="noopener">
+          📄 Download Referral Form (PDF)
+        </a>
+      </div>
     </div>
-
   </div>
 </div>
+<!-- Hero Banner Section End -->
 
-<!-- Instructions + Support -->
+<!-- Instructions + Empower Section -->
 <div class="section" style="background-color:#fffbf9; padding: 40px 20px;">
   <div class="container" style="max-width: 860px; margin: 0 auto;">
 
     <!-- Steps Card -->
-    <div class="card-soft" style="padding:22px; max-width: 780px; margin: 0 auto 18px;">
-      <h2 style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1.25rem; font-weight:700; text-align:center; margin:0 0 14px;">
+    <div class="card-soft" style="padding:28px; max-width: 780px; margin: 0 auto;">
+      <h2 style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1.25rem; font-weight:700; text-align:center; margin:0 0 18px;">
         Simple 3-Step Referral
       </h2>
 
+      <!-- Step 1 -->
       <div style="display:flex; align-items:flex-start; gap:12px; margin-bottom:12px;">
         <div style="min-width:36px; height:36px; background:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:700;">1</div>
         <p style="font-family:'Montserrat', sans-serif; color:#444; margin:0;">Fill in provider and patient info.</p>
       </div>
 
+      <!-- Step 2 -->
       <div style="display:flex; align-items:flex-start; gap:12px; margin-bottom:12px;">
         <div style="min-width:36px; height:36px; background:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:700;">2</div>
         <p style="font-family:'Montserrat', sans-serif; color:#444; margin:0;">Confirm the referral objective (optimize fertility) and select diagnosis.</p>
       </div>
 
+      <!-- Step 3 -->
       <div style="display:flex; align-items:flex-start; gap:12px; margin-bottom:16px;">
         <div style="min-width:36px; height:36px; background:#1d4939; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:700;">3</div>
         <p style="font-family:'Montserrat', sans-serif; color:#444; margin:0;">Sign and fax to <strong style="color:#1d4939;">(530) 267-6712</strong>.</p>
       </div>
 
       <!-- Inside card: Referral Instructions link -->
-      <p style="text-align:center; margin:14px 0 0;">
+      <p style="text-align:center; margin:16px 0 0;">
         <a href="/assets/forms/Food-and-Fertility-Referral-Instructions.pdf" target="_blank" rel="noopener" style="color:#1d4939; font-family:'Montserrat', sans-serif; font-size:0.95rem; text-decoration:underline;">
           📄 Download Referral Instructions (PDF)
         </a>
       </p>
+
+      <!-- Empower Statement inside card -->
+      <p style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1rem; font-weight:500; text-align:center; margin:20px 0 0;">
+        Empower your clients with the nutrition support to help grow their families.
+      </p>
     </div>
 
-    <!-- Collaborative + grateful note -->
-    <p style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1rem; font-weight:500; text-align:center; margin: 0 0 8px;">
-      We value our collaboration with you and are grateful for the opportunity<br>
-      to support your patients together on their fertility journey.
-    </p>
-
-    <!-- Contact -->
-    <div class="text-center" style="margin-top:22px;">
+    <!-- Contact + Compliance -->
+    <div class="text-center" style="margin-top:24px;">
       <p style="font-family:'Montserrat', sans-serif; color:#1d4939; font-weight:600; margin:0;">Questions? We’re here to help.</p>
       <p style="font-family:'Montserrat', sans-serif; color:#444; margin:.25rem 0 0;">
         📧 <a href="mailto:info@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">info@foodandfertility.com</a>
