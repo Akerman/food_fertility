@@ -2,12 +2,11 @@
 layout: default
 title: Referrals
 ---
-<!-- Local styles to guarantee pill button + soft card (remove if already global) -->
 <style>
   .custom-btn {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #2f6859; /* Button green from your index */
+    padding: 14px 36px;
+    background-color: #2f6859;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -16,112 +15,128 @@ title: Referrals
     font-weight: 600;
     transition: all 0.3s ease;
     border: none;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 12px 8px 0 0;
     white-space: nowrap;
   }
-  .custom-btn:hover,.custom-btn:focus{ background-color:#3b8a72; color:#fff; text-decoration:none; }
-  .card-soft { background:#fff; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
-  .eyebrow { font-size:.85rem; letter-spacing:.04em; text-transform:uppercase; color:#1d4939; font-weight:700; margin:0 0 6px; }
-  .lead { font-size:1rem; color:#444; margin:0 0 16px; }
+  .custom-btn:hover,
+  .custom-btn:focus {
+    background-color: #3b8a72;
+    color: #fff;
+    text-decoration: none;
+  }
+  .card-soft {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    padding: 40px 32px;
+    margin-bottom: 32px;
+  }
+  .referral-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d4939;
+    margin: 0 0 12px;
+    text-align: center;
+  }
+  .referral-subline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .contact-block {
+    border-top: 1px solid #eee;
+    margin-top: 28px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contact-block p {
+    margin: 4px 0;
+    color: #444;
+  }
+  .contact-block a {
+    color: #1d4939;
+    text-decoration: underline;
+  }
+  .contact-block strong {
+    color: #1d4939;
+  }
 </style>
 
-<!-- Hero Banner Section Start (matches About page padding) -->
-<div class="slider-section" style="background-color:#ffffff; padding: 80px 0 10px 0;">
+<!-- Hero Banner -->
+<div class="slider-section" style="background-color:#ffffff; padding: 80px 0 20px 0;">
   <div class="container text-center">
-    <div class="slider-content" style="max-width: 720px; margin: 0 auto;">
+    <div style="max-width: 720px; margin: 0 auto;">
       <h1 class="main-title" style="
-        font-family: 'Montserrat', sans-serif;
-        color: #1d4939;
+        font-family:'Montserrat',sans-serif;
+        color:#1d4939;
         font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;">
-        Refer a Client
+        font-weight:700;
+        margin-bottom:.5rem;">
+        Referrals
       </h1>
       <p class="hero-subheading" style="
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
-        color: #1d4939;
-        margin: 0 0 1.5rem 0;">
-        Download the referral form, complete, and fax back.<br>
-        We’ll take care of the rest.
+        font-family:'Montserrat',sans-serif;
+        font-size:1rem;
+        color:#1d4939;
+        margin:0 0 1.5rem;">
+        Whether you’re a healthcare provider or a client, use the same referral form below.
       </p>
-
-      <!-- Primary CTA -->
-      <div class="cta-buttons" style="margin-top: 1.25rem;">
-        <a class="custom-btn" href="/assets/referral.pdf" download target="_blank" rel="noopener">
-          📄 Download Referral Form (PDF)
-        </a>
-      </div>
     </div>
   </div>
 </div>
-<!-- Hero Banner Section End -->
 
-<!-- Two-Column Section: Providers + Clients -->
+<!-- Referral Sections -->
 <div class="section" style="background-color:#fffbf9; padding: 40px 20px;">
-  <div class="container" style="max-width: 980px; margin: 0 auto;">
+  <div class="container" style="max-width: 860px; margin: 0 auto;">
 
-    <!-- Providers Card -->
-    <div class="card-soft" style="padding:28px; max-width: 900px; margin: 0 auto 20px;">
-      <div class="eyebrow">For Healthcare Providers</div>
-      <h2 style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1.6rem; font-weight:700; margin:0 0 10px;">
-        Download, complete, and fax to <span style="white-space:nowrap;">(530) 267-6712</span>
-      </h2>
-      <p class="lead">
-        We’ll coordinate care, provide progress updates, and send any requested documentation.
+    <!-- Providers -->
+    <div class="card-soft">
+      <h2 class="referral-heading">For Healthcare Providers</h2>
+      <p class="referral-subline">
+        Download the referral form, complete it, and fax to <strong>(530) 267-6712</strong>.
       </p>
-
-      <div style="margin:14px 0 10px;">
+      <div class="text-center">
         <a class="custom-btn" href="/assets/referral.pdf" download target="_blank" rel="noopener">
           📄 Download Referral Form (PDF)
         </a>
-        <a class="custom-btn" style="background:#ffffff; color:#1d4939; border:2px solid #1d4939;"
+        <a class="custom-btn" style="background:#fff; color:#1d4939; border:2px solid #1d4939;"
            href="/assets/forms/Food-and-Fertility-Referral-Instructions.pdf" target="_blank" rel="noopener">
           📄 Referral Instructions (PDF)
         </a>
       </div>
-
-      <div style="font-family:'Montserrat', sans-serif; color:#444; margin-top:10px;">
-        <p style="margin:.25rem 0;"><strong style="color:#1d4939;">Fax:</strong> (530) 267-6712</p>
-        <p style="margin:.25rem 0;">
-          <strong style="color:#1d4939;">Email:</strong> <a href="mailto:info@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">info@foodandfertility.com</a>
-          &nbsp;|&nbsp; <strong style="color:#1d4939;">Phone:</strong> (916) 938-2539
-        </p>
-        <p style="color:#555; font-size:.9rem; margin:.5rem 0 0;">
-          Medical Nutrition Therapy (MNT) is provided under CA B&amp;P §2586 upon provider referral. Digital signatures accepted.
+      <div class="contact-block">
+        <p><strong>Fax:</strong> (530) 267-6712</p>
+        <p><strong>Email:</strong> <a href="mailto:info@foodandfertility.com">info@foodandfertility.com</a></p>
+        <p><strong>Phone:</strong> (916) 938-2539</p>
+        <p style="font-size:.9rem; color:#555; margin-top:10px;">
+          Medical Nutrition Therapy (MNT) is provided under CA B&amp;P §2586 upon provider referral.<br>
+          Digital signatures accepted.
         </p>
       </div>
     </div>
 
-    <!-- Clients Card -->
-    <div class="card-soft" style="padding:28px; max-width: 900px; margin: 0 auto;">
-      <div class="eyebrow">For Clients</div>
-      <h2 style="font-family:'Montserrat', sans-serif; color:#1d4939; font-size:1.6rem; font-weight:700; margin:0 0 10px;">
-        Ask your provider to refer you to Food &amp; Fertility
-      </h2>
-      <p class="lead">
-        Download the same referral form and bring it to your next appointment—or email/fax it to your provider’s office ahead of time.
+    <!-- Clients -->
+    <div class="card-soft">
+      <h2 class="referral-heading">For Clients</h2>
+      <p class="referral-subline">
+        Ask your provider to refer you to Food &amp; Fertility. Download the form and bring it to your next appointment or send it to their office.
       </p>
-
-      <div style="margin:14px 0 0;">
+      <div class="text-center">
         <a class="custom-btn" href="/assets/referral.pdf" download target="_blank" rel="noopener">
           📄 Download Referral Form (PDF)
         </a>
       </div>
-
-      <p style="font-family:'Montserrat', sans-serif; color:#444; margin:14px 0 0;">
-        Need help? Email us at <a href="mailto:info@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">info@foodandfertility.com</a>.
-      </p>
-    </div>
-
-    <!-- Contact + Compliance (kept as a small footer note for the page) -->
-    <div class="text-center" style="margin-top:24px;">
-      <p style="font-family:'Montserrat', sans-serif; color:#1d4939; font-weight:600; margin:0;">Questions? We’re here to help.</p>
-      <p style="font-family:'Montserrat', sans-serif; color:#444; margin:.25rem 0 0;">
-        📧 <a href="mailto:info@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">info@foodandfertility.com</a>
-        &nbsp;|&nbsp; 📞 (916) 938-2539
-      </p>
+      <div class="contact-block">
+        <p><strong>Email:</strong> <a href="mailto:info@foodandfertility.com">info@foodandfertility.com</a></p>
+        <p><strong>Phone:</strong> (916) 938-2539</p>
+        <p style="font-size:.9rem; color:#555; margin-top:10px;">
+          We’re here to answer your questions and guide you through the process.
+        </p>
+      </div>
     </div>
 
   </div>
