@@ -2,32 +2,6 @@
 layout: default
 title: About Us
 ---
-<script>
-(function(){
-  // Site-relative path; case-sensitive
-  var href = "{{ '/assets/icons/Fav-Icon512.png' | relative_url }}";
-
-  // Standard favicon
-  var icon = document.createElement('link');
-  icon.rel = 'icon';
-  icon.type = 'image/png';
-  icon.sizes = '512x512';
-  icon.href = href;
-  document.head.appendChild(icon);
-
-  // Apple touch icon
-  var apple = document.createElement('link');
-  apple.rel = 'apple-touch-icon';
-  apple.href = href;
-  document.head.appendChild(apple);
-
-  // Optional: theme color for mobile UI
-  var meta = document.createElement('meta');
-  meta.name = 'theme-color';
-  meta.content = '#ffffff';
-  document.head.appendChild(meta);
-})();
-</script>
 <!-- Overlay Start -->
         <div class="overlay"></div>
         <!-- Overlay End -->
@@ -86,4 +60,5 @@ title: About Us
   </div>
 </div>
 <!-- Instructor Section End -->
+
 
