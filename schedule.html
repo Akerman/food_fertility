@@ -2,101 +2,139 @@
 layout: default
 title: Book an Appointment
 ---
-<!-- ====== PROGRAM TILES (add above the accordion) ====== -->
-<section class="ff-section" aria-labelledby="ff-tiles-heading">
-  <h2 id="ff-tiles-heading" class="ff-h1">Individualized Fertility Nutrition Care</h2>
-  <p class="ff-intro">
+<!-- ====== PROGRAM TILES (HTML-only, inline styles) ====== -->
+<section aria-labelledby="ff-tiles-heading" style="margin:44px 0 28px 0;">
+  <h2 id="ff-tiles-heading" style="color:#1d4939;font-weight:800;font-size:clamp(26px,4vw,36px);margin:0 0 6px 0;font-family:Montserrat,Arial,sans-serif;">
+    Individualized Fertility Nutrition Care
+  </h2>
+  <p style="color:#5c6a66;margin:0 0 16px 0;font-size:16px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
     No two fertility stories are alike — and your care shouldn’t be either.
-    Every plan at <em>Food &amp; Fertility</em> begins with a comprehensive <strong>Initial Consultation</strong>,
-    followed by a personalized program aligned with your body’s natural timelines.
+    Every plan at <em>Food &amp; Fertility</em> begins with a comprehensive <strong>Initial Consultation</strong>, followed by a personalized program aligned with your body’s natural timelines.
     <br><strong>Food is the foundation of health.</strong> When you eat well, you can improve your health — and your fertility.
   </p>
 
-  <div class="ff-tiles" role="list">
+  <!-- Tiles container: flex + wrap for responsive layout -->
+  <div role="list"
+       style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;justify-content:stretch;">
+
     <!-- Initial Consultation -->
-    <article class="ff-tile" role="listitem">
-      <h3 class="ff-tile-title">Initial Fertility Consultation</h3>
-      <p class="ff-tile-meta">75 minutes · US$275 · HSA/FSA eligible</p>
-      <p class="ff-tile-copy">
+    <article role="listitem"
+      style="background:#ffffff;border:1px solid rgba(29,73,57,0.10);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:18px;position:relative;flex:1 1 300px;max-width:100%;">
+      <h3 style="margin:0 0 6px;color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
+        Initial Fertility Consultation
+      </h3>
+      <p style="margin:0 0 10px;color:#5c6a66;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        75 minutes · US$275 · HSA/FSA eligible
+      </p>
+      <p style="margin:0 0 10px;color:#1e2a27;font-size:15px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
         Start here. We’ll review your history, labs, nutrition, and supplements and create your personalized plan for fertility and hormone balance.
       </p>
-      <ul class="ff-tile-list">
+      <ul style="margin:0 0 14px 18px;color:#1e2a27;font-size:15px;font-family:Montserrat,Arial,sans-serif;">
         <li>Comprehensive intake + plan</li>
         <li>Supplement guidance</li>
         <li>Action steps you can use right away</li>
       </ul>
-      <a class="ff-btn" target="_blank" rel="noopener"
-         href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88">
+      <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
+         target="_blank" rel="noopener"
+         style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
         Book Initial Consultation
       </a>
     </article>
 
     <!-- 3-Month Program (Most chosen) -->
-    <article class="ff-tile ff-tile-featured" role="listitem" aria-label="3-Month Fertility Program, most chosen">
-      <div class="ff-badge" aria-hidden="true">★ Most chosen</div>
-      <h3 class="ff-tile-title">3-Month Fertility Program</h3>
-      <p class="ff-tile-meta">12 weeks · US$695 · Includes Initial + 3 Follow-Ups · HSA/FSA eligible</p>
-      <p class="ff-tile-copy">
-        Your personalized roadmap over one full cycle of egg and sperm development — with structure, accountability,
-        and <strong>secure messaging support through your client portal</strong> between visits.
+    <article role="listitem"
+      style="background:#f7faf9;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:18px;position:relative;flex:1 1 300px;max-width:100%;">
+      <!-- badge -->
+      <div aria-hidden="true"
+           style="position:absolute;top:12px;right:12px;font-size:12px;font-weight:700;line-height:1;background:rgba(247,152,15,.12);color:#f7980f;padding:6px 8px;border-radius:999px;font-family:Montserrat,Arial,sans-serif;">
+        ★ Most chosen
+      </div>
+      <h3 style="margin:0 0 6px;color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
+        3-Month Fertility Program
+      </h3>
+      <p style="margin:0 0 10px;color:#5c6a66;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        12 weeks · US$695 · Includes Initial + 3 Follow-Ups · HSA/FSA eligible
       </p>
-      <ul class="ff-tile-list">
+      <p style="margin:0 0 10px;color:#1e2a27;font-size:15px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
+        Your personalized roadmap over one full cycle of egg and sperm development — with structure, accountability, and
+        <strong>secure messaging support through your client portal</strong> between visits.
+      </p>
+      <ul style="margin:0 0 14px 18px;color:#1e2a27;font-size:15px;font-family:Montserrat,Arial,sans-serif;">
         <li>1 × Initial (75 min) + 3 × Follow-Ups (45 min)</li>
         <li>Nutrition + supplement plan</li>
         <li>Cycle tracking + lab interpretation</li>
-        <li>Secure messaging support via client portal</li>
+        <li>Secure messaging via client portal</li>
       </ul>
-      <p class="ff-savings">Save US$60 compared to booking individually.</p>
-      <!-- TODO: replace placeholder with your 3-Month package booking link -->
-      <a class="ff-btn" target="_blank" rel="noopener" href="https://my.practicebetter.io/#/your-3-month-link">
+      <p style="margin:2px 0 12px 0;font-weight:700;color:#1e2a27;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        Save US$60 compared to booking individually.
+      </p>
+      <a href="https://my.practicebetter.io/#/your-3-month-link"
+         target="_blank" rel="noopener"
+         style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
         Start 3-Month Program
       </a>
     </article>
 
     <!-- 6-Month Extended Care -->
-    <article class="ff-tile" role="listitem">
-      <h3 class="ff-tile-title">Extended Fertility Care (6 Months)</h3>
-      <p class="ff-tile-meta">24 weeks · US$1,095 · Includes Initial + 6 Follow-Ups · HSA/FSA eligible</p>
-      <p class="ff-tile-copy">
-        Ongoing support for clients who choose to continue beyond 12 weeks — ideal for PCOS with insulin resistance,
-        recurrent loss, or preparing for multiple IVF/IUI cycles.
+    <article role="listitem"
+      style="background:#ffffff;border:1px solid rgba(29,73,57,0.10);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:18px;position:relative;flex:1 1 300px;max-width:100%;">
+      <h3 style="margin:0 0 6px;color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
+        Extended Fertility Care (6 Months)
+      </h3>
+      <p style="margin:0 0 10px;color:#5c6a66;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        24 weeks · US$1,095 · Includes Initial + 6 Follow-Ups · HSA/FSA eligible
       </p>
-      <ul class="ff-tile-list">
+      <p style="margin:0 0 10px;color:#1e2a27;font-size:15px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
+        Ongoing support for clients who choose to continue beyond 12 weeks — ideal for PCOS with insulin resistance, recurrent loss, or multiple IVF/IUI cycles.
+        Includes <strong>secure messaging support through your client portal</strong>.
+      </p>
+      <ul style="margin:0 0 14px 18px;color:#1e2a27;font-size:15px;font-family:Montserrat,Arial,sans-serif;">
         <li>1 × Initial (75 min) + 6 × Follow-Ups (45 min)</li>
         <li>Advanced meal + supplement periodization</li>
         <li>Ongoing lab integration</li>
-        <li>Secure messaging support via client portal</li>
+        <li>Secure messaging via client portal</li>
       </ul>
-      <p class="ff-savings">Save US$140 compared to booking individually.</p>
-      <!-- TODO: replace placeholder with your 6-Month package booking link -->
-      <a class="ff-btn" target="_blank" rel="noopener" href="https://my.practicebetter.io/#/your-6-month-link">
+      <p style="margin:2px 0 12px 0;font-weight:700;color:#1e2a27;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        Save US$140 compared to booking individually.
+      </p>
+      <a href="https://my.practicebetter.io/#/your-6-month-link"
+         target="_blank" rel="noopener"
+         style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
         Begin 6-Month Care
       </a>
     </article>
 
     <!-- Follow-Up (à la carte) -->
-    <article class="ff-tile" role="listitem">
-      <h3 class="ff-tile-title">Follow-Up Session</h3>
-      <p class="ff-tile-meta">45 minutes · US$160 · HSA/FSA eligible</p>
-      <p class="ff-tile-copy">
-        For returning clients extending care beyond a program or between fertility treatments — refine your plan and keep momentum.
+    <article role="listitem"
+      style="background:#ffffff;border:1px solid rgba(29,73,57,0.10);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:18px;position:relative;flex:1 1 300px;max-width:100%;">
+      <h3 style="margin:0 0 6px;color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
+        Follow-Up Session
+      </h3>
+      <p style="margin:0 0 10px;color:#5c6a66;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
+        45 minutes · US$160 · HSA/FSA eligible
       </p>
-      <ul class="ff-tile-list">
+      <p style="margin:0 0 10px;color:#1e2a27;font-size:15px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
+        For returning clients continuing care beyond a program or between fertility treatments — refine your plan and keep momentum.
+      </p>
+      <ul style="margin:0 0 14px 18px;color:#1e2a27;font-size:15px;font-family:Montserrat,Arial,sans-serif;">
         <li>Plan adjustments based on cycle, labs, or symptoms</li>
         <li>Targeted troubleshooting</li>
         <li>Next-step nutrition strategies</li>
       </ul>
-      <a class="ff-btn" target="_blank" rel="noopener"
-         href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1">
+      <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
+         target="_blank" rel="noopener"
+         style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
         Book Follow-Up
       </a>
     </article>
   </div>
 
   <!-- Who We Help -->
-  <div class="ff-help">
-    <h3 class="ff-help-title">Who We Help</h3>
-    <ul class="ff-help-list">
+  <div style="margin-top:18px;background:#ffffff;border:1px solid rgba(29,73,57,0.10);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:18px;">
+    <h3 style="margin:0 0 8px;color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
+      Who We Help
+    </h3>
+    <ul style="margin:0;padding-left:18px;color:#1e2a27;font-size:15px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
       <li>PCOS and insulin resistance</li>
       <li>Endometriosis or irregular/painful cycles</li>
       <li>Thyroid disorders (hypo/hyperthyroidism)</li>
@@ -104,7 +142,8 @@ title: Book an Appointment
       <li>IVF, IUI, or egg-freezing preparation</li>
       <li>Pregnancy loss / miscarriage recovery</li>
       <li>Male fertility (sperm quality and motility)</li>
-      <li>Preconception optimization & early pregnancy nutrition</li>
+      <li>Preconception optimization &amp; early pregnancy nutrition</li>
     </ul>
   </div>
 </section>
+
