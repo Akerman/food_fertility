@@ -7,6 +7,112 @@ title: Book an Appointment
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+<style>
+  /* Simple, brand-aligned polish for the two-card layout */
+  :root {
+    --ff: 'Montserrat', Arial, sans-serif;
+    --brand: #1d4939;
+    --brand-ink: #1e2a27;
+    --muted: #5c6a66;
+    --accent: #f7980f;
+    --card: #ffffff;
+    --card-alt: #f7faf9;
+    --ring: rgba(29,73,57,0.18);
+    --shadow-s: 0 1px 2px rgba(0,0,0,.05);
+    --shadow-m: 0 4px 16px rgba(0,0,0,.08);
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+  .text-center { text-align: center; }
+
+  /* Booking grid */
+  .booking-wrap { max-width: 900px; margin: 0 auto; padding: 40px 0 56px; font-family: var(--ff); }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 720px) {
+    .booking-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  }
+
+  .booking-card {
+    background: var(--card);
+    border: 1px solid var(--ring);
+    border-radius: 16px;
+    box-shadow: var(--shadow-s);
+    padding: 22px 20px;
+    text-align: center;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .booking-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-m);
+    border-color: rgba(29,73,57,0.28);
+  }
+  .booking-card.alt { background: var(--card-alt); }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(247,152,15,.14);
+    border-radius: 999px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 20px;
+    margin: 4px 0 6px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .cta {
+    display: inline-block;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+  .cta:focus,
+  .cta:hover { opacity: .92; transform: translateY(-1px); }
+
+  .note {
+    text-align: center;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* Optional tiny list that stacks nicely if you want to re-add bullets later
+     (kept here for future use; not displayed by default) */
+  .mini-list {
+    display: none; /* set to block if you want to show bullets later */
+    text-align: left;
+    margin: 10px auto 14px;
+    padding-left: 18px;
+    max-width: 520px;
+    color: var(--brand-ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+</style>
+
 <!-- Hero Banner (matches homepage) -->
 <div class="slider-section" style="background-color:#ffffff;padding:80px 0 10px 0;">
   <div class="container text-center" style="text-align:center;">
@@ -23,120 +129,58 @@ title: Book an Appointment
   </div>
 </div>
 
-<!-- Programs -->
-<div id="programs" style="max-width:1200px;margin:0 auto;padding:40px 16px 40px;font-family:Montserrat,Arial,sans-serif;">
-  <div style="max-width:720px;margin:0 auto;">
+<!-- Booking (Two Options Only) -->
+<div id="programs" class="container" style="font-family:Montserrat,Arial,sans-serif;">
+  <div class="booking-wrap">
 
-    <!-- Strong Start -->
-    <details style="background:#ffffff;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05);overflow:hidden;margin:0 0 14px;">
-      <summary style="cursor:pointer;list-style:none;padding:16px 18px;text-align:center;">
-        <div style="color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
-          Strong Start: Fertility Nutrition Consultation
-        </div>
-        <div style="color:#5c6a66;font-size:14px;margin:4px 0;font-family:Montserrat,Arial,sans-serif;">
-          Duration: 75 minutes · Fee: US$275*
-        </div>
-      </summary>
-      <div style="padding:0 18px 18px 18px;text-align:center;color:#1e2a27;font-size:15px;line-height:1.7;font-family:Montserrat,Arial,sans-serif;">
-        <!-- Bullets only inside dropdown -->
-        <ul style="display:inline-block;text-align:left;margin:10px 0 12px;padding:0 0 0 18px;">
-          <li>A full nutrition and lifestyle assessment with a Registered Dietitian</li>
+    <div class="booking-grid">
+
+      <!-- New Client (Initial Consult) -->
+      <div class="booking-card">
+        <div class="pill" aria-hidden="true">New Client</div>
+        <div class="title">Initial Consult</div>
+        <div class="meta">75 minutes · US$275*</div>
+
+        <!-- Keep this hidden list ready if you want details later -->
+        <ul class="mini-list">
+          <li>Registered Dietitian–led nutrition & lifestyle assessment</li>
           <li>Review of labs, supplements, and fertility goals</li>
           <li>A simple, personalized plan to start right away</li>
-          <li>Practical meal ideas to support hormone and reproductive health</li>
-          <li>Clear next steps for your fertility journey</li>
         </ul>
-        <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
-           target="_blank" rel="noopener"
-           style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Book Now
-        </a>
-      </div>
-    </details>
 
-    <!-- Build Momentum (Most chosen) -->
-    <details style="background:#f7faf9;border:1px solid rgba(29,73,57,0.24);border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);overflow:hidden;margin:0 0 14px;position:relative;">
-      <div aria-hidden="true" style="position:absolute;top:10px;right:10px;font-size:12px;font-weight:700;background:rgba(247,152,15,.16);color:#f7980f;padding:6px 8px;border-radius:999px;font-family:Montserrat,Arial,sans-serif;">★ Most chosen</div>
-      <summary style="cursor:pointer;list-style:none;padding:16px 18px;text-align:center;">
-        <div style="color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
-          Build Momentum: 3-Month Fertility Care
-        </div>
-        <div style="color:#5c6a66;font-size:14px;margin:4px 0;font-family:Montserrat,Arial,sans-serif;">
-          Duration: 75-minute Initial + 3 × 45-minute Follow-Ups · Fee: US$695*
-        </div>
-      </summary>
-      <div style="padding:0 18px 18px 18px;text-align:center;color:#1e2a27;font-size:15px;line-height:1.7;font-family:Montserrat,Arial,sans-serif;">
-        <ul style="display:inline-block;text-align:left;margin:10px 0 10px;padding:0 0 0 18px;">
-          <li>Registered Dietitian–led care across one full cycle</li>
-          <li>Personalized, evolving meal plans (preferences, progress, goals)</li>
-          <li>Nutrition, supplement, and lifestyle adjustments each month</li>
-          <li>Secure messaging support between visits</li>
-          <li>Client portal for plans, notes, and progress tracking</li>
+        <a
+          class="cta"
+          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
+          target="_blank" rel="noopener"
+          aria-label="Book Initial Consult — New Client"
+        >Book Now</a>
+      </div>
+
+      <!-- Existing Client (Follow-Up) -->
+      <div class="booking-card alt">
+        <div class="pill" aria-hidden="true">Existing Client</div>
+        <div class="title">Follow-Up Appointment</div>
+        <div class="meta">45 minutes · Current Clients Only</div>
+
+        <!-- Hidden list placeholder if needed later -->
+        <ul class="mini-list">
+          <li>Refine your plan, adjust supplements & habits</li>
+          <li>Review progress and set next steps</li>
+          <li>Keep momentum with focused support</li>
         </ul>
-        <div style="margin:4px 0 12px;color:#1e2a27;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Save US$60 compared to booking individually
-        </div>
-        <a href="https://my.practicebetter.io/#/your-3-month-link"
-           target="_blank" rel="noopener"
-           style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Book Now
-        </a>
+
+        <a
+          class="cta"
+          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
+          target="_blank" rel="noopener"
+          aria-label="Book Follow-Up — Existing Client"
+        >Book Now</a>
       </div>
-    </details>
 
-    <!-- Continued Support -->
-    <details style="background:#ffffff;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05);overflow:hidden;margin:0 0 14px;">
-      <summary style="cursor:pointer;list-style:none;padding:16px 18px;text-align:center;">
-        <div style="color:#1d4939;font-weight:800;font-size:18px;font-family:Montserrat,Arial,sans-serif;">
-          Continued Support: 6-Month Fertility Care
-        </div>
-        <div style="color:#5c6a66;font-size:14px;margin:4px 0;font-family:Montserrat,Arial,sans-serif;">
-          Duration: 75-minute Initial + 6 × 45-minute Follow-Ups · Fee: US$1,095*
-        </div>
-      </summary>
-      <div style="padding:0 18px 18px 18px;text-align:center;color:#1e2a27;font-size:15px;line-height:1.7;font-family:Montserrat,Arial,sans-serif;">
-        <ul style="display:inline-block;text-align:left;margin:10px 0 10px;padding:0 0 0 18px;">
-          <li>Registered Dietitian–led care with more touchpoints and accountability</li>
-          <li>Personalized, evolving meal plans refined to long-term goals</li>
-          <li>Ongoing adjustments to nutrition, supplements, and lifestyle routines</li>
-          <li>Secure messaging support between visits</li>
-          <li>Client portal for plans, notes, and progress tracking</li>
-          <li>Added structure to maintain consistency over time</li>
-        </ul>
-        <div style="margin:4px 0 12px;color:#1e2a27;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Save US$140 compared to booking individually
-        </div>
-        <a href="https://my.practicebetter.io/#/your-6-month-link"
-           target="_blank" rel="noopener"
-           style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Book Now
-        </a>
-      </div>
-    </details>
+    </div>
 
-    <!-- HSA/FSA note for all packages -->
-    <p style="text-align:center;margin:10px 0 0;color:#5c6a66;font-size:13px;line-height:1.6;font-family:Montserrat,Arial,sans-serif;">
-      <em>*All consultations and programs are HSA/FSA eligible.</em>
-    </p>
-
-    <!-- Existing clients: welcoming dropdown -->
-    <details style="text-align:center;color:#1e2a27;font-size:15px;margin:20px auto 0;max-width:720px;padding:0;border-radius:16px;background:#f7faf9;border:1px solid rgba(29,73,57,0.15);font-family:Montserrat,Arial,sans-serif;overflow:hidden;">
-      <summary style="padding:18px;cursor:pointer;list-style:none;">
-        <h3 style="color:#1d4939;font-weight:800;font-size:18px;margin:0 0 6px;font-family:Montserrat,Arial,sans-serif;">
-          Already a Food &amp; Fertility Client? Book your follow-up appointment here
-        </h3>
-        <p style="margin:0;color:#5c6a66;font-size:14px;line-height:1.6;">
-          We love continuing the journey with you — check in, refine, and keep your momentum.
-        </p>
-      </summary>
-      <div style="padding:0 0 18px;">
-        <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
-           target="_blank" rel="noopener"
-           style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;font-family:Montserrat,Arial,sans-serif;">
-          Book Now
-        </a>
-      </div>
-    </details>
-
+    <!-- HSA/FSA note -->
+    <p class="note"><em>*All consultations and programs are HSA/FSA eligible.</em></p>
   </div>
 </div>
+
