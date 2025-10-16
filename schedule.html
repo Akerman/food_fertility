@@ -7,184 +7,77 @@ title: Book an Appointment
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-  :root {
-    --ff: 'Montserrat', Arial, sans-serif;
-    --brand: #1d4939;
-    --ink: #1e2a27;
-    --muted: #5c6a66;
-    --accent: #f7980f;
-    --card: #ffffff;
-    --card-alt: #f7faf9;
-    --ring: rgba(29,73,57,0.18);
-    --ring-strong: rgba(29,73,57,0.28);
-    --shadow-s: 0 1px 2px rgba(0,0,0,.05);
-    --shadow-m: 0 4px 16px rgba(0,0,0,.08);
-  }
-
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-  .text-center { text-align: center; }
-
-  /* Section heading over cards */
-  .section-lede {
-    max-width: 880px;
-    margin: 0 auto 18px auto;
-    text-align: center;
-    font-family: var(--ff);
-    color: var(--brand);
-    font-weight: 800;
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-
-  /* Booking grid */
-  .booking-wrap { max-width: 960px; margin: 0 auto; padding: 32px 0 56px; font-family: var(--ff); }
-  .booking-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  @media (min-width: 720px) {
-    .booking-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
-  }
-
-  .booking-card {
-    background: var(--card);
-    border: 1px solid var(--ring);
-    border-radius: 16px;
-    box-shadow: var(--shadow-s);
-    padding: 22px 20px;
-    text-align: center;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  }
-  .booking-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-m);
-    border-color: var(--ring-strong);
-  }
-  .booking-card.alt { background: var(--card-alt); }
-
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    background: rgba(247,152,15,.14);
-    border-radius: 999px;
-    padding: 6px 10px;
-    margin-bottom: 8px;
-  }
-
-  .card-title {
-    color: var(--brand);
-    font-weight: 800;
-    font-size: 20px;
-    margin: 4px 0 8px;
-  }
-  .card-tagline {
-    color: var(--ink);
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 14px;
-  }
-
-  .cta {
-    display: inline-block;
-    background: var(--brand);
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1;
-    transition: opacity .15s ease, transform .15s ease;
-  }
-  .cta:focus,
-  .cta:hover { opacity: .92; transform: translateY(-1px); }
-
-  .note {
-    text-align: center;
-    margin-top: 18px;
-    color: var(--muted);
-    font-size: 13px;
-    font-family: var(--ff);
-  }
-</style>
-
-<!-- Hero Banner (matches homepage) -->
-<div class="slider-section" style="background-color:#ffffff;padding:80px 0 10px 0;">
-  <div class="container text-center" style="text-align:center;">
-    <div class="slider-content" style="max-width:720px;margin:0 auto;">
-      <h1 class="main-title" style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:3rem;font-weight:700;margin-bottom:0.25rem;">
-        Improve Your Fertility With Nutrition.
-      </h1>
-      <p class="hero-subheading" style="font-family:'Montserrat',sans-serif;font-size:1rem;font-style:italic;color:#1d4939;margin:0.75rem 0;">
-        Align your body and your dreams!
-      </p>
-      <!-- Keep spacing, remove button -->
-      <div class="cta-buttons" style="margin-top:1.5rem;height:38px;"></div>
-    </div>
+<!-- Hero Banner -->
+<div style="background-color:#ffffff;padding:80px 0 10px 0;text-align:center;">
+  <div style="max-width:720px;margin:0 auto;">
+    <h1 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:3rem;font-weight:700;margin-bottom:0.25rem;">
+      Improve Your Fertility With Nutrition.
+    </h1>
+    <p style="font-family:'Montserrat',sans-serif;font-size:1rem;font-style:italic;color:#1d4939;margin:0.75rem 0;">
+      Align your body and your dreams!
+    </p>
+    <div style="margin-top:1.5rem;height:38px;"></div>
   </div>
 </div>
 
-<!-- Shared heading over cards -->
-<div class="container">
-  <p class="section-lede">
-    Compassionate and evidence-based care to support egg, sperm, and reproductive health through nutrition and lifestyle.
-  </p>
+<!-- Shared Heading -->
+<div style="max-width:880px;margin:0 auto 24px;text-align:center;font-family:'Montserrat',sans-serif;color:#1d4939;font-weight:800;font-size:1.1rem;line-height:1.6;">
+  Compassionate and evidence-based care to support egg, sperm, and reproductive health through nutrition and lifestyle.
 </div>
 
-<!-- Booking (Three Options) -->
-<div id="programs" class="container" style="font-family:Montserrat,Arial,sans-serif;">
-  <div class="booking-wrap">
+<!-- Cards Wrapper -->
+<div style="max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:18px;padding:0 16px 56px;font-family:'Montserrat',sans-serif;">
 
-    <div class="booking-grid">
-
-      <!-- Free Discovery Call -->
-      <div class="booking-card alt">
-        <div class="pill" aria-hidden="true">New Visitors</div>
-        <div class="card-title">Free Discovery Call</div>
-        <p class="card-tagline">Learn more about how nutrition can support your fertility and help optimize the health of your baby.</p>
-        <a
-          class="cta"
-          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=YOUR_DISCOVERY_CALL_LINK"
-          target="_blank" rel="noopener"
-          aria-label="Book Free Discovery Call"
-        >Book Now</a>
-      </div>
-
-      <!-- New Clients: Initial Consult -->
-      <div class="booking-card">
-        <div class="pill" aria-hidden="true">New Clients</div>
-        <div class="card-title">Initial Consult</div>
-        <p class="card-tagline">Feel supported and empowered as you improve your fertility through nutrition.</p>
-        <a
-          class="cta"
-          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
-          target="_blank" rel="noopener"
-          aria-label="Book Initial Consult — New Clients"
-        >Book Now</a>
-      </div>
-
-      <!-- Existing Clients: Follow-Up Appointment -->
-      <div class="booking-card">
-        <div class="pill" aria-hidden="true">Existing Clients</div>
-        <div class="card-title">Follow-Up Appointment</div>
-        <p class="card-tagline">Continue feeling guided and supported on your path to parenthood.</p>
-        <a
-          class="cta"
-          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
-          target="_blank" rel="noopener"
-          aria-label="Book Follow-Up — Existing Clients"
-        >Book Now</a>
-      </div>
-
+  <!-- Free Discovery Call -->
+  <div style="flex:1 1 300px;max-width:340px;background:#f7faf9;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05);padding:24px 20px;text-align:center;">
+    <div style="display:inline-block;background:rgba(247,152,15,.14);color:#f7980f;font-weight:700;font-size:12px;border-radius:999px;padding:6px 10px;margin-bottom:8px;">
+      New Visitors
     </div>
+    <h3 style="color:#1d4939;font-weight:800;font-size:20px;margin:4px 0 8px;">Free Discovery Call</h3>
+    <p style="color:#1e2a27;font-size:15px;line-height:1.7;margin:0 0 16px;">
+      Learn more about how nutrition can support your fertility and help optimize the health of your baby.
+    </p>
+    <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=YOUR_DISCOVERY_CALL_LINK"
+       target="_blank" rel="noopener"
+       style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;">
+      Book Now
+    </a>
+  </div>
 
-    <!-- HSA/FSA note -->
-    <p class="note"><em>*All consultations and programs are HSA/FSA eligible.</em></p>
+  <!-- Initial Consult -->
+  <div style="flex:1 1 300px;max-width:340px;background:#ffffff;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05);padding:24px 20px;text-align:center;">
+    <div style="display:inline-block;background:rgba(247,152,15,.14);color:#f7980f;font-weight:700;font-size:12px;border-radius:999px;padding:6px 10px;margin-bottom:8px;">
+      New Clients
+    </div>
+    <h3 style="color:#1d4939;font-weight:800;font-size:20px;margin:4px 0 8px;">Initial Consult</h3>
+    <p style="color:#1e2a27;font-size:15px;line-height:1.7;margin:0 0 16px;">
+      Feel supported and empowered as you improve your fertility through nutrition.
+    </p>
+    <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
+       target="_blank" rel="noopener"
+       style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;">
+      Book Now
+    </a>
+  </div>
+
+  <!-- Follow-Up Appointment -->
+  <div style="flex:1 1 300px;max-width:340px;background:#ffffff;border:1px solid rgba(29,73,57,0.18);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05);padding:24px 20px;text-align:center;">
+    <div style="display:inline-block;background:rgba(247,152,15,.14);color:#f7980f;font-weight:700;font-size:12px;border-radius:999px;padding:6px 10px;margin-bottom:8px;">
+      Existing Clients
+    </div>
+    <h3 style="color:#1d4939;font-weight:800;font-size:20px;margin:4px 0 8px;">Follow-Up Appointment</h3>
+    <p style="color:#1e2a27;font-size:15px;line-height:1.7;margin:0 0 16px;">
+      Continue feeling guided and supported on your path to parenthood.
+    </p>
+    <a href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
+       target="_blank" rel="noopener"
+       style="display:inline-block;background:#1d4939;color:#fff;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;">
+      Book Now
+    </a>
   </div>
 </div>
+
+<!-- HSA/FSA note -->
+<p style="text-align:center;margin:10px 0 40px;color:#5c6a66;font-size:13px;line-height:1.6;font-family:'Montserrat',sans-serif;">
+  <em>*All consultations and programs are HSA/FSA eligible.</em>
+</p>
