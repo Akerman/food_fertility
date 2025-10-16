@@ -8,16 +8,16 @@ title: Book an Appointment
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  /* Simple, brand-aligned polish for the two-card layout */
   :root {
     --ff: 'Montserrat', Arial, sans-serif;
     --brand: #1d4939;
-    --brand-ink: #1e2a27;
+    --ink: #1e2a27;
     --muted: #5c6a66;
     --accent: #f7980f;
     --card: #ffffff;
     --card-alt: #f7faf9;
     --ring: rgba(29,73,57,0.18);
+    --ring-strong: rgba(29,73,57,0.28);
     --shadow-s: 0 1px 2px rgba(0,0,0,.05);
     --shadow-m: 0 4px 16px rgba(0,0,0,.08);
   }
@@ -25,8 +25,20 @@ title: Book an Appointment
   .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
   .text-center { text-align: center; }
 
+  /* Section heading over cards */
+  .section-lede {
+    max-width: 880px;
+    margin: 0 auto 18px auto;
+    text-align: center;
+    font-family: var(--ff);
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
   /* Booking grid */
-  .booking-wrap { max-width: 900px; margin: 0 auto; padding: 40px 0 56px; font-family: var(--ff); }
+  .booking-wrap { max-width: 960px; margin: 0 auto; padding: 32px 0 56px; font-family: var(--ff); }
   .booking-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -48,7 +60,7 @@ title: Book an Appointment
   .booking-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-m);
-    border-color: rgba(29,73,57,0.28);
+    border-color: var(--ring-strong);
   }
   .booking-card.alt { background: var(--card-alt); }
 
@@ -65,16 +77,17 @@ title: Book an Appointment
     margin-bottom: 8px;
   }
 
-  .title {
+  .card-title {
     color: var(--brand);
     font-weight: 800;
     font-size: 20px;
-    margin: 4px 0 6px;
+    margin: 4px 0 8px;
   }
-  .meta {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 14px;
+  .card-tagline {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 14px;
   }
 
   .cta {
@@ -97,19 +110,7 @@ title: Book an Appointment
     margin-top: 18px;
     color: var(--muted);
     font-size: 13px;
-  }
-
-  /* Optional tiny list that stacks nicely if you want to re-add bullets later
-     (kept here for future use; not displayed by default) */
-  .mini-list {
-    display: none; /* set to block if you want to show bullets later */
-    text-align: left;
-    margin: 10px auto 14px;
-    padding-left: 18px;
-    max-width: 520px;
-    color: var(--brand-ink);
-    font-size: 15px;
-    line-height: 1.7;
+    font-family: var(--ff);
   }
 </style>
 
@@ -129,51 +130,55 @@ title: Book an Appointment
   </div>
 </div>
 
-<!-- Booking (Two Options Only) -->
+<!-- Shared heading over cards -->
+<div class="container">
+  <p class="section-lede">
+    Compassionate and evidence-based care to support egg, sperm, and reproductive health through nutrition and lifestyle.
+  </p>
+</div>
+
+<!-- Booking (Three Options) -->
 <div id="programs" class="container" style="font-family:Montserrat,Arial,sans-serif;">
   <div class="booking-wrap">
 
     <div class="booking-grid">
 
-      <!-- New Client (Initial Consult) -->
+      <!-- Free Discovery Call -->
+      <div class="booking-card alt">
+        <div class="pill" aria-hidden="true">New Visitors</div>
+        <div class="card-title">Free Discovery Call</div>
+        <p class="card-tagline">Learn more about how nutrition can support your fertility and help optimize the health of your baby.</p>
+        <a
+          class="cta"
+          href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=YOUR_DISCOVERY_CALL_LINK"
+          target="_blank" rel="noopener"
+          aria-label="Book Free Discovery Call"
+        >Book Now</a>
+      </div>
+
+      <!-- New Clients: Initial Consult -->
       <div class="booking-card">
-        <div class="pill" aria-hidden="true">New Client</div>
-        <div class="title">Initial Consult</div>
-        <div class="meta">75 minutes · US$275*</div>
-
-        <!-- Keep this hidden list ready if you want details later -->
-        <ul class="mini-list">
-          <li>Registered Dietitian–led nutrition & lifestyle assessment</li>
-          <li>Review of labs, supplements, and fertility goals</li>
-          <li>A simple, personalized plan to start right away</li>
-        </ul>
-
+        <div class="pill" aria-hidden="true">New Clients</div>
+        <div class="card-title">Initial Consult</div>
+        <p class="card-tagline">Feel supported and empowered as you improve your fertility through nutrition.</p>
         <a
           class="cta"
           href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d65d354798ab9afee3b88"
           target="_blank" rel="noopener"
-          aria-label="Book Initial Consult — New Client"
+          aria-label="Book Initial Consult — New Clients"
         >Book Now</a>
       </div>
 
-      <!-- Existing Client (Follow-Up) -->
-      <div class="booking-card alt">
-        <div class="pill" aria-hidden="true">Existing Client</div>
-        <div class="title">Follow-Up Appointment</div>
-        <div class="meta">45 minutes · Current Clients Only</div>
-
-        <!-- Hidden list placeholder if needed later -->
-        <ul class="mini-list">
-          <li>Refine your plan, adjust supplements & habits</li>
-          <li>Review progress and set next steps</li>
-          <li>Keep momentum with focused support</li>
-        </ul>
-
+      <!-- Existing Clients: Follow-Up Appointment -->
+      <div class="booking-card">
+        <div class="pill" aria-hidden="true">Existing Clients</div>
+        <div class="card-title">Follow-Up Appointment</div>
+        <p class="card-tagline">Continue feeling guided and supported on your path to parenthood.</p>
         <a
           class="cta"
           href="https://my.practicebetter.io/#/686c32ba9a42aa4d3bdc57c4/bookings?s=686d68988e3602612e852ab1"
           target="_blank" rel="noopener"
-          aria-label="Book Follow-Up — Existing Client"
+          aria-label="Book Follow-Up — Existing Clients"
         >Book Now</a>
       </div>
 
@@ -183,4 +188,3 @@ title: Book an Appointment
     <p class="note"><em>*All consultations and programs are HSA/FSA eligible.</em></p>
   </div>
 </div>
-
