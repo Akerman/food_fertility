@@ -204,6 +204,200 @@ body {
     }
   });
 </script>
+<!-- =========================
+     Food & Fertility Popup
+     Paste this ENTIRE block right before </body> in index.html
+     ========================= -->
+
+<style>
+  /* Food & Fertility Popup (on-brand) */
+  .ff-overlay{
+    position:fixed; inset:0;
+    display:none;
+    align-items:center; justify-content:center;
+    padding:20px;
+    background:rgba(13, 22, 18, 0.55);
+    z-index:9999;
+  }
+  .ff-overlay.is-open{ display:flex; }
+
+  .ff-modal{
+    width:100%;
+    max-width:520px;
+    background:#fff;
+    border-radius:18px;
+    padding:22px 20px 18px;
+    box-shadow:0 24px 70px rgba(0,0,0,0.28);
+    position:relative;
+    color:#0f1a14;
+
+    /* Explicit brand font */
+    font-family:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .ff-close{
+    position:absolute;
+    top:10px; right:12px;
+    width:36px; height:36px;
+    border:none;
+    background:transparent;
+    border-radius:10px;
+    font-size:22px;
+    line-height:36px;
+    cursor:pointer;
+    opacity:0.7;
+  }
+  .ff-close:hover{ opacity:1; }
+
+  .ff-logo{
+    height:40px;
+    width:auto;
+    display:block;
+    margin:2px 0 14px;
+  }
+
+  .ff-title{
+    margin:0 30px 10px 0;
+    font-size:1.35rem;
+    line-height:1.2;
+    letter-spacing:-0.01em;
+    font-weight:600;
+  }
+
+  .ff-text{
+    margin:0 0 14px;
+    font-size:1rem;
+    line-height:1.55;
+    opacity:0.95;
+    font-weight:400;
+  }
+
+  .ff-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:12px 14px;
+    border-radius:14px;
+    font-weight:700;
+    background:#1d4939;   /* brand green */
+    color:#fff;
+    border:1px solid #1d4939;
+    transition:transform 140ms ease, opacity 140ms ease;
+  }
+  .ff-cta:hover{
+    opacity:0.95;
+    transform:translateY(-1px);
+  }
+
+  .ff-fineprint{
+    margin:12px 0 0;
+    font-size:0.85rem;
+    opacity:0.7;
+    font-weight:400;
+  }
+
+  /* Mobile spacing tweak */
+  @media (max-width: 420px){
+    .ff-modal{ padding:20px 18px 16px; }
+    .ff-title{ font-size:1.25rem; }
+  }
+</style>
+
+<div id="ff-overlay" class="ff-overlay" aria-hidden="true">
+  <div class="ff-modal" role="dialog" aria-modal="true" aria-labelledby="ff-title">
+    <button class="ff-close" id="ff-close" aria-label="Close">×</button>
+
+    <!-- If your logo path differs, update src accordingly -->
+    <img class="ff-logo" src="https://foodandfertility.com/assets/images/logo.png" alt="Food & Fertility logo">
+
+    <h2 id="ff-title" class="ff-title">We all want the healthiest egg and sperm.</h2>
+
+    <p class="ff-text">
+      And food is one of the most powerful tools we have.
+      Download this <strong>free fertility nutrition guide</strong> to learn how to nourish reproductive health—without extremes or overwhelm.
+    </p>
+
+    <!-- Update this link to your quiz or lead magnet page -->
+    <a class="ff-cta" id="ff-cta" href="/free-guide/">
+      Download the free guide
+    </a>
+
+    <p class="ff-fineprint">Created by a fertility-focused Registered Dietitian.</p>
+  </div>
+</div>
+
+<script>
+(() => {
+  const overlay = document.getElementById('ff-overlay');
+  const closeBtn = document.getElementById('ff-close');
+  const ctaBtn = document.getElementById('ff-cta');
+
+  if (!overlay || !closeBtn || !ctaBtn) return;
+
+  // Settings
+  const SHOW_AFTER_MS = 35000; // show after 35 seconds
+  const COOLDOWN_DAYS = 7;     // don't show again for 7 days after close/click
+  const KEY = 'ff_popup_next_show_ts';
+
+  const now = Date.now();
+  const nextAllowed = Number(localStorage.getItem(KEY) || '0');
+  const canShow = now >= nextAllowed;
+
+  const setCooldown = () => {
+    const ms = COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
+    localStorage.setItem(KEY, String(Date.now() + ms));
+  };
+
+  const openPopup = () => {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.addEventListener('keydown', onKeyDown);
+  };
+
+  const closePopup = () => {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.removeEventListener('keydown', onKeyDown);
+    setCooldown();
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === 'Escape') closePopup();
+  };
+
+  // Close when clicking the dim background
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  closeBtn.addEventListener('click', closePopup);
+
+  // If they click the CTA, close + apply cooldown
+  ctaBtn.addEventListener('click', closePopup);
+
+  // Exit intent (desktop only)
+  const onExitIntent = (e) => {
+    if (e.clientY <= 8) {
+      document.removeEventListener('mousemove', onExitIntent);
+      if (canShow && !overlay.classList.contains('is-open')) openPopup();
+    }
+  };
+
+  if (canShow) {
+    // Time delay trigger
+    setTimeout(() => {
+      if (!overlay.classList.contains('is-open')) openPopup();
+    }, SHOW_AFTER_MS);
+
+    // Exit intent trigger (desktop pointer devices)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.addEventListener('mousemove', onExitIntent);
+    }
+  }
+})();
+</script>
 
 </body>
 </html>
