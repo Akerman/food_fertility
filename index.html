@@ -205,141 +205,194 @@ body {
   });
 </script>
 <!-- =========================
-     Food & Fertility Popup
+     Food & Fertility Bottom Popup (non-intrusive)
      Paste this ENTIRE block right before </body> in index.html
      ========================= -->
 
 <style>
-  /* Food & Fertility Popup (on-brand) */
-  .ff-overlay{
-    position:fixed; inset:0;
-    display:none;
-    align-items:center; justify-content:center;
-    padding:20px;
-    background:rgba(13, 22, 18, 0.55);
-    z-index:9999;
-  }
-  .ff-overlay.is-open{ display:flex; }
+  /* Bottom banner container */
+  .ff-bottom-banner {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
 
-  .ff-modal{
-    width:100%;
-    max-width:520px;
-    background:#fff;
-    border-radius:18px;
-    padding:22px 20px 18px;
-    box-shadow:0 24px 70px rgba(0,0,0,0.28);
-    position:relative;
-    color:#0f1a14;
-
-    /* Explicit brand font */
-    font-family:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                Roboto, Helvetica, Arial, sans-serif;
+    display: none; /* toggled by JS */
+    justify-content: center;
+    pointer-events: none; /* allows clicking/scrolling behind except on the card */
   }
 
-  .ff-close{
-    position:absolute;
-    top:10px; right:12px;
-    width:36px; height:36px;
-    border:none;
-    background:transparent;
-    border-radius:10px;
-    font-size:22px;
-    line-height:36px;
-    cursor:pointer;
-    opacity:0.7;
-  }
-  .ff-close:hover{ opacity:1; }
-
-  .ff-logo{
-    height:40px;
-    width:auto;
-    display:block;
-    margin:2px 0 14px;
+  .ff-bottom-banner.is-open {
+    display: flex;
   }
 
-  .ff-title{
-    margin:0 30px 10px 0;
-    font-size:1.35rem;
-    line-height:1.2;
-    letter-spacing:-0.01em;
-    font-weight:600;
+  /* Card */
+  .ff-bottom-card {
+    width: 100%;
+    max-width: 980px;
+
+    pointer-events: auto; /* clickable */
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(29, 73, 57, 0.12);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.16);
+
+    padding: 16px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    align-items: center;
+
+    /* Brand font (explicit) */
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                 Roboto, Helvetica, Arial, sans-serif;
+
+    transform: translateY(18px);
+    opacity: 0;
+    transition: transform 220ms ease, opacity 220ms ease;
   }
 
-  .ff-text{
-    margin:0 0 14px;
-    font-size:1rem;
-    line-height:1.55;
-    opacity:0.95;
-    font-weight:400;
+  .ff-bottom-banner.is-open .ff-bottom-card {
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  .ff-cta{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    padding:12px 14px;
-    border-radius:14px;
-    font-weight:700;
-    background:#1d4939;   /* brand green */
-    color:#fff;
-    border:1px solid #1d4939;
-    transition:transform 140ms ease, opacity 140ms ease;
-  }
-  .ff-cta:hover{
-    opacity:0.95;
-    transform:translateY(-1px);
+  .ff-bottom-left {
+    display: grid;
+    gap: 8px;
+    min-width: 0; /* prevent overflow */
   }
 
-  .ff-fineprint{
-    margin:12px 0 0;
-    font-size:0.85rem;
-    opacity:0.7;
-    font-weight:400;
+  .ff-bottom-title {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #0f1a14;
+    letter-spacing: -0.01em;
   }
 
-  /* Mobile spacing tweak */
-  @media (max-width: 420px){
-    .ff-modal{ padding:20px 18px 16px; }
-    .ff-title{ font-size:1.25rem; }
+  .ff-bottom-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(15, 26, 20, 0.88);
+  }
+
+  .ff-bottom-fineprint {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: rgba(15, 26, 20, 0.68);
+  }
+
+  .ff-bottom-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .ff-bottom-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+
+    background: #1d4939; /* brand green */
+    border: 1px solid #1d4939;
+    color: #ffffff;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1;
+
+    transition: transform 140ms ease, opacity 140ms ease;
+    white-space: nowrap;
+  }
+
+  .ff-bottom-cta:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+
+  .ff-bottom-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 26, 20, 0.12);
+    background: #ffffff;
+    cursor: pointer;
+
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+
+    color: rgba(15, 26, 20, 0.7);
+    transition: opacity 140ms ease, transform 140ms ease;
+  }
+
+  .ff-bottom-close:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+
+  /* Mobile: stack nicely and add breathing room */
+  @media (max-width: 640px) {
+    .ff-bottom-card {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 16px 14px;
+    }
+    .ff-bottom-actions {
+      justify-content: flex-start;
+    }
+    .ff-bottom-title {
+      font-size: 1.02rem;
+    }
   }
 </style>
 
-<div id="ff-overlay" class="ff-overlay" aria-hidden="true">
-  <div class="ff-modal" role="dialog" aria-modal="true" aria-labelledby="ff-title">
-    <button class="ff-close" id="ff-close" aria-label="Close">×</button>
+<div id="ff-bottom-banner" class="ff-bottom-banner" aria-hidden="true">
+  <div class="ff-bottom-card" role="dialog" aria-label="Food & Fertility Guide">
+    <div class="ff-bottom-left">
+      <h3 class="ff-bottom-title">We all want the healthiest egg and sperm.</h3>
 
-    <!-- If your logo path differs, update src accordingly -->
-    <img class="ff-logo" src="https://foodandfertility.com/assets/images/logo.png" alt="Food & Fertility logo">
+      <p class="ff-bottom-text">
+        Food can help improve egg and sperm quality. Learn more about how food can improve fertility.
+        <strong>Download free Food &amp; Fertility Guide.</strong>
+      </p>
 
-    <h2 id="ff-title" class="ff-title">We all want the healthiest egg and sperm.</h2>
+      <p class="ff-bottom-fineprint">
+        Created by a fertility-focused Registered Dietitian.
+      </p>
+    </div>
 
-    <p class="ff-text">
-      And food is one of the most powerful tools we have.
-      Download this <strong>free fertility nutrition guide</strong> to learn how to nourish reproductive health—without extremes or overwhelm.
-    </p>
-
-    <!-- Update this link to your quiz or lead magnet page -->
-    <a class="ff-cta" id="ff-cta" href="/free-guide/">
-      Download the free guide
-    </a>
-
-    <p class="ff-fineprint">Created by a fertility-focused Registered Dietitian.</p>
+    <div class="ff-bottom-actions">
+      <!-- Update this link to your actual guide signup / landing page -->
+      <a class="ff-bottom-cta" id="ff-bottom-cta" href="/free-guide/">Food &amp; Fertility Guide</a>
+      <button class="ff-bottom-close" id="ff-bottom-close" aria-label="Close">×</button>
+    </div>
   </div>
 </div>
 
 <script>
 (() => {
-  const overlay = document.getElementById('ff-overlay');
-  const closeBtn = document.getElementById('ff-close');
-  const ctaBtn = document.getElementById('ff-cta');
+  const banner = document.getElementById('ff-bottom-banner');
+  const closeBtn = document.getElementById('ff-bottom-close');
+  const ctaBtn = document.getElementById('ff-bottom-cta');
 
-  if (!overlay || !closeBtn || !ctaBtn) return;
+  if (!banner || !closeBtn || !ctaBtn) return;
 
-  // Settings
-  const SHOW_AFTER_MS = 35000; // show after 35 seconds
-  const COOLDOWN_DAYS = 7;     // don't show again for 7 days after close/click
-  const KEY = 'ff_popup_next_show_ts';
+  // SETTINGS
+  const SHOW_AFTER_MS = 14000; // less intrusive than 35s; change to taste
+  const COOLDOWN_DAYS = 7;
+  const KEY = 'ff_bottom_banner_next_show_ts';
 
   const now = Date.now();
   const nextAllowed = Number(localStorage.getItem(KEY) || '0');
@@ -350,54 +403,26 @@ body {
     localStorage.setItem(KEY, String(Date.now() + ms));
   };
 
-  const openPopup = () => {
-    overlay.classList.add('is-open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.addEventListener('keydown', onKeyDown);
+  const openBanner = () => {
+    banner.classList.add('is-open');
+    banner.setAttribute('aria-hidden', 'false');
   };
 
-  const closePopup = () => {
-    overlay.classList.remove('is-open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.removeEventListener('keydown', onKeyDown);
+  const closeBanner = () => {
+    banner.classList.remove('is-open');
+    banner.setAttribute('aria-hidden', 'true');
     setCooldown();
   };
 
-  const onKeyDown = (e) => {
-    if (e.key === 'Escape') closePopup();
-  };
+  closeBtn.addEventListener('click', closeBanner);
 
-  // Close when clicking the dim background
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closePopup();
-  });
-
-  closeBtn.addEventListener('click', closePopup);
-
-  // If they click the CTA, close + apply cooldown
-  ctaBtn.addEventListener('click', closePopup);
-
-  // Exit intent (desktop only)
-  const onExitIntent = (e) => {
-    if (e.clientY <= 8) {
-      document.removeEventListener('mousemove', onExitIntent);
-      if (canShow && !overlay.classList.contains('is-open')) openPopup();
-    }
-  };
+  // If they click the CTA, close it (so it doesn’t linger on return)
+  ctaBtn.addEventListener('click', closeBanner);
 
   if (canShow) {
-    // Time delay trigger
-    setTimeout(() => {
-      if (!overlay.classList.contains('is-open')) openPopup();
-    }, SHOW_AFTER_MS);
-
-    // Exit intent trigger (desktop pointer devices)
-    if (window.matchMedia('(pointer: fine)').matches) {
-      document.addEventListener('mousemove', onExitIntent);
-    }
+    setTimeout(openBanner, SHOW_AFTER_MS);
   }
 })();
 </script>
-
 </body>
 </html>
