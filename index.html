@@ -204,35 +204,127 @@ body {
     }
   });
 </script>
-<!-- Food & Fertility Popup -->
-<div id="ff-popup-overlay">
-  <div id="ff-popup">
+<!-- Food & Fertility Bottom Banner (HTML only) -->
+<div
+  id="ff-popup-overlay"
+  style="
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+  "
+>
+  <div
+    id="ff-popup"
+    style="
+      max-width: 900px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid rgba(29, 73, 57, 0.12);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                   Roboto, Helvetica, Arial, sans-serif;
+    "
+  >
 
-    <!-- Close Button -->
-    <button class="ff-popup-close" aria-label="Close popup">×</button>
+    <!-- Text -->
+    <div style="display: flex; flex-direction: column; gap: 6px;">
 
-    <!-- Logo -->
-    <img
-      src="/images/food-and-fertility-logo.png"
-      alt="Food & Fertility Logo"
-      class="ff-popup-logo"
-    />
+      <!-- Headline -->
+      <h1
+        class="ff-popup-title"
+        style="
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.25;
+          font-weight: 700;
+          color: #1d4939;
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        Improve your fertility with nutrition.
+      </h1>
 
-    <!-- Headline -->
-    <h1 class="ff-popup-title">
-      Support fertility through food.
-    </h1>
+      <!-- Subheading -->
+      <div
+        style="
+          font-size: 0.95rem;
+          line-height: 1.4;
+          font-weight: 500;
+          color: rgba(15, 26, 20, 0.85);
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        Download free Food &amp; Fertility Guide.
+      </div>
 
-    <!-- Subtext -->
-    <p class="ff-popup-subtext">
-      Created by a fertility-focused Registered Dietitian.
-    </p>
+      <!-- Fine print -->
+      <div
+        style="
+          font-size: 0.85rem;
+          color: rgba(15, 26, 20, 0.65);
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        Created by a fertility-focused Registered Dietitian.
+      </div>
 
-    <!-- CTA Button (matches Book An Appointment) -->
-    <div class="cta-buttons" style="margin-top: 1.5rem;">
-      <a class="custom-btn" href="#YOUR_GUIDE_LINK">
-        Download the Food &amp; Fertility Guide
+    </div>
+
+    <!-- CTA + Close -->
+    <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+
+      <a
+        href="#YOUR_GUIDE_LINK"
+        class="custom-btn"
+        style="
+          padding: 10px 16px;
+          border-radius: 14px;
+          background: #1d4939;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.95rem;
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        Food &amp; Fertility Guide
       </a>
+
+      <!-- Close Button -->
+      <button
+        aria-label="Close popup"
+        onclick="this.parentElement.parentElement.parentElement.style.display='none';"
+        style="
+          width: 36px;
+          height: 36px;
+          border-radius: 12px;
+          border: 1px solid rgba(15, 26, 20, 0.15);
+          background: #ffffff;
+          cursor: pointer;
+          font-size: 18px;
+          line-height: 32px;
+          color: rgba(15, 26, 20, 0.6);
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        ×
+      </button>
+
     </div>
 
   </div>
