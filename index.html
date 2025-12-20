@@ -112,12 +112,12 @@ title: Home Page
     <img src="/assets/images/Baby6.png" alt="Baby">
   </div>
 </div>
-<!-- Unified Value Stack / FAQ Section End -->
+<!-- Styles -->
 <style>
-.custom-btn {
+  .custom-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #2f6859; /* Darker green */
+    background-color: #2f6859;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -126,105 +126,13 @@ title: Home Page
     font-weight: 600;
     transition: all 0.3s ease;
     border: none;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-}
-
-.custom-btn:hover,
-.custom-btn:focus,
-.custom-btn:active {
-    background-color: #3b8a72; /* Lighter green on hover/click */
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Fertility Steps Section (new) */
-.fertility-steps-section {
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.fertility-steps-title {
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #1d4939;
-}
-
-.fertility-steps-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.fertility-step {
-    max-width: 200px;
-}
-
-.fertility-step img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
-}
-
-.fertility-step h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1d4939;
-    margin: 0;
-}
-
-body {
-    padding-top: 100px;
-}
-  /* Restore couple image visibility on mobile */
-@media (max-width: 767px) {
-  .couple-image-section {
-    display: block !important;
-    padding-top: 20px !important;
-  }
-
-  .couple-image-section img {
-    display: block !important;
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-<script>
-  window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header-main');
-    if (window.scrollY > 100) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-    }
-  });
-</script>
-<style>
-  /* Mobile layout fix: stack content above button */
-  @media (max-width: 640px) {
-    #ff-popup {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-    }
-
-    #ff-popup > div:last-child {
-      width: 100%;
-      justify-content: flex-start !important;
-    }
-
-    #ff-popup a.custom-btn,
-    #ff-popup a {
-      width: 100%;
-      text-align: center;
-    }
   }
 </style>
-<!-- Food & Fertility Bottom Banner (HTML only) -->
+
+<!-- ============================= -->
+<!-- FOOD & FERTILITY POPUP (FINAL) -->
+<!-- ============================= -->
+
 <div
   id="ff-popup-overlay"
   style="
@@ -233,12 +141,11 @@ body {
     right: 16px;
     bottom: 16px;
     z-index: 9999;
-    display: flex;
+    display: none;
     justify-content: center;
   "
 >
   <div
-    id="ff-popup"
     style="
       max-width: 900px;
       width: 100%;
@@ -248,106 +155,37 @@ body {
       box-shadow: 0 14px 40px rgba(0,0,0,0.14);
       padding: 20px 22px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 20px;
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                   Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     "
   >
-
-    <!-- Text -->
-    <div style="display: flex; flex-direction: column; gap: 6px;">
-
-      <!-- Headline -->
-      <h1
-        class="ff-popup-title"
-        style="
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.25;
-          font-weight: 700;
-          color: #1d4939;
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
-                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <h2 style="margin:0;font-size:1.25rem;font-weight:700;color:#1d4939;">
         Improve your fertility with nutrition.
-      </h1>
-
-      <!-- Subheading -->
-      <div
-        style="
-          font-size: 0.95rem;
-          line-height: 1.4;
-          font-weight: 500;
-          color: rgba(15, 26, 20, 0.85);
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
-                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
+      </h2>
+      <div style="font-size:0.95rem;color:#333;">
         Download free Food &amp; Fertility Guide.
       </div>
-
-      <!-- Fine print -->
-      <div
-        style="
-          font-size: 0.85rem;
-          color: rgba(15, 26, 20, 0.65);
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
-                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
+      <div style="font-size:0.85rem;color:#666;">
         Created by a fertility-focused Registered Dietitian.
       </div>
-
     </div>
 
-    <!-- CTA + Close -->
-    <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
-
-      <a
-        href="#YOUR_GUIDE_LINK"
-        class="custom-btn"
-        style="
-          padding: 10px 16px;
-          border-radius: 14px;
-          background: #1d4939;
-          color: #ffffff;
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 0.95rem;
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
-                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
-        Food &amp; Fertility Guide
-      </a>
-
-      <!-- Close Button -->
-      <button
-        aria-label="Close popup"
-        onclick="this.parentElement.parentElement.parentElement.style.display='none';"
-        style="
-          width: 36px;
-          height: 36px;
-          border-radius: 12px;
-          border: 1px solid rgba(15, 26, 20, 0.15);
-          background: #ffffff;
-          cursor: pointer;
-          font-size: 18px;
-          line-height: 32px;
-          color: rgba(15, 26, 20, 0.6);
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
-                       'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
-        ×
-      </button>
-
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Food &amp; Fertility Guide</a>
+      <button onclick="document.getElementById('ff-popup-overlay').style.display='none';"
+        style="background:none;border:none;font-size:20px;cursor:pointer;">×</button>
     </div>
-
   </div>
 </div>
+
+<script>
+  setTimeout(function () {
+    const popup = document.getElementById('ff-popup-overlay');
+    if (popup) popup.style.display = 'flex';
+  }, 20000);
+</script>
+
 </body>
 </html>
