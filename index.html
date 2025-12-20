@@ -204,6 +204,26 @@ body {
     }
   });
 </script>
+<style>
+  /* Mobile layout fix: stack content above button */
+  @media (max-width: 640px) {
+    #ff-popup {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+
+    #ff-popup > div:last-child {
+      width: 100%;
+      justify-content: flex-start !important;
+    }
+
+    #ff-popup a.custom-btn,
+    #ff-popup a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
 <!-- Food & Fertility Bottom Banner (HTML only) -->
 <div
   id="ff-popup-overlay"
