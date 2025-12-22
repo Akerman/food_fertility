@@ -1,27 +1,41 @@
 <!-- ============================= -->
-<!-- FOOD & FERTILITY POPUP -->
+<!-- FOOD & FERTILITY PLATE POPUP  -->
 <!-- ============================= -->
 
 <style>
-  /* Popup button override */
+  /* Button behavior ONLY inside popup — do NOT override size/shape */
   #ff-popup-overlay .custom-btn {
-    background-color: #1d4939 !important; /* green */
+    background-color: #1d4939 !important;
     color: #ffffff !important;
     font-family: 'Montserrat', sans-serif !important;
-    text-decoration: none !important;
   }
 
-  /* Keep font white even after click/visit */
+  #ff-popup-overlay .custom-btn:hover,
+  #ff-popup-overlay .custom-btn:active,
+  #ff-popup-overlay .custom-btn:focus,
+  #ff-popup-overlay .custom-btn:focus-visible {
+    background-color: #f7980f !important;
+    color: #ffffff !important;
+    outline: none !important;
+  }
+
   #ff-popup-overlay .custom-btn:visited {
     color: #ffffff !important;
   }
 
-  /* Hover/Active/Focus turns button orange, text stays white */
-  #ff-popup-overlay .custom-btn:hover,
-  #ff-popup-overlay .custom-btn:active,
-  #ff-popup-overlay .custom-btn:focus {
-    background-color: #f7980f !important; /* orange */
-    color: #ffffff !important;
+  /* Mobile stack */
+  @media (max-width: 640px) {
+    #ff-popup {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+    #ff-popup-actions {
+      width: 100%;
+    }
+    #ff-popup-overlay .custom-btn {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>
 
@@ -38,13 +52,15 @@
   "
 >
   <div
+    id="ff-popup"
     style="
+      position: relative;
       max-width: 900px;
       width: 100%;
       background: #ffffff;
       border-radius: 18px;
       border: 1px solid rgba(29, 73, 57, 0.12);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
       padding: 20px 22px;
       display: flex;
       justify-content: space-between;
@@ -53,8 +69,30 @@
       font-family: 'Montserrat', sans-serif;
     "
   >
-    <div style="display:flex;flex-direction:column;gap:6px;">
-      <div
+    <!-- Close button -->
+    <button
+      type="button"
+      id="ff-popup-close"
+      style="
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+        line-height: 1;
+        color: #1d4939;
+        font-family: 'Montserrat', sans-serif;
+      "
+      aria-label="Close popup"
+    >
+      ×
+    </button>
+
+    <!-- Text -->
+    <div style="display:flex;flex-direction:column;gap:6px;padding-right:10px;">
+      <h2
         style="
           margin: 0;
           font-size: 1.25rem;
@@ -64,7 +102,7 @@
         "
       >
         Download The Fertility Plate — free
-      </div>
+      </h2>
 
       <div
         style="
@@ -75,42 +113,64 @@
       >
         A simple guide to building meals that support fertility.
       </div>
-
-      <div
-        style="
-          font-size: 0.85rem;
-          color: #666;
-          font-family: 'Montserrat', sans-serif;
-        "
-      >
-        Created by a fertility-focused Registered Dietitian.
-      </div>
     </div>
 
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Download</a>
-
-      <button
-        onclick="document.getElementById('ff-popup-overlay').style.display='none';"
-        style="
-          background: none;
-          border: none;
-          font-size: 20px;
-          cursor: pointer;
-          font-family: 'Montserrat', sans-serif;
-          line-height: 1;
-        "
-        aria-label="Close popup"
+    <!-- CTA -->
+    <div id="ff-popup-actions" style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+      <a
+        id="ff-popup-download"
+        href="/assets/downloads/fertility-plate.pdf"
+        class="custom-btn"
       >
-        ×
-      </button>
+        Download
+      </a>
     </div>
   </div>
 </div>
 
 <script>
-  setTimeout(function () {
-    var popup = document.getElementById('ff-popup-overlay');
-    if (popup) popup.style.display = 'flex';
-  }, 8000);
+  (function () {
+    const SHOW_DELAY_MS = 8000;
+    const HIDE_AFTER_CLOSE_DAYS = 7;
+    const HIDE_AFTER_DOWNLOAD_DAYS = 30;
+
+    const KEY_HIDE_UNTIL = "ff_popup_hide_until_ts";
+
+    function now() {
+      return Date.now();
+    }
+    function daysToMs(d) {
+      return d * 24 * 60 * 60 * 1000;
+    }
+    function shouldShow() {
+      const until = parseInt(localStorage.getItem(KEY_HIDE_UNTIL) || "0", 10);
+      return now() > until;
+    }
+    function setHide(days) {
+      localStorage.setItem(KEY_HIDE_UNTIL, String(now() + daysToMs(days)));
+    }
+
+    if (shouldShow()) {
+      setTimeout(function () {
+        const popup = document.getElementById("ff-popup-overlay");
+        if (popup) popup.style.display = "flex";
+      }, SHOW_DELAY_MS);
+    }
+
+    const closeBtn = document.getElementById("ff-popup-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        document.getElementById("ff-popup-overlay").style.display = "none";
+        setHide(HIDE_AFTER_CLOSE_DAYS);
+      });
+    }
+
+    const downloadBtn = document.getElementById("ff-popup-download");
+    if (downloadBtn) {
+      downloadBtn.addEventListener("click", function () {
+        document.getElementById("ff-popup-overlay").style.display = "none";
+        setHide(HIDE_AFTER_DOWNLOAD_DAYS);
+      });
+    }
+  })();
 </script>
