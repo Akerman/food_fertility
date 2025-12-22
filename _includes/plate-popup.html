@@ -3,27 +3,34 @@
 <!-- ============================= -->
 
 <style>
-  /* Only color behavior inside popup — keep site button sizing/shape */
+  /* Keep popup button styling scoped to popup only */
   #ff-popup-overlay .custom-btn {
-    background-color: #1d4939 !important;
-    color: #ffffff !important;
-    font-family: 'Montserrat', sans-serif !important;
-
-    /* Safety: keep common anchor/button defaults */
+    display: inline-block !important;
+    padding: 12px 30px !important;
+    border-radius: 9999px !important; /* pill */
+    background-color: #1d4939 !important; /* green */
+    color: #ffffff !important;           /* keep text white */
     text-decoration: none !important;
     border: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    transition: all 0.3s ease !important;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   #ff-popup-overlay .custom-btn:hover,
   #ff-popup-overlay .custom-btn:active,
   #ff-popup-overlay .custom-btn:focus,
   #ff-popup-overlay .custom-btn:focus-visible {
-    background-color: #f7980f !important;
+    background-color: #f7980f !important; /* orange */
     color: #ffffff !important;
     outline: none !important;
   }
 
-  /* Prevent visited link color changes */
+  /* Prevent visited link color change */
   #ff-popup-overlay .custom-btn:visited {
     color: #ffffff !important;
   }
@@ -36,11 +43,10 @@
     }
     #ff-popup-actions {
       width: 100%;
-      justify-content: flex-start !important;
     }
     #ff-popup-overlay .custom-btn {
-      width: 100%;
-      text-align: center;
+      width: 100% !important;
+      text-align: center !important;
     }
   }
 </style>
@@ -72,6 +78,7 @@
       justify-content: space-between;
       gap: 20px;
       align-items: center;
+      font-family: 'Montserrat', sans-serif;
     "
   >
     <!-- Close button -->
@@ -158,11 +165,6 @@
       localStorage.setItem(KEY_HIDE_UNTIL, String(now() + daysToMs(days)));
     }
 
-    function hidePopup() {
-      const overlay = document.getElementById("ff-popup-overlay");
-      if (overlay) overlay.style.display = "none";
-    }
-
     if (shouldShow()) {
       setTimeout(function () {
         const popup = document.getElementById("ff-popup-overlay");
@@ -173,7 +175,8 @@
     const closeBtn = document.getElementById("ff-popup-close");
     if (closeBtn) {
       closeBtn.addEventListener("click", function () {
-        hidePopup();
+        const overlay = document.getElementById("ff-popup-overlay");
+        if (overlay) overlay.style.display = "none";
         setHide(HIDE_AFTER_CLOSE_DAYS);
       });
     }
@@ -181,10 +184,10 @@
     const downloadBtn = document.getElementById("ff-popup-download");
     if (downloadBtn) {
       downloadBtn.addEventListener("click", function () {
-        hidePopup();
+        const overlay = document.getElementById("ff-popup-overlay");
+        if (overlay) overlay.style.display = "none";
         setHide(HIDE_AFTER_DOWNLOAD_DAYS);
       });
     }
   })();
 </script>
-
