@@ -3,7 +3,7 @@
 <!-- ============================= -->
 
 <style>
-  /* Button behavior ONLY inside popup — do NOT override size/shape */
+  /* Popup button behavior ONLY — keep site sizing/shape */
   #ff-popup-overlay .custom-btn {
     background-color: #1d4939 !important;
     color: #ffffff !important;
@@ -23,7 +23,14 @@
     color: #ffffff !important;
   }
 
-  /* Mobile stack */
+  /* Hide footer copyright bar ONLY while popup is active */
+  body.ff-popup-active .footer-bottom,
+  body.ff-popup-active .footer-bottom-area,
+  body.ff-popup-active .footer-copyright {
+    display: none !important;
+  }
+
+  /* Mobile stacking */
   @media (max-width: 640px) {
     #ff-popup {
       flex-direction: column !important;
@@ -73,6 +80,7 @@
     <button
       type="button"
       id="ff-popup-close"
+      aria-label="Close popup"
       style="
         position: absolute;
         top: 10px;
@@ -85,7 +93,6 @@
         color: #1d4939;
         font-family: 'Montserrat', sans-serif;
       "
-      aria-label="Close popup"
     >
       ×
     </button>
@@ -116,7 +123,10 @@
     </div>
 
     <!-- CTA -->
-    <div id="ff-popup-actions" style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <div
+      id="ff-popup-actions"
+      style="display:flex;align-items:center;gap:10px;flex-shrink:0;"
+    >
       <a
         id="ff-popup-download"
         href="/assets/downloads/fertility-plate.pdf"
@@ -133,14 +143,13 @@
     const SHOW_DELAY_MS = 8000;
     const HIDE_AFTER_CLOSE_DAYS = 7;
     const HIDE_AFTER_DOWNLOAD_DAYS = 30;
-
     const KEY_HIDE_UNTIL = "ff_popup_hide_until_ts";
 
     function now() {
       return Date.now();
     }
-    function daysToMs(d) {
-      return d * 24 * 60 * 60 * 1000;
+    function daysToMs(days) {
+      return days * 24 * 60 * 60 * 1000;
     }
     function shouldShow() {
       const until = parseInt(localStorage.getItem(KEY_HIDE_UNTIL) || "0", 10);
@@ -150,17 +159,30 @@
       localStorage.setItem(KEY_HIDE_UNTIL, String(now() + daysToMs(days)));
     }
 
+    function showPopup() {
+      const popup = document.getElementById("ff-popup-overlay");
+      if (popup) {
+        popup.style.display = "flex";
+        document.body.classList.add("ff-popup-active");
+      }
+    }
+
+    function hidePopup() {
+      const popup = document.getElementById("ff-popup-overlay");
+      if (popup) {
+        popup.style.display = "none";
+        document.body.classList.remove("ff-popup-active");
+      }
+    }
+
     if (shouldShow()) {
-      setTimeout(function () {
-        const popup = document.getElementById("ff-popup-overlay");
-        if (popup) popup.style.display = "flex";
-      }, SHOW_DELAY_MS);
+      setTimeout(showPopup, SHOW_DELAY_MS);
     }
 
     const closeBtn = document.getElementById("ff-popup-close");
     if (closeBtn) {
       closeBtn.addEventListener("click", function () {
-        document.getElementById("ff-popup-overlay").style.display = "none";
+        hidePopup();
         setHide(HIDE_AFTER_CLOSE_DAYS);
       });
     }
@@ -168,7 +190,7 @@
     const downloadBtn = document.getElementById("ff-popup-download");
     if (downloadBtn) {
       downloadBtn.addEventListener("click", function () {
-        document.getElementById("ff-popup-overlay").style.display = "none";
+        hidePopup();
         setHide(HIDE_AFTER_DOWNLOAD_DAYS);
       });
     }
