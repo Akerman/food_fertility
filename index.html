@@ -157,25 +157,57 @@ title: Home Page
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      font-family: 'Montserrat', sans-serif;
     "
   >
     <div style="display:flex;flex-direction:column;gap:6px;">
-      <h2 style="margin:0;font-size:1.25rem;font-weight:700;color:#1d4939;">
-        Improve your fertility with nutrition.
+      <h2
+        style="
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #1d4939;
+          font-family: 'Montserrat', sans-serif;
+        "
+      >
+        Download The Fertility Plate — free
       </h2>
-      <div style="font-size:0.95rem;color:#333;">
-        Download free Food &amp; Fertility Guide.
+
+      <div
+        style="
+          font-size: 0.95rem;
+          color: #333;
+          font-family: 'Montserrat', sans-serif;
+        "
+      >
+        A simple guide to building meals that support fertility.
       </div>
-      <div style="font-size:0.85rem;color:#666;">
+
+      <div
+        style="
+          font-size: 0.85rem;
+          color: #666;
+          font-family: 'Montserrat', sans-serif;
+        "
+      >
         Created by a fertility-focused Registered Dietitian.
       </div>
     </div>
 
     <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Food &amp; Fertility Guide</a>
-      <button onclick="document.getElementById('ff-popup-overlay').style.display='none';"
-        style="background:none;border:none;font-size:20px;cursor:pointer;">×</button>
+      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Download Free</a>
+      <button
+        onclick="document.getElementById('ff-popup-overlay').style.display='none';"
+        style="
+          background: none;
+          border: none;
+          font-size: 20px;
+          cursor: pointer;
+          font-family: 'Montserrat', sans-serif;
+        "
+        aria-label="Close popup"
+      >
+        ×
+      </button>
     </div>
   </div>
 </div>
@@ -184,8 +216,7 @@ title: Home Page
   setTimeout(function () {
     const popup = document.getElementById('ff-popup-overlay');
     if (popup) popup.style.display = 'flex';
-  }, 20000);
+  }, 8000);
 </script>
-
 </body>
 </html>
