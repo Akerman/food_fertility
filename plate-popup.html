@@ -7,10 +7,16 @@
   #ff-popup-overlay .custom-btn {
     background-color: #1d4939 !important; /* green */
     color: #ffffff !important;
-    font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.2s ease;
+    font-family: 'Montserrat', sans-serif !important;
+    text-decoration: none !important;
   }
 
+  /* Keep font white even after click/visit */
+  #ff-popup-overlay .custom-btn:visited {
+    color: #ffffff !important;
+  }
+
+  /* Hover/Active/Focus turns button orange, text stays white */
   #ff-popup-overlay .custom-btn:hover,
   #ff-popup-overlay .custom-btn:active,
   #ff-popup-overlay .custom-btn:focus {
@@ -42,31 +48,29 @@
       padding: 20px 22px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 20px;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
     "
   >
-    <!-- TEXT COLUMN -->
     <div style="display:flex;flex-direction:column;gap:6px;">
-      <h2
+      <div
         style="
           margin: 0;
           font-size: 1.25rem;
           font-weight: 700;
           color: #1d4939;
           font-family: 'Montserrat', sans-serif;
-          line-height: 1.2;
         "
       >
         Download The Fertility Plate — free
-      </h2>
+      </div>
 
       <div
         style="
           font-size: 0.95rem;
           color: #333;
           font-family: 'Montserrat', sans-serif;
-          line-height: 1.35;
         "
       >
         A simple guide to building meals that support fertility.
@@ -77,25 +81,16 @@
           font-size: 0.85rem;
           color: #666;
           font-family: 'Montserrat', sans-serif;
-          line-height: 1.35;
         "
       >
         Created by a fertility-focused Registered Dietitian.
       </div>
     </div>
 
-    <!-- CTA + CLOSE -->
     <div style="display:flex;align-items:center;gap:10px;">
-      <a
-        href="#YOUR_GUIDE_LINK"
-        class="custom-btn"
-        style="font-family:'Montserrat', sans-serif;"
-      >
-        Download
-      </a>
+      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Download</a>
 
       <button
-        type="button"
         onclick="document.getElementById('ff-popup-overlay').style.display='none';"
         style="
           background: none;
@@ -114,13 +109,8 @@
 </div>
 
 <script>
-  if (!localStorage.getItem('ffPopupShown')) {
-    setTimeout(function () {
-      const popup = document.getElementById('ff-popup-overlay');
-      if (popup) {
-        popup.style.display = 'flex';
-        localStorage.setItem('ffPopupShown', 'true');
-      }
-    }, 8000);
-  }
+  setTimeout(function () {
+    var popup = document.getElementById('ff-popup-overlay');
+    if (popup) popup.style.display = 'flex';
+  }, 8000);
 </script>
