@@ -128,87 +128,14 @@ title: Home Page
     border: none;
   }
 </style>
-
-<!-- ============================= -->
-<!-- FOOD & FERTILITY POPUP (FINAL) -->
-<!-- ============================= -->
-
-<div
-  id="ff-popup-overlay"
-  style="
-    position: fixed;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    z-index: 9999;
-    display: none;
-    justify-content: center;
-  "
->
-  <div
-    style="
-      max-width: 900px;
-      width: 100%;
-      background: #ffffff;
-      border-radius: 18px;
-      border: 1px solid rgba(29, 73, 57, 0.12);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.14);
-      padding: 20px 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    "
-  >
-    <!-- TEXT COLUMN -->
-    <div style="display:flex;flex-direction:column;gap:6px;">
-      <h2
-        style="
-          margin: 0;
-          font-size: 1.25rem;
-          font-weight: 700;
-          color: #1d4939;
-          font-family: 'Montserrat', sans-serif;
-        "
-      >
-        Download The Fertility Plate — free
-      </h2>
-
-      <div
-        style="
-          font-size: 0.95rem;
-          color: #333;
-          font-family: 'Montserrat', sans-serif;
-        "
-      >
-        A simple guide to building meals that support fertility.
-      </div>
-    </div>
-
-    <!-- CTA + CLOSE -->
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#YOUR_GUIDE_LINK" class="custom-btn">Download</a>
-      <button
-        onclick="document.getElementById('ff-popup-overlay').style.display='none';"
-        style="
-          background: none;
-          border: none;
-          font-size: 20px;
-          cursor: pointer;
-          font-family: 'Montserrat', sans-serif;
-        "
-        aria-label="Close popup"
-      >
-        ×
-      </button>
-    </div>
-  </div>
-</div>
+<div id="ff-popup-mount"></div>
 
 <script>
-  setTimeout(function () {
-    const popup = document.getElementById('ff-popup-overlay');
-    if (popup) popup.style.display = 'flex';
-  }, 8000);
+  fetch('/plate-popup.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('ff-popup-mount').innerHTML = html;
+    });
 </script>
 </body>
 </html>
