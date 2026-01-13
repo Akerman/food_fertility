@@ -1,5 +1,6 @@
 <!-- ============================= -->
 <!-- FOOD & FERTILITY PLATE POPUP  -->
+<!-- DISABLED (can be re-enabled)  -->
 <!-- ============================= -->
 
 <style>
@@ -7,9 +8,9 @@
   #ff-popup-overlay .custom-btn {
     display: inline-block !important;
     padding: 12px 30px !important;
-    border-radius: 9999px !important; /* pill */
-    background-color: #1d4939 !important; /* green */
-    color: #ffffff !important;           /* keep text white */
+    border-radius: 9999px !important;
+    background-color: #1d4939 !important;
+    color: #ffffff !important;
     text-decoration: none !important;
     border: none !important;
     font-family: 'Montserrat', sans-serif !important;
@@ -25,17 +26,15 @@
   #ff-popup-overlay .custom-btn:active,
   #ff-popup-overlay .custom-btn:focus,
   #ff-popup-overlay .custom-btn:focus-visible {
-    background-color: #f7980f !important; /* orange */
+    background-color: #f7980f !important;
     color: #ffffff !important;
     outline: none !important;
   }
 
-  /* Prevent visited link color change */
   #ff-popup-overlay .custom-btn:visited {
     color: #ffffff !important;
   }
 
-  /* Mobile stack */
   @media (max-width: 640px) {
     #ff-popup {
       flex-direction: column !important;
@@ -81,7 +80,6 @@
       font-family: 'Montserrat', sans-serif;
     "
   >
-    <!-- Close button -->
     <button
       type="button"
       id="ff-popup-close"
@@ -102,53 +100,32 @@
       ×
     </button>
 
-    <!-- Text -->
     <div style="display:flex;flex-direction:column;gap:6px;padding-right:10px;">
-      <h2
-        style="
-          margin: 0;
-          font-size: 1.25rem;
-          font-weight: 700;
-          color: #1d4939;
-          font-family: 'Montserrat', sans-serif;
-        "
-      >
+      <h2 style="margin:0;font-size:1.25rem;font-weight:700;color:#1d4939;">
         Download The Fertility Plate — free
       </h2>
-
-      <div
-        style="
-          font-size: 0.95rem;
-          color: #333;
-          font-family: 'Montserrat', sans-serif;
-        "
-      >
+      <div style="font-size:0.95rem;color:#333;">
         A simple guide to building meals that support fertility.
       </div>
     </div>
 
-    <!-- CTA -->
-    <div
-      id="ff-popup-actions"
-      style="display:flex;align-items:center;gap:10px;flex-shrink:0;"
-    >
+    <div id="ff-popup-actions" style="display:flex;align-items:center;gap:10px;">
       <a
-  id="ff-popup-download"
-  href="/The%20Fertility%20Plate.pdf"
-  class="custom-btn"
-  download
->
-  Download
-</a>
+        id="ff-popup-download"
+        href="/The%20Fertility%20Plate.pdf"
+        class="custom-btn"
+        download
+      >
+        Download
+      </a>
     </div>
   </div>
 </div>
 
 <script>
   (function () {
-    const SHOW_DELAY_MS = 8000;
-    const HIDE_AFTER_CLOSE_DAYS = 7;
-    const HIDE_AFTER_DOWNLOAD_DAYS = 30;
+    // POPUP IS DISABLED
+    // To re-enable, restore the show logic here
 
     const KEY_HIDE_UNTIL = "ff_popup_hide_until_ts";
 
@@ -158,19 +135,8 @@
     function daysToMs(d) {
       return d * 24 * 60 * 60 * 1000;
     }
-    function shouldShow() {
-      const until = parseInt(localStorage.getItem(KEY_HIDE_UNTIL) || "0", 10);
-      return now() > until;
-    }
     function setHide(days) {
       localStorage.setItem(KEY_HIDE_UNTIL, String(now() + daysToMs(days)));
-    }
-
-    if (shouldShow()) {
-      setTimeout(function () {
-        const popup = document.getElementById("ff-popup-overlay");
-        if (popup) popup.style.display = "flex";
-      }, SHOW_DELAY_MS);
     }
 
     const closeBtn = document.getElementById("ff-popup-close");
@@ -178,7 +144,7 @@
       closeBtn.addEventListener("click", function () {
         const overlay = document.getElementById("ff-popup-overlay");
         if (overlay) overlay.style.display = "none";
-        setHide(HIDE_AFTER_CLOSE_DAYS);
+        setHide(7);
       });
     }
 
@@ -187,7 +153,7 @@
       downloadBtn.addEventListener("click", function () {
         const overlay = document.getElementById("ff-popup-overlay");
         if (overlay) overlay.style.display = "none";
-        setHide(HIDE_AFTER_DOWNLOAD_DAYS);
+        setHide(30);
       });
     }
   })();
