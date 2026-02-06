@@ -1,0 +1,171 @@
+---
+layout: default
+title: The Fertility Partnership
+---
+
+<!-- Hero Section -->
+<div style="background-color:#ffffff; padding:80px 20px 40px 20px;">
+  <div style="max-width:800px; margin:0 auto; text-align:center;">
+
+    <h1 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:2.6rem;font-weight:700;margin-bottom:10px;">
+      The Fertility Partnership
+    </h1>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:1.05rem;font-weight:500;margin-bottom:18px;">
+      One-on-one, personalized nutrition guidance focused on what can have the greatest impact on your fertility.
+    </p>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.05rem;max-width:700px;margin:0 auto 18px auto;">
+      Trying to conceive can feel overwhelming — so much information, so many opinions, and constant second-guessing.
+    </p>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.05rem;max-width:700px;margin:0 auto 28px auto;">
+      This 3-month experience helps you feel supported, focused, and confident that you’re prioritizing what truly matters for your fertility and baby goals.
+    </p>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:1.2rem;font-weight:600;margin-bottom:30px;">
+      Focus on what matters now — and move toward what matters most to you.
+    </p>
+
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="schedule.html"
+         style="display:inline-block;width:240px;background:#1d4939;color:#ffffff;padding:14px 0;border-radius:999px;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:400;text-align:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+        Book Discovery Call
+      </a>
+
+      <a href="schedule.html"
+         style="display:inline-block;width:240px;background:#1d4939;color:#ffffff;padding:14px 0;border-radius:999px;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:400;text-align:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+        Book The Program
+      </a>
+    </div>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#666;font-size:0.9rem;margin-top:18px;">
+      Program details, pricing, and flexible payment options are shared on the booking page so you can review everything before deciding. Services may be eligible for HSA/FSA reimbursement, depending on your plan.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- Transformation Section -->
+<div style="background-color:#fffbf9; padding:70px 20px;">
+  <div style="max-width:800px; margin:0 auto;">
+
+    <h2 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:2rem;font-weight:700;margin-bottom:22px;text-align:center;">
+      A Shift Toward Steady, Confident Support
+    </h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:30px;">
+
+      <div style="flex:1; min-width:280px;">
+        <h3 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:1.2rem;font-weight:600;margin-bottom:12px;">
+          From
+        </h3>
+        <ul style="font-family:'Montserrat',sans-serif;color:#444;line-height:1.7;">
+          <li>Constantly wondering if you’re doing the “right” things</li>
+          <li>Piecing together advice from the internet and others</li>
+          <li>Feeling pressure to be perfect with food and lifestyle</li>
+        </ul>
+      </div>
+
+      <div style="flex:1; min-width:280px;">
+        <h3 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:1.2rem;font-weight:600;margin-bottom:12px;">
+          To
+        </h3>
+        <ul style="font-family:'Montserrat',sans-serif;color:#444;line-height:1.7;">
+          <li>Feeling grounded in a clear, personalized plan</li>
+          <li>Understanding what truly impacts fertility</li>
+          <li>Building realistic, supportive routines</li>
+          <li>Trusting you’re focusing on what’s within your control</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;margin-top:26px;">
+      For many clients, the biggest shift isn’t just what they eat — it’s the relief that comes from understanding, trusting, and supporting their body and fertility.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- Why Over Time Section -->
+<div style="background-color:#ffffff; padding:70px 20px;">
+  <div style="max-width:800px; margin:0 auto;">
+
+    <h2 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:2rem;font-weight:700;margin-bottom:20px;">
+      Why This Work Happens Over Time
+    </h2>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;margin-bottom:16px;">
+      Fertility isn’t a single moment — it’s a process. Egg and sperm development, hormone signaling, and nutrient status are shaped over months, not days.
+    </p>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;margin-bottom:18px;">
+      A three-month window allows nutrition and lifestyle support to align with how the body naturally works.
+    </p>
+
+    <ul style="font-family:'Montserrat',sans-serif;color:#444;line-height:1.7;">
+      <li>Clarify priorities instead of reacting</li>
+      <li>Build consistency</li>
+      <li>Adjust support as your cycle or treatment plan evolves</li>
+    </ul>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;margin-top:20px;">
+      Together, we focus on what matters now — the areas that can have the greatest impact on your fertility journey — and support steady progress toward what matters most to you: building your family.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- Who It's For Section -->
+<div style="background-color:#f1f5f3; padding:70px 20px;">
+  <div style="max-width:800px; margin:0 auto;">
+
+    <h2 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:2rem;font-weight:700;margin-bottom:20px;">
+      Who This Is For
+    </h2>
+
+    <ul style="font-family:'Montserrat',sans-serif;color:#444;line-height:1.8;">
+      <li>Trying to conceive and unsure where to focus</li>
+      <li>Preparing for an upcoming IVF or treatment cycle</li>
+      <li>Between cycles and wanting to support egg or sperm health</li>
+      <li>Navigating PCOS, endometriosis, irregular cycles, or insulin resistance</li>
+      <li>Experiencing unexplained infertility</li>
+      <li>Coming off birth control and wanting to support cycle health</li>
+      <li>Wanting guidance without restrictive dieting or fear-based messaging</li>
+    </ul>
+
+  </div>
+</div>
+
+
+<!-- Working Together Section -->
+<div style="background-color:#ffffff; padding:70px 20px;">
+  <div style="max-width:800px; margin:0 auto;">
+
+    <h2 style="font-family:'Montserrat',sans-serif;color:#1d4939;font-size:2rem;font-weight:700;margin-bottom:16px;">
+      What Working Together Looks Like
+    </h2>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#1d4939;font-weight:600;margin-bottom:14px;">
+      You don’t have to figure this out alone anymore.
+    </p>
+
+    <p style="font-family:'Montserrat',sans-serif;color:#444;margin-bottom:18px;">
+      This is personalized, one-on-one support over three months — designed to help you focus your energy on what can have the greatest impact on your fertility.
+    </p>
+
+    <ul style="font-family:'Montserrat',sans-serif;color:#444;line-height:1.8;">
+      <li>Clarify what matters most right now</li>
+      <li>Focus on the areas that can make the biggest difference</li>
+      <li>Build a personalized plan</li>
+      <li>Reduce second-guessing and information overload</li>
+      <li>Adjust as your cycle or treatment evolves</li>
+      <li>Ongoing support between sessions — with guidance when you need it</li>
+    </ul>
+
+  </div>
+</div>
