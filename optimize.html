@@ -227,95 +227,87 @@ title: Optimize Fertility
       color:#1d4939;
       font-size:2.6rem;
       font-weight:600;
-      margin-bottom:30px;
+      margin-bottom:40px;
       line-height:1.2;
     ">
       On the journey to parenthood
     </h2>
 
-    <!-- SCROLL AREA -->
-    <div style="
-      display:flex;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling:touch;
-      gap:24px;
-      padding:10px 0;
-    ">
+    <div style="position:relative; max-width:680px; margin:0 auto;">
 
-      <!-- CARD 1 -->
-      <div style="
-        flex:0 0 100%;
-        scroll-snap-align:center;
-        display:flex;
-        justify-content:center;
+      <!-- LEFT ARROW -->
+      <button onclick="prevTestimonial()" style="
+        position:absolute;
+        left:-50px;
+        top:50%;
+        transform:translateY(-50%);
+        background:none;
+        border:none;
+        font-size:28px;
+        color:#1d4939;
+        cursor:pointer;
+      ">‹</button>
+
+      <!-- RIGHT ARROW -->
+      <button onclick="nextTestimonial()" style="
+        position:absolute;
+        right:-50px;
+        top:50%;
+        transform:translateY(-50%);
+        background:none;
+        border:none;
+        font-size:28px;
+        color:#1d4939;
+        cursor:pointer;
+      ">›</button>
+
+      <!-- CARD CONTAINER -->
+      <div id="testimonial-box" style="
+        background:#ffffff;
+        padding:38px;
+        border-radius:16px;
+        box-shadow:0 10px 26px rgba(0,0,0,0.06);
+        text-align:left;
+        transition:all .3s ease;
       ">
-        <div style="
-          max-width:640px;
-          background:#ffffff;
-          padding:36px;
-          border-radius:16px;
-          box-shadow:0 10px 26px rgba(0,0,0,0.06);
-          text-align:left;
-        ">
-          <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.08rem;line-height:1.85;margin:0;">
-            “I was overwhelmed by all the conflicting advice around fertility, food, and supplements and didn’t know what actually mattered. Working with Lorena helped me sort through the noise and focus on what to prioritize. She helped me make simple changes to how I was eating and think more clearly about supplements. For the first time, everything felt clear and manageable, and I finally felt like I had a plan.”
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div style="flex:0 0 100%; scroll-snap-align:center; display:flex; justify-content:center;">
-        <div style="
-          max-width:640px;
-          background:#ffffff;
-          padding:36px;
-          border-radius:16px;
-          box-shadow:0 10px 26px rgba(0,0,0,0.06);
-          text-align:left;
-        ">
-          <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.08rem;line-height:1.85;margin:0;">
-            “Living with PCOS, I struggled to figure out what would actually make a difference for my fertility. Lorena helped me focus on the nutrition and lifestyle changes that mattered most and build habits that felt realistic and sustainable. Over time my cycles became more regular, and I eventually conceived. I’m so grateful for her calm, steady guidance and the confidence I gained along the way.”
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div style="flex:0 0 100%; scroll-snap-align:center; display:flex; justify-content:center;">
-        <div style="
-          max-width:640px;
-          background:#ffffff;
-          padding:36px;
-          border-radius:16px;
-          box-shadow:0 10px 26px rgba(0,0,0,0.06);
-          text-align:left;
-        ">
-          <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.08rem;line-height:1.85;margin:0;">
-            “After two unsuccessful IVF cycles at 37, I felt discouraged and unsure what else I could do. I wanted to feel like I was supporting my health and egg quality in a meaningful way before trying again. Lorena helped me make thoughtful changes to my nutrition and guided me through what to consider with supplements so I felt more confident in what I was doing. I ended up getting pregnant between cycles, and I’m incredibly thankful to have had her support during that time.”
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 4 -->
-      <div style="flex:0 0 100%; scroll-snap-align:center; display:flex; justify-content:center;">
-        <div style="
-          max-width:640px;
-          background:#ffffff;
-          padding:36px;
-          border-radius:16px;
-          box-shadow:0 10px 26px rgba(0,0,0,0.06);
-          text-align:left;
-        ">
-          <p style="font-family:'Montserrat',sans-serif;color:#444;font-size:1.08rem;line-height:1.85;margin:0;">
-            “After having my first child, I didn’t expect getting pregnant again to be so difficult. I felt confused and discouraged and didn’t know where to start. Lorena helped me feel supported and gave me a clear direction with my nutrition and daily habits during a really emotional time. I eventually became pregnant again, and I’m so grateful I had that guidance.”
-          </p>
-        </div>
+        <p id="testimonial-text" style="
+          font-family:'Montserrat',sans-serif;
+          color:#444;
+          font-size:1.08rem;
+          line-height:1.85;
+          margin:0;
+        "></p>
       </div>
 
     </div>
-
   </div>
 </div>
+
+<script>
+const testimonials = [
+`“I was overwhelmed by all the conflicting advice around fertility, food, and supplements and didn’t know what actually mattered. Working with Lorena helped me sort through the noise and focus on what to prioritize. She helped me make simple changes to how I was eating and think more clearly about supplements. For the first time, everything felt clear and manageable, and I finally felt like I had a plan.”`,
+
+`“Living with PCOS, I struggled to figure out what would actually make a difference for my fertility. Lorena helped me focus on the nutrition and lifestyle changes that mattered most and build habits that felt realistic and sustainable. Over time my cycles became more regular, and I eventually conceived. I’m so grateful for her calm, steady guidance and the confidence I gained along the way.”`,
+
+`“After two unsuccessful IVF cycles at 37, I felt discouraged and unsure what else I could do. I wanted to feel like I was supporting my health and egg quality in a meaningful way before trying again. Lorena helped me make thoughtful changes to my nutrition and guided me through what to consider with supplements so I felt more confident in what I was doing. I ended up getting pregnant between cycles, and I’m incredibly thankful to have had her support during that time.”`,
+
+`“After having my first child, I didn’t expect getting pregnant again to be so difficult. I felt confused and discouraged and didn’t know where to start. Lorena helped me feel supported and gave me a clear direction with my nutrition and daily habits during a really emotional time. I eventually became pregnant again, and I’m so grateful I had that guidance.”`
+];
+
+let index = 0;
+document.getElementById("testimonial-text").innerHTML = testimonials[index];
+
+function nextTestimonial() {
+  index = (index + 1) % testimonials.length;
+  document.getElementById("testimonial-text").innerHTML = testimonials[index];
+}
+
+function prevTestimonial() {
+  index = (index - 1 + testimonials.length) % testimonials.length;
+  document.getElementById("testimonial-text").innerHTML = testimonials[index];
+}
+</script>
+
 
 <!-- BOTTOM CTA -->
 <div style="background-color:#f7fbf9; padding:90px 20px 100px 20px;">
