@@ -262,14 +262,17 @@ title: Optimize Fertility
       ">›</button>
 
       <!-- CARD CONTAINER -->
-      <div id="testimonial-box" style="
-        background:#ffffff;
-        padding:38px;
-        border-radius:16px;
-        box-shadow:0 10px 26px rgba(0,0,0,0.06);
-        text-align:left;
-        transition:all .3s ease;
-      ">
+      <div id="testimonial-box"
+     onclick="tapTestimonial(event)"
+     style="
+  background:#ffffff;
+  padding:38px;
+  border-radius:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.06);
+  text-align:left;
+  transition:all .3s ease;
+  cursor:pointer;
+">
         <p id="testimonial-text" style="
           font-family:'Montserrat',sans-serif;
           color:#444;
@@ -306,8 +309,18 @@ function prevTestimonial() {
   index = (index - 1 + testimonials.length) % testimonials.length;
   document.getElementById("testimonial-text").innerHTML = testimonials[index];
 }
-</script>
+function tapTestimonial(e) {
+  const box = document.getElementById("testimonial-box");
+  const rect = box.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
 
+  if (clickX < rect.width / 2) {
+    prevTestimonial();
+  } else {
+    nextTestimonial();
+  }
+}
+</script>
 
 <!-- BOTTOM CTA -->
 <div style="background-color:#f7fbf9; padding:90px 20px 100px 20px;">
