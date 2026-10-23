@@ -10,21 +10,29 @@
 
                 <!-- Header Logo Start -->
                 <div class="header-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                    <a href="/"><img src="/assets/images/logo.png" alt="Food and Fertility"></a>
                 </div>
                 <!-- Header Logo End -->
 <!-- Header Menu Start -->
 <div class="header-menu d-none d-lg-flex">
 
     <ul class="nav-menu">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %} href="/">Home</a></li>
+        <li><a {% if page.url contains "egg-health" %}class="active"{% endif %} href="/egg-health.html">Courses</a></li>
+        <li><a {% if page.url contains "about" %}class="active"{% endif %} href="/about.html">About</a></li>
         <li><a href="https://blog.foodandfertility.com/">Articles</a></li>
+        <li>
+            <a href="#">Log In <i class="icofont-simple-down" style="font-size:11px;"></i></a>
+            <ul class="sub-menu">
+                <li><a href="https://foodandfertility.learnworlds.com/">Course Login</a></li>
+                <li><a href="https://my.practicebetter.io/#/signin" target="_blank" rel="noopener">Client Login</a></li>
+            </ul>
+        </li>
     </ul>
 
     <div class="header-btn" style="transform: translateY(-2px);">
        <a class="btn btn-secondary btn-hover-primary"
-   href="schedule.html"
+   href="/schedule.html"
    style="padding:0 24px; height:55px; display:inline-flex; align-items:center; justify-content:center; white-space:nowrap;">
    Schedule Appointment
 </a>
@@ -37,7 +45,7 @@
 
 <!-- Mobile CTA Button -->
 <a class="btn btn-secondary btn-hover-primary"
-   href="schedule.html">
+   href="/schedule.html">
    Schedule Appointment
 </a>
 
@@ -73,15 +81,23 @@
   <!-- Mobile Menu Start -->
   <div class="mobile-menu-items">
     <ul class="nav-menu">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %} href="/">Home</a></li>
+      <li><a {% if page.url contains "egg-health" %}class="active"{% endif %} href="/egg-health.html">Courses</a></li>
+      <li><a {% if page.url contains "about" %}class="active"{% endif %} href="/about.html">About</a></li>
+      <li><a href="https://blog.foodandfertility.com/">Articles</a></li>
+      <li>
+        <a href="#">Log In</a>
+        <ul class="sub-menu">
+          <li><a href="https://foodandfertility.learnworlds.com/">Course Login</a></li>
+          <li><a href="https://my.practicebetter.io/#/signin" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </li>
       <li>
   <a class="btn btn-secondary btn-hover-primary"
-   href="schedule.html">
+   href="/schedule.html">
    Schedule Appointment
 </a>
 </li>
-      <li><a href="https://blog.foodandfertility.com/">Articles</a></li>
     </ul>
   </div>
   <!-- Mobile Menu End -->

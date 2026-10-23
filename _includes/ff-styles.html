@@ -1,0 +1,52 @@
+<!-- Food and Fertility page styles (used by Home, Egg Health, and About) -->
+<style>
+  .ff { font-family: 'Montserrat', sans-serif; color: #2b3330; }
+  .ff *, .ff *::before, .ff *::after { box-sizing: border-box; }
+  .ff h1, .ff h2, .ff h3, .ff p, .ff figure, .ff blockquote { margin: 0; }
+  .ff h1, .ff h2, .ff h3 { font-family: 'Montserrat', sans-serif; color: #1d4939; font-weight: 700; letter-spacing: 0; text-transform: none; }
+  .ff h1 { font-size: clamp(36px, 5vw, 60px); line-height: 1.1; }
+  .ff h2 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.15; }
+  .ff h3 { font-size: 20px; line-height: 1.3; }
+  .ff p { font-size: 17px; line-height: 1.7; }
+  .ff img { max-width: 100%; display: block; }
+  .ff a { transition: background-color .2s ease, color .2s ease; }
+
+  .ff-section { padding: 96px 0; }
+  .ff-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .ff-blush { background: #f8ebe5; }
+  .ff-green { background: #1d4939; }
+  .ff-white { background: #ffffff; }
+  .ff-eyebrow { font-size: 17px !important; font-weight: 600; color: #2f6859; }
+  .ff-lead { font-size: 19px !important; }
+  .ff-small { font-size: 14px !important; }
+
+  .ff-split { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; }
+  .ff-split > * { flex: 1 1 420px; min-width: 0; }
+  .ff-stack { display: flex; flex-direction: column; gap: 22px; }
+  .ff-center { text-align: center; align-items: center; margin: 0 auto; }
+
+  .ff-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+  .ff-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 14px 30px; border-radius: 999px; font-weight: 600; font-size: 17px; text-decoration: none !important; border: 1.5px solid #1d4939; }
+  .ff-btn-primary { background: #1d4939; color: #ffffff !important; }
+  .ff-btn-primary:hover { background: #2f6859; border-color: #2f6859; }
+  .ff-btn-outline { background: transparent; color: #1d4939 !important; }
+  .ff-btn-outline:hover { background: #1d4939; color: #ffffff !important; }
+  .ff-btn-light { background: #f8ebe5; color: #1d4939 !important; border-color: #f8ebe5; }
+  .ff-btn-light:hover { background: #ffffff; border-color: #ffffff; }
+  .ff-btn-block { width: 100%; }
+
+  .ff-photo { width: 100%; border-radius: 40px; object-fit: cover; }
+
+  .ff-check { display: flex; gap: 12px; font-size: 16px !important; line-height: 1.5 !important; }
+  .ff-check svg { flex: 0 0 20px; margin-top: 2px; }
+
+  .ff-link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #1d4939 !important; }
+
+  @media (max-width: 767px) {
+    .ff-section { padding: 64px 0; }
+    .ff-wrap { padding: 0 16px; }
+    .ff-split { gap: 36px; }
+    .ff-split > * { flex-basis: 100%; }
+    .ff-btns .ff-btn { width: 100%; }
+  }
+</style>
