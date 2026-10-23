@@ -13,6 +13,7 @@ title: Home
   .ffh-steps p { display: flex; gap: 14px; font-size: 16px !important; line-height: 1.5 !important; }
   .ffh-steps span:first-child { flex: 0 0 64px; font-weight: 600; color: #2f6859; }
   .ffh-consult { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+  @media (max-width: 767px) { .ffh-feature-img { max-height: 240px !important; aspect-ratio: 16 / 10 !important; } }
   .ffh-about-photo { flex: 0 1 320px !important; min-width: 240px; margin: 0 auto; }
   .ffh-signup { flex: 1 1 380px; min-width: 0; }
 </style>
@@ -57,7 +58,7 @@ title: Home
   <section class="ff-section ff-blush">
     <div class="ff-wrap ff-split">
       <div>
-        <img class="ff-photo" src="/assets/images/egg-health-cover.jpg" alt="Egg Health Course cover: pomegranates on soft pink linen" style="aspect-ratio: 5 / 4; object-position: 55% center;">
+        <img class="ff-photo ffh-feature-img" src="/assets/images/egg-health-cover.jpg" alt="Egg Health Course cover: pomegranates on soft pink linen" style="aspect-ratio: 4 / 3; max-height: 320px; max-width: 430px; margin: 0 auto; object-position: 55% center;">
       </div>
       <div class="ff-stack">
         <p class="ff-eyebrow">Featured course</p>
@@ -95,7 +96,7 @@ title: Home
   <section class="ff-section ff-blush">
     <div class="ff-wrap ff-split">
       <div class="ffh-about-photo">
-        <img class="ff-photo" src="/assets/images/Lo.webp" alt="Lorena Akerman">
+        <img class="ff-photo" src="/assets/images/Lo.webp" alt="Lorena Akerman" style="aspect-ratio: 4 / 5; object-position: center top;">
       </div>
       <div class="ff-stack" style="flex: 1 1 520px;">
         <h2>Hi, I'm Lorena.</h2>
@@ -113,7 +114,7 @@ title: Home
     <div class="ff-wrap" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:32px;">
       <div class="ff-stack" style="flex: 1 1 420px; gap: 12px;">
         <h2 style="font-size: clamp(24px, 2.6vw, 34px);">Not ready yet? Start with the Fertility Plate.</h2>
-        <p>A free guide to building balanced meals, sent to your inbox.</p>
+        <p>Subscribe to get the free Fertility Plate guide, plus new articles on fertility nutrition. Unsubscribe anytime.</p>
       </div>
       <div class="ffh-signup">
         <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.4/umd/signup-form.min.js" data-label-1="Fertility Plate" data-button-color="#1d4939" data-button-text-color="#FFFFFF" data-site="https://blog.foodandfertility.com/" data-locale="en" async></script></div>

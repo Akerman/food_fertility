@@ -7,10 +7,11 @@ title: The Egg Health Course
 <style>
   .ffe-badges { display: flex; flex-wrap: wrap; gap: 10px 28px; padding-top: 6px; }
   .ffe-badges span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: #2b3330; }
-  .ffe-hero-media { position: relative; }
-  .ffe-callout { position: absolute; left: -24px; bottom: 32px; max-width: 300px; background: #ffffff; border-radius: 18px; padding: 20px 22px; box-shadow: 0 18px 40px rgba(29,73,57,.14); }
+  .ffe-hero-media { position: relative; max-width: 380px; margin-left: auto; margin-bottom: 32px; }
+  @media (max-width: 767px) { .ffe-hero-media { max-width: none; } .ffe-hero-media .ff-photo { aspect-ratio: 16 / 10 !important; max-height: 260px; } }
+  .ffe-callout { position: absolute; left: -56px; bottom: -32px; max-width: 250px; background: #ffffff; border-radius: 18px; padding: 20px 22px; box-shadow: 0 18px 40px rgba(29,73,57,.14); }
   .ffe-callout p:first-child { font-size: 14px !important; font-weight: 700; color: #2f6859; margin-bottom: 6px; }
-  .ffe-callout p:last-child { font-size: 15px !important; line-height: 1.55 !important; color: #2b3330; }
+  .ffe-callout p:last-child { font-size: 14px !important; line-height: 1.55 !important; color: #2b3330; }
   .ffe-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 20px; }
   @media (min-width: 1100px) { .ffe-steps { grid-template-columns: repeat(5, 1fr); } }
   .ffe-step { background: #2f6859; border-radius: 28px; padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; }
@@ -52,7 +53,7 @@ title: The Egg Health Course
         <h1>Support your eggs in the months that matter most.</h1>
         <p class="ff-lead">Clear, evidence-based nutrition for egg health, without the overwhelm. Five clear steps from a fertility dietitian, at your own pace.</p>
         <div class="ff-btns">
-          <a class="ff-btn ff-btn-primary" href="https://foodandfertility.learnworlds.com/payment?product_id=egg-health">Enroll Now</a>
+          <a class="ff-btn ff-btn-primary" href="https://foodandfertility.learnworlds.com/payment?product_id=egg-health" target="_blank" rel="noopener">Enroll Now</a>
         </div>
         <div class="ffe-badges">
           <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f6859" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>By Lorena Akerman, MS, RD, CDN, CDCES</span>
@@ -61,7 +62,7 @@ title: The Egg Health Course
         </div>
       </div>
       <div class="ffe-hero-media">
-        <img class="ff-photo" src="/assets/images/egg-health-cover.jpg" alt="Egg Health Course cover: pomegranates on soft pink linen" style="aspect-ratio: 4 / 5; max-height: 560px; object-position: 42% center;">
+        <img class="ff-photo" src="/assets/images/egg-health-cover.jpg" alt="Egg Health Course cover: pomegranates on soft pink linen" style="aspect-ratio: 1 / 1; max-height: 380px; object-position: 42% center;">
         <div class="ffe-callout">
           <p>Your 90-day window</p>
           <p>Eggs complete their final growth in the three months before ovulation. What you eat now matters.</p>
@@ -130,7 +131,7 @@ title: The Egg Health Course
             <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>{{ item }}</span></p>
             {% endfor %}
           </div>
-          <a class="ff-btn ff-btn-primary ff-btn-block" href="https://foodandfertility.learnworlds.com/payment?product_id=egg-health">Enroll Now</a>
+          <a class="ff-btn ff-btn-primary ff-btn-block" href="https://foodandfertility.learnworlds.com/payment?product_id=egg-health" target="_blank" rel="noopener">Enroll Now</a>
           <p class="ff-small" style="text-align:center; color:#6b5a52;">Enroll with confidence. <a href="#refund" class="ffe-refund-link" style="color:#1d4939; text-decoration:underline;">14-day refunds</a>.</p>
         </div>
         <div class="ffe-card ffe-card-care">
