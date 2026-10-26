@@ -54,6 +54,33 @@ title: The Egg Health Course
     .ffe-card { padding: 32px 26px; }
     .ffe-box { padding: 30px 26px; }
   }
+  .ffe-fitbox { max-width: 980px; margin: 0 auto; background: #faf6f0; border-radius: 32px; padding: 48px; display: flex; flex-direction: column; gap: 28px; }
+  .ffe-fitbox h2 { font-size: clamp(26px, 3vw, 38px); }
+  .ffe-fitchecks { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; }
+  .ffe-fitnote { font-size: 15px !important; line-height: 1.6 !important; padding-top: 20px; border-top: 1px solid #e6ded6; }
+  .ffe-step > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .ffe-step > summary::-webkit-details-marker { display: none; }
+  .ffe-step-icon { flex: 0 0 22px; display: none; transition: transform .2s ease; }
+  .ffe-step[open] .ffe-step-icon { transform: rotate(45deg); }
+  .ffe-care-phone { display: none; }
+  .ffe-care-mini { display: flex; flex-direction: column; gap: 14px; background: #ffffff; border: 1.5px solid #1d4939; border-radius: 24px; padding: 28px 24px; }
+  @media (max-width: 767px) {
+    .ff-section { padding: 48px 0; }
+    .ffe-hero-media .ff-photo { aspect-ratio: 16 / 9 !important; max-height: 200px !important; }
+    .ffe-hero-media .ffe-callout { display: none; }
+    .ffe-feats { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
+    .ffe-card-care { display: none; }
+    .ffe-care-phone { display: block; padding-top: 0; }
+    .ffe-faq-all > summary.ffe-faq-toggle { padding: 28px 24px; border-radius: 24px; }
+    #enroll { padding-bottom: 0; }
+    #faq { padding-top: 32px; padding-bottom: 32px; }
+    .ffe-step-icon { display: block; }
+    .ffe-step { padding: 18px 0; }
+    .ffe-step h3 { font-size: 18px; }
+    .ffe-step-list { padding-top: 8px; }
+    .ffe-fitbox { padding: 30px 24px; gap: 22px; border-radius: 24px; }
+    .ffe-fitchecks { grid-template-columns: 1fr; }
+  }
 </style>
 
 <div class="ff">
@@ -92,11 +119,11 @@ title: The Egg Health Course
         <p>Each step builds on the last, so you know what to focus on next.</p>
       </div>
       <div class="ffe-steps">
-        <div class="ffe-step"><h3><span>Step 1:</span> Understand Your Cycle and Timing</h3><ul class="ffe-step-list"><li>Your eggs' 90-day window</li><li>Tracking your cycle</li><li>When to reach out for help</li></ul></div>
-        <div class="ffe-step"><h3><span>Step 2:</span> Nourish With Balanced Meals</h3><ul class="ffe-step-list"><li>The Fertility Plate</li><li>Eating enough to support ovulation</li><li>Shortcuts and go-to meals</li></ul></div>
-        <div class="ffe-step"><h3><span>Step 3:</span> Support Key Nutrient Needs</h3><ul class="ffe-step-list"><li>Key nutrients for your eggs</li><li>Reviewing your prenatal vitamin</li><li>Testing and supplements</li></ul></div>
-        <div class="ffe-step"><h3><span>Step 4:</span> Balance Your Health and Habits</h3><ul class="ffe-step-list"><li>Blood sugar and cooking methods</li><li>Sleep, movement, and stress</li><li>Alcohol, caffeine, and everyday exposures</li></ul></div>
-        <div class="ffe-step"><h3><span>Step 5:</span> Prepare Your Personal Plan</h3><ul class="ffe-step-list"><li>Choosing your priorities</li><li>Your plan and weekly check-in</li><li>When to seek more support</li></ul></div>
+        <details class="ffe-step"><summary><h3><span>Step 1:</span> Understand Your Cycle and Timing</h3><svg class="ffe-step-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><ul class="ffe-step-list"><li>Your eggs' 90-day window</li><li>Tracking your cycle</li><li>When to reach out for help</li></ul></details>
+        <details class="ffe-step"><summary><h3><span>Step 2:</span> Nourish With Balanced Meals</h3><svg class="ffe-step-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><ul class="ffe-step-list"><li>The Fertility Plate</li><li>Eating enough to support ovulation</li><li>Shortcuts and go-to meals</li></ul></details>
+        <details class="ffe-step"><summary><h3><span>Step 3:</span> Support Key Nutrient Needs</h3><svg class="ffe-step-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><ul class="ffe-step-list"><li>Key nutrients for your eggs</li><li>Reviewing your prenatal vitamin</li><li>Testing and supplements</li></ul></details>
+        <details class="ffe-step"><summary><h3><span>Step 4:</span> Balance Your Health and Habits</h3><svg class="ffe-step-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><ul class="ffe-step-list"><li>Blood sugar and cooking methods</li><li>Sleep, movement, and stress</li><li>Alcohol, caffeine, and everyday exposures</li></ul></details>
+        <details class="ffe-step"><summary><h3><span>Step 5:</span> Prepare Your Personal Plan</h3><svg class="ffe-step-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><ul class="ffe-step-list"><li>Choosing your priorities</li><li>Your plan and weekly check-in</li><li>When to seek more support</li></ul></details>
       </div>
       <div class="ffe-feats">
         <div><h3>Short lessons</h3><p>Read on your phone in one sitting.</p></div>
@@ -109,21 +136,16 @@ title: The Egg Health Course
 
   <!-- WHO IT'S FOR -->
   <section class="ff-section ff-white">
-    <div class="ff-wrap ff-stack" style="gap: 40px;">
-      <h2>Made for where you are right now.</h2>
-      <div class="ffe-fit">
-        <div class="ffe-box ff-blush">
-          <h3>This course is for you if</h3>
+    <div class="ff-wrap">
+      <div class="ffe-fitbox">
+        <h2>Made for where you are right now.</h2>
+        <div class="ffe-fitchecks">
           <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>You're trying to conceive, or planning to soon</span></p>
           <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>You want clear guidance you can trust</span></p>
           <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>You're on your own path or in fertility treatment</span></p>
           <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>You want practical steps, not a strict diet</span></p>
         </div>
-        <div class="ffe-box" style="border: 1.5px solid #ece4df;">
-          <h3>Good to know</h3>
-          <p>Nutrition is one important part of fertility care. It supports your reproductive and overall health.</p>
-          <p>It can't fix structural, age-related, or medical causes of infertility, and it can't guarantee pregnancy. This course works alongside your medical care, not in place of it.</p>
-        </div>
+        <p class="ffe-fitnote"><strong>Good to know:</strong> Nutrition is one part of fertility care. This course works alongside your medical care, not in place of it.</p>
       </div>
     </div>
   </section>
@@ -173,6 +195,7 @@ title: The Egg Health Course
         <details><summary>How long does the course take?{{ plus }}</summary><p>Each step takes about 5 to 15 minutes. The course is intentionally focused: it brings together the guidance I share most often in appointments, so you spend your time on what matters most. Go at your own pace.</p></details>
         <details><summary>Do I need to be in fertility treatment?{{ plus }}</summary><p>No. Whether you're planning ahead, trying to conceive, or going through treatment, this course is for you. Nutrition supports egg health on its own and alongside fertility treatment.</p></details>
         <details><summary>Does this replace my doctor?{{ plus }}</summary><p>No. The course works alongside your medical care, helping you make informed nutrition choices and know what to ask your healthcare provider.</p></details>
+        <details id="guarantee"><summary>Can nutrition guarantee pregnancy?{{ plus }}</summary><p>No. Nutrition supports your reproductive and overall health, but it can't fix structural, age-related, or medical causes of infertility. It's one important part of your fertility care.</p></details>
         <details><summary>Can I use it on my phone?{{ plus }}</summary><p>Yes! Learn on your phone, tablet, or computer, wherever works for you.</p></details>
         <details><summary>How long do I have access?{{ plus }}</summary><p>You'll have 12 months from enrollment to work through the course and revisit lessons whenever you need a refresher.</p></details>
         <details><summary>Is there a course for my partner?{{ plus }}</summary><p>A Sperm Health Course is coming soon. Stay tuned!</p></details>
@@ -181,6 +204,19 @@ title: The Egg Health Course
       </details>
     </div>
   </section>
+
+  <!-- ONE-ON-ONE (phones only) -->
+  <section class="ff-section ff-white ffe-care-phone">
+    <div class="ff-wrap">
+      <div class="ffe-care-mini">
+            <h3 style="font-size:22px;">Prefer one-on-one care?</h3>
+            <p style="font-size:16px !important; line-height:1.6 !important;">Work with me directly for a nutrition plan built around your history, labs, and fertility care.</p>
+            <a class="ff-btn ff-btn-outline ff-btn-block" href="/schedule.html">Schedule Appointment</a>
+            <p class="ff-small" style="text-align:center; color:#6b5a52;">Available in California and New York. Requires a doctor's referral.</p>
+      </div>
+    </div>
+  </section>
+
 
 </div>
 
@@ -198,4 +234,13 @@ title: The Egg Health Course
     item.open = true;
     item.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
+</script>
+
+<script>
+  // Steps start open on larger screens and collapsed on phones.
+  (function () {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      document.querySelectorAll('details.ffe-step').forEach(function (d) { d.open = true; });
+    }
+  })();
 </script>
