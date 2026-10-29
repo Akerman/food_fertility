@@ -199,7 +199,7 @@ title: The Egg Health Course
         <details><summary>Can I use it on my phone?{{ plus }}</summary><p>Yes! Learn on your phone, tablet, or computer, wherever works for you.</p></details>
         <details><summary>How long do I have access?{{ plus }}</summary><p>You'll have 12 months from enrollment to work through the course and revisit lessons whenever you need a refresher.</p></details>
         <details><summary>Is there a course for my partner?{{ plus }}</summary><p>A Sperm Health Course is coming soon. Stay tuned!</p></details>
-        <details id="refund"><summary>What if it isn't right for me?{{ plus }}</summary><p>I want you to feel completely satisfied. If you're not, <a href="mailto:lorena@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">email me</a> within 14 days of purchase for a full refund, as long as you've completed less than 25% of the course.</p></details>
+        <details id="refund"><summary>What's your refund policy?{{ plus }}</summary><p>I want you to feel confident in your purchase. If the course isn't right for you, <a href="mailto:lorena@foodandfertility.com" style="color:#1d4939; text-decoration:underline;">email me</a> within 14 days of purchase for a full refund, as long as you've completed less than 25% of the course.</p></details>
         </div>
       </details>
     </div>
@@ -224,6 +224,12 @@ title: The Egg Health Course
   // FAQ toggle label
   var faqAll = document.getElementById('faq-all');
   faqAll.addEventListener('toggle', function () { faqAll.querySelector('.ffe-faq-btn').textContent = faqAll.open ? 'Hide answers' : 'See answers'; });
+  // Arriving from an outside link to #refund (e.g., the Fertility Plate guide): open the FAQ and the refund answer
+  if (location.hash === '#refund') {
+    document.getElementById('faq-all').open = true;
+    document.getElementById('refund').open = true;
+    setTimeout(function () { document.getElementById('refund').scrollIntoView({ block: 'center' }); }, 150);
+  }
   // "14-day refunds" link: open the refund question and scroll to it
   document.addEventListener('click', function (e) {
     var link = e.target.closest('.ffe-refund-link');
