@@ -81,12 +81,18 @@ title: The Egg Health Course
     .ffe-fitbox { padding: 30px 24px; gap: 22px; border-radius: 24px; }
     .ffe-fitchecks { grid-template-columns: 1fr; }
   }
-  .ffe-reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 22px; }
-  .ffe-review { margin: 0; background: #faf6f0; border-radius: 24px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
-  .ffe-stars { color: #c9822b; font-size: 18px; letter-spacing: 3px; line-height: 1; }
-  .ffe-review blockquote { margin: 0; font-size: 16px; line-height: 1.65; color: #2b3330; }
+  .ffe-reviews { display: flex; gap: 24px; max-width: 980px; margin: 0 auto; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #2f6859 #f0e8e2; }
+  .ffe-reviews:focus-visible { outline: 2px solid #2f6859; outline-offset: 4px; border-radius: 28px; }
+  .ffe-review { flex: 0 0 min(420px, 85%); scroll-snap-align: start; background: #ffffff; border: 1.5px solid #ece4df; border-top: 4px solid #f7980f; border-radius: 24px; padding: 36px 36px 40px; margin: 0; display: flex; flex-direction: column; gap: 18px; }
+  .ffe-review blockquote { margin: 0 !important; padding: 0 !important; background: none !important; border: none !important; box-shadow: none !important; text-align: left !important; font-size: 18px !important; line-height: 1.65 !important; color: #2b3330 !important; font-style: italic; quotes: none; }
+  .ffe-review blockquote::before, .ffe-review blockquote::after { content: none !important; }
   .ffe-review figcaption { font-size: 15px; font-weight: 700; color: #1d4939; margin-top: auto; }
-  @media (max-width: 767px) { .ffe-review { padding: 24px 22px; } }
+  .ffe-stars { display: flex; gap: 4px; }
+  .ffe-arrows { display: flex; justify-content: center; gap: 16px; margin-top: -12px !important; }
+  .ffe-arrow { width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #1d4939; background: #ffffff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+  .ffe-arrow:hover { background: #f8ebe5; }
+  .ffe-arrow:focus-visible { outline: 2px solid #2f6859; outline-offset: 3px; }
+  @media (max-width: 767px) { .ffe-review { padding: 28px 24px; } .ffe-review blockquote { font-size: 16px !important; } }
 </style>
 
 <div class="ff">
@@ -140,6 +146,53 @@ title: The Egg Health Course
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section class="ff-section ff-white" style="padding-top: 0;">
+    <div class="ff-wrap ff-stack" style="gap: 36px;">
+      <div class="ff-stack" style="gap: 16px; max-width: 980px; width: 100%; margin: 0 auto;">
+        <p class="ff-eyebrow">What reviewers are saying</p>
+        <h2>Clear, practical, and easy to follow.</h2>
+        <p class="ff-small" style="font-style: italic; color: #6b5a52;">Free access in exchange for honest feedback.</p>
+      </div>
+      <div class="ffe-reviews" id="ffe-reviews" tabindex="0" role="region" aria-label="Reviews, scroll sideways for more">
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"I loved this course! So much practical, helpful information. And I really loved the worksheets. They're something I'll refer back to."</blockquote>
+          <figcaption>Giovanna</figcaption>
+        </figure>
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"The Egg Health Course made fertility nutrition feel approachable. The sections were manageable and genuinely resonated, and the guided workplans helped me set priorities and track my progress at my own pace."</blockquote>
+          <figcaption>Ali</figcaption>
+        </figure>
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"Everything is laid out in such an appealing way that it made me WANT to click on things to learn more. It was short, simple, and to the point. I can't wait to see how adjusting my current vitamin routine will help my egg health!"</blockquote>
+          <figcaption>Jenn</figcaption>
+        </figure>
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"This is a practical, clear and easy-to-understand course that helps support women along their fertility journeys. The healthy habits that the course promotes are also very relevant for pregnancy and motherhood, which is a bonus!"</blockquote>
+          <figcaption>Emese</figcaption>
+        </figure>
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"It's a great resource for anyone trying to understand how to best support their fertility efforts with diet and lifestyle. It helps make a sometimes overwhelming time into something manageable and digestible."</blockquote>
+          <figcaption>K.B.</figcaption>
+        </figure>
+        <figure class="ffe-review">
+          <div class="ffe-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f7980f" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <blockquote>"Dealing with fertility can be stressful and it can leave people feeling like they don't have control over what's going on in their bodies. Focusing on taking care of their nutrition gives them a sense of control that they may not have otherwise."</blockquote>
+          <figcaption>Karla R.</figcaption>
+        </figure>
+      </div>
+      <div class="ffe-arrows">
+        <button type="button" class="ffe-arrow" data-dir="-1" aria-label="Previous reviews"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg></button>
+        <button type="button" class="ffe-arrow" data-dir="1" aria-label="Next reviews"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+      </div>
+    </div>
+  </section>
+
   <!-- WHO IT'S FOR -->
   <section class="ff-section ff-white">
     <div class="ff-wrap">
@@ -152,49 +205,6 @@ title: The Egg Health Course
           <p class="ff-check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4939" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>You want practical steps, not a strict diet</span></p>
         </div>
         <p class="ffe-fitnote"><strong>Good to know:</strong> Nutrition is one part of fertility care. This course works alongside your medical care, not in place of it.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="ff-section ff-white" id="reviews">
-    <div class="ff-wrap ff-stack" style="gap: 32px;">
-      <div class="ff-stack" style="gap: 12px; max-width: 760px;">
-        <p class="ff-eyebrow">From our early reviewers</p>
-        <h2>Clear, practical, and easy to follow.</h2>
-        <p class="ff-small" style="font-style: italic; color: #6b5a52;">Free access in exchange for honest feedback.</p>
-      </div>
-      <div class="ffe-reviews">
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"I loved this course! So much practical, helpful information. And I really loved the worksheets. They're something I'll refer back to."</blockquote>
-          <figcaption>Giovanna</figcaption>
-        </figure>
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"The Egg Health Course made fertility nutrition feel approachable. The sections were manageable and genuinely resonated, and the guided workplans helped me set priorities and track my progress at my own pace."</blockquote>
-          <figcaption>Ali</figcaption>
-        </figure>
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"Everything is laid out in such an appealing way that it made me WANT to click on things to learn more. It was short, simple, and to the point. I can't wait to see how adjusting my current vitamin routine will help my egg health!"</blockquote>
-          <figcaption>Jenn</figcaption>
-        </figure>
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"This is a practical, clear and easy-to-understand course that helps support women along their fertility journeys. The healthy habits that the course promotes are also very relevant for pregnancy and motherhood, which is a bonus!"</blockquote>
-          <figcaption>Emese</figcaption>
-        </figure>
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"It's a great resource for anyone trying to understand how to best support their fertility efforts with diet and lifestyle. It helps make a sometimes overwhelming time into something manageable and digestible."</blockquote>
-          <figcaption>K.B.</figcaption>
-        </figure>
-        <figure class="ffe-review">
-          <p class="ffe-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote>"Dealing with fertility can be stressful and it can leave people feeling like they don't have control over what's going on in their bodies. Focusing on taking care of their nutrition gives them a sense of control that they may not have otherwise."</blockquote>
-          <figcaption>Karla R.</figcaption>
-        </figure>
       </div>
     </div>
   </section>
@@ -298,4 +308,16 @@ title: The Egg Health Course
       document.querySelectorAll('details.ffe-step').forEach(function (d) { d.open = true; });
     }
   })();
+</script>
+
+<script>
+  // Review arrows: scroll one card at a time.
+  document.querySelectorAll('.ffe-arrow').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var row = document.getElementById('ffe-reviews');
+      var card = row.querySelector('.ffe-review');
+      var step = card ? card.getBoundingClientRect().width + 24 : 300;
+      row.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+    });
+  });
 </script>
