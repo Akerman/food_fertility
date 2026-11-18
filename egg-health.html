@@ -81,14 +81,15 @@ title: The Egg Health Course
     .ffe-fitbox { padding: 30px 24px; gap: 22px; border-radius: 24px; }
     .ffe-fitchecks { grid-template-columns: 1fr; }
   }
-  .ffe-reviews { display: flex; gap: 24px; max-width: 980px; margin: 0 auto; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #2f6859 #f0e8e2; }
+  .ffe-reviews { display: flex; gap: 24px; max-width: 980px; margin: 0 auto; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .ffe-reviews::-webkit-scrollbar { display: none; }
   .ffe-reviews:focus-visible { outline: 2px solid #2f6859; outline-offset: 4px; border-radius: 28px; }
   .ffe-review { flex: 0 0 min(420px, 85%); scroll-snap-align: start; background: #ffffff; border: 1.5px solid #ece4df; border-top: 4px solid #f7980f; border-radius: 24px; padding: 36px 36px 40px; margin: 0; display: flex; flex-direction: column; gap: 18px; }
   .ffe-review blockquote { margin: 0 !important; padding: 0 !important; background: none !important; border: none !important; box-shadow: none !important; text-align: left !important; font-size: 18px !important; line-height: 1.65 !important; color: #2b3330 !important; font-style: italic; quotes: none; }
   .ffe-review blockquote::before, .ffe-review blockquote::after { content: none !important; }
   .ffe-review figcaption { font-size: 15px; font-weight: 700; color: #1d4939; margin-top: auto; }
   .ffe-stars { display: flex; gap: 4px; }
-  .ffe-arrows { display: flex; justify-content: center; gap: 16px; margin-top: -12px !important; }
+  .ffe-arrows { display: flex; justify-content: center; gap: 16px; margin-top: -8px !important; }
   .ffe-arrow { width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #1d4939; background: #ffffff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
   .ffe-arrow:hover { background: #f8ebe5; }
   .ffe-arrow:focus-visible { outline: 2px solid #2f6859; outline-offset: 3px; }
@@ -311,13 +312,38 @@ title: The Egg Health Course
 </script>
 
 <script>
-  // Review arrows: scroll one card at a time.
-  document.querySelectorAll('.ffe-arrow').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var row = document.getElementById('ffe-reviews');
-      var card = row.querySelector('.ffe-review');
-      var step = card ? card.getBoundingClientRect().width + 24 : 300;
-      row.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+  // Reviews: endless loop in both directions (copies of the cards sit on each side).
+  (function () {
+    var row = document.getElementById('ffe-reviews');
+    if (!row) return;
+    var originals = Array.prototype.slice.call(row.children);
+    var n = originals.length;
+    function copy(el) { var c = el.cloneNode(true); c.setAttribute('aria-hidden', 'true'); return c; }
+    originals.forEach(function (el) { row.appendChild(copy(el)); });
+    originals.slice().reverse().forEach(function (el) { row.insertBefore(copy(el), row.firstChild); });
+    var setW = 0, timer;
+    function measure() { setW = row.children[2 * n].offsetLeft - row.children[n].offsetLeft; }
+    function jump(by) {
+      row.style.scrollSnapType = 'none';
+      row.scrollLeft += by;
+      requestAnimationFrame(function () { row.style.scrollSnapType = ''; });
+    }
+    function recenter() {
+      if (!setW) return;
+      if (row.scrollLeft < setW * 0.5) jump(setW);
+      else if (row.scrollLeft >= setW * 1.5) jump(-setW);
+    }
+    function start() { measure(); row.style.scrollSnapType = 'none'; row.scrollLeft = setW; requestAnimationFrame(function () { row.style.scrollSnapType = ''; }); }
+    window.addEventListener('load', start);
+    window.addEventListener('resize', function () { var ratio = setW ? row.scrollLeft / setW : 1; measure(); row.style.scrollSnapType = 'none'; row.scrollLeft = ratio * setW; requestAnimationFrame(function () { row.style.scrollSnapType = ''; }); });
+    start();
+    row.addEventListener('scroll', function () { clearTimeout(timer); timer = setTimeout(recenter, 150); }, { passive: true });
+    document.querySelectorAll('.ffe-arrow').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        recenter();
+        var step = row.children[n + 1].offsetLeft - row.children[n].offsetLeft;
+        row.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+      });
     });
-  });
+  })();
 </script>
